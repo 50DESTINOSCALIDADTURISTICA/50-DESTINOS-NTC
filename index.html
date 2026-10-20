@@ -1249,11 +1249,10 @@ function render(res,id,cod){
   var t=R.fin?(R.est==='verde'?TXT.finV:TXT.finN):TXT[R.est];
   var C=2*Math.PI*74,off=C*(1-(R.cuenta.length?R.asis.length/R.cuenta.length:0));
   var ses='';for(var i=1;i<=c.total;i++){var f=(c.fechas||{})[i]||'',cl,tt,tx=i;
-    if(c.realizadas.indexOf(i)>=0){if(R.nc.indexOf(i)>=0){cl='nc';tt='No se tiene en cuenta en tu cálculo'}else if(R.acr.indexOf(i)>=0){cl='si acr';tt='Acreditada a todos los participantes';tx='✓'}else if(R.asis.indexOf(i)>=0){cl='si';tt='Tienes registro de asistencia';tx='✓'}else{cl='no';tt='Sin registro de asistencia'}}
+    if(c.realizadas.indexOf(i)>=0){if(R.nc.indexOf(i)>=0){cl='nc';tt='No se tiene en cuenta en tu cálculo'}else if(R.acr.indexOf(i)>=0){cl='si';tt='Tienes registro de asistencia';tx='✓'}else if(R.asis.indexOf(i)>=0){cl='si';tt='Tienes registro de asistencia';tx='✓'}else{cl='no';tt='Sin registro de asistencia'}}
     else{cl='fut';tt='Sesión por realizar'}
     ses+='<div class="ses '+cl+'" title="Sesión '+i+(f?' · '+fCorta(f):'')+': '+tt+'">'+tx+'<small>'+(f?fCorta(f):'S'+i)+'</small></div>'}
   var notas='';
-  if(R.acr.length)notas+='<p class="av-msg" style="color:var(--tinta2)">Las sesiones '+R.acr.join(' y ')+' se acreditan a todos los participantes porque el formulario de asistencia presentó fallas.</p>';
   if(rec.z&&(c.flexibles||[]).length)notas+='<p class="av-msg" style="color:var(--tinta2)">Por la situación de tu destino, las sesiones '+c.flexibles.join(' y ')+' no se tienen en cuenta en tu cálculo. Seguimos acompañándote.</p>';
   var cert='';
   if(R.est==='verde'&&R.fin)cert='<div class="cert-box"><p><strong>Tu certificado está listo.</strong> Descárgalo en PDF.</p><button class="btn vino" type="button" data-cert="1">Descargar certificado</button></div>';
@@ -1264,7 +1263,7 @@ function render(res,id,cod){
    '<div class="av-main"><div class="ring"><svg width="170" height="170" viewBox="0 0 170 170"><circle class="bg" cx="85" cy="85" r="74"/><circle class="fg" cx="85" cy="85" r="74" stroke="'+COL[R.est]+'" stroke-dasharray="'+C+'" stroke-dashoffset="'+C+'" data-off="'+off+'"/></svg><div class="num"><b>'+R.asis.length+'</b><span>de '+R.cuenta.length+' sesiones<br>realizadas</span></div></div>'+
    '<div class="estado-av '+R.est+'"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">'+ICO[R.est]+'</svg></span><div><strong>'+t[0]+'</strong><span class="av-msg">'+t[1]+'</span>'+'</div></div></div>'+
    '<div><div style="font-family:var(--fd);font-weight:700;margin-bottom:10px">Tus sesiones</div><div class="sesiones">'+ses+'</div>'+
-   '<div class="leyenda" style="margin-top:10px"><span><i style="background:#2F7A24"></i>Con registro</span><span><i style="background:#7FAF73"></i>Acreditada a todos</span><span><i style="border:2px solid var(--linea)"></i>Sin registro</span><span><i style="background:repeating-linear-gradient(45deg,#ddd,#ddd 3px,#fff 3px,#fff 6px)"></i>No se cuenta</span><span><i style="border:2px dashed var(--linea)"></i>Por realizar</span></div></div>'+
+   '<div class="leyenda" style="margin-top:10px"><span><i style="background:#2F7A24"></i>Con registro</span><span><i style="border:2px solid var(--linea)"></i>Sin registro</span><span><i style="background:repeating-linear-gradient(45deg,#ddd,#ddd 3px,#fff 3px,#fff 6px)"></i>No se cuenta</span><span><i style="border:2px dashed var(--linea)"></i>Por realizar</span></div></div>'+
    notas+cert+
    '<div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center;font-size:14px"><button type="button" class="btn line" id="avOtro" style="color:var(--tinta);min-height:44px;padding:10px 18px">Consultar otro documento</button><a href="mailto:'+MAIL+'?subject='+encodeURIComponent('Revisión de asistencia · '+c.nombre)+'&body='+encodeURIComponent('Hola. Solicito revisar mi registro de asistencia.\nDocumento: '+id+'\nNombre: '+rec.n+'\nSesión a revisar: ')+'" style="font-weight:700">¿Algo no coincide? Escríbenos</a></div>';
   requestAnimationFrame(function(){requestAnimationFrame(function(){var fg=card.querySelector('.fg');if(fg)fg.style.strokeDashoffset=fg.dataset.off})});
