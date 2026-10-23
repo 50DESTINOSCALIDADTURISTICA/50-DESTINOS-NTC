@@ -464,7 +464,7 @@ section{position:relative}
 /* DIPLOMADO */
 .dip{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:44px;align-items:center}
 .carrusel{position:relative;border-radius:24px;overflow:hidden;box-shadow:var(--sombra);aspect-ratio:4/5;background:#7EC700}
-.carrusel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .8s ease}
+.carrusel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .5s ease}
 .carrusel img.on{opacity:1}
 .car-dots{display:flex;gap:8px;justify-content:center;margin-top:14px}
 .car-dots button{width:12px;height:12px;border-radius:999px;border:0;background:var(--linea);padding:0;transition:all .25s ease}
@@ -496,6 +496,71 @@ section{position:relative}
 .res-form input:focus{outline:none;border-color:var(--sost)}
 .vid.libro video{object-fit:contain;background:#1D2E2A}
 .vid-nota{font-size:14px;color:#EFE6D6;margin-top:12px;display:flex;gap:10px;align-items:flex-start}
+/* VIDEOS */
+.vbox{border-radius:22px;overflow:hidden;background:#111;aspect-ratio:16/9;box-shadow:var(--sombra)}
+.vbox video{width:100%;height:100%;object-fit:cover;display:block}
+.ova-vid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:32px;align-items:center;margin-top:56px}
+.plat-vid{margin-top:8px}
+@media (max-width:900px){.ova-vid{grid-template-columns:minmax(0,1fr)}}
+/* PORTADA ANIMADA */
+.hero{position:relative}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.hero-velo{position:absolute;inset:0;z-index:0;background:linear-gradient(90deg,rgba(74,13,31,.96) 0%,rgba(74,13,31,.86) 46%,rgba(74,13,31,.62) 100%)}
+.hero .orb{z-index:1}
+.hero-logos,.hero-grid,.accesos,.scroll-hint{position:relative;z-index:2}
+.rota{font-family:var(--fd);font-size:clamp(20px,2.2vw,28px);font-weight:700;margin-top:18px;color:#FBF8F1;display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.rw{display:inline-block;color:var(--oro);min-width:8ch;transition:opacity .45s ease,transform .45s ease}
+.rw.out{opacity:0;transform:translateY(-12px)}
+.guia{position:relative;height:min(600px,68vh);min-height:480px}
+.guia .halo{position:absolute;left:58%;top:52%;width:460px;height:460px;margin:-230px 0 0 -230px;border-radius:50%;background:radial-gradient(circle,rgba(227,168,59,.32),rgba(227,168,59,0) 68%);animation:latir 5s ease-in-out infinite}
+.guia .aro{position:absolute;left:58%;top:52%;width:400px;height:400px;margin:-200px 0 0 -200px;border-radius:50%;border:2px dashed rgba(251,248,241,.28);animation:girar 50s linear infinite}
+.guia .mapa-g{position:absolute;right:0;bottom:6%;width:min(230px,40%);opacity:.5}
+.guia .pj{position:absolute;left:58%;bottom:0;height:86%;width:auto;transform:translateX(-50%) translateY(40px) scale(.96);opacity:0;transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1);pointer-events:none}
+.guia .pj.on{opacity:1;transform:translateX(-50%) translateY(0) scale(1)}
+.guia .pj img{height:100%;width:auto;animation:flotar 5.5s ease-in-out infinite}
+.guia .sello{position:absolute;width:84px;height:84px;filter:drop-shadow(0 10px 18px rgba(0,0,0,.3))}
+.guia .s1{right:6%;top:2%;animation:flotar 6s ease-in-out infinite}
+.guia .s2{left:22%;top:12%;width:66px;height:66px;animation:flotar2 7s ease-in-out infinite}
+.guia .s3{right:0;top:42%;width:70px;height:70px;animation:flotar 8s ease-in-out infinite .8s}
+.guia .bub{position:absolute;left:0;top:26%;width:min(290px,52%);background:#FBF8F1;color:#141414;border-radius:22px 22px 22px 6px;padding:18px 20px;box-shadow:0 18px 40px rgba(0,0,0,.3);z-index:3}
+.guia .bub p{font-family:var(--fd);font-weight:600;font-size:17px;line-height:1.4;min-height:3.9em}
+.guia .bub .btn{margin-top:12px;opacity:0;transform:translateY(8px);transition:opacity .4s ease,transform .4s ease}
+.guia .bub.listo .btn{opacity:1;transform:none}
+.guia .bub small{display:block;font-family:var(--fd);font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--tierra);margin-bottom:6px}
+.cursor{display:inline-block;width:2px;height:1em;background:var(--tierra);vertical-align:-2px;margin-left:2px;animation:brillo 1s steps(2) infinite}
+.guia-dots{position:absolute;left:0;right:0;bottom:-34px;display:flex;gap:8px;justify-content:center;z-index:3}
+.guia-dots button{width:12px;height:12px;border-radius:999px;border:0;background:rgba(251,248,241,.4);padding:0;transition:all .3s ease}
+.guia-dots button[aria-current="true"]{width:34px;background:var(--oro)}
+.guia-hint{position:absolute;left:0;bottom:-36px;font-size:13px;color:#EADFCB;display:flex;gap:6px;align-items:center}
+.ola{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:70px;z-index:1;pointer-events:none}
+@keyframes latir{0%,100%{transform:scale(1);opacity:.9}50%{transform:scale(1.08);opacity:1}}
+@keyframes brillo2{0%,72%{left:-60%}100%{left:130%}}
+.btn.oro{position:relative;overflow:hidden}
+.btn.oro::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(120deg,transparent,rgba(255,255,255,.6),transparent);transform:skewX(-20deg);animation:brillo2 4.5s ease-in-out infinite;pointer-events:none}
+.reveal .eyebrow::before,.eyebrow::before{transition:width .8s ease .2s}
+.reveal:not(.in) .eyebrow::before{width:0}
+.acceso{position:relative;overflow:hidden}
+.acceso::before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 30%,rgba(227,168,59,.18) 50%,transparent 70%);transform:translateX(-100%);transition:transform .7s ease}
+.acceso:hover::before{transform:translateX(100%)}
+.acceso .ir{position:absolute;right:16px;top:16px;width:30px;height:30px;border-radius:50%;background:rgba(227,168,59,.18);display:flex;align-items:center;justify-content:center;transition:transform .3s ease,background .3s ease}
+.acceso:hover .ir{transform:translateX(4px);background:var(--oro)}
+.acceso:hover .ir svg{stroke:#141414}
+.pagehead .pj-head{position:absolute;right:4%;bottom:0;height:88%;max-height:330px;width:auto;animation:entrar .9s cubic-bezier(.2,.8,.2,1) both}
+.pagehead .pj-head img{height:100%;width:auto;animation:flotar 6s ease-in-out infinite}
+.pagehead .bub-head{position:absolute;right:calc(4% + 200px);top:38%;background:#FBF8F1;color:#141414;font-family:var(--fd);font-weight:600;font-size:15px;line-height:1.35;padding:12px 16px;border-radius:18px 18px 4px 18px;box-shadow:0 12px 26px rgba(0,0,0,.25);max-width:230px;animation:entrar 1s cubic-bezier(.2,.8,.2,1) .35s both}
+@keyframes entrar{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+.plat-tabs-v{display:flex;gap:8px;flex-wrap:wrap}
+.plat-tabs-v button{border:1.5px solid rgba(251,248,241,.4);background:transparent;color:#FBF8F1;border-radius:999px;padding:9px 14px;font-family:var(--fd);font-weight:700;font-size:13px;min-height:40px}
+.plat-tabs-v button[aria-selected="true"]{background:var(--oro);border-color:var(--oro);color:#141414}
+@media (max-width:1100px){.pagehead .pj-head,.pagehead .bub-head{display:none}}
+@media (max-width:900px){
+  .guia{height:460px;min-height:0;margin-top:10px}
+  .guia .bub{left:0;right:0;width:auto;top:0}
+  .guia .pj{height:66%;left:62%}
+  .guia .halo,.guia .aro{left:62%;top:62%}
+  .guia .s2{display:none}
+}
+html.nomo .hero-bg{display:none}
 /* PAGINAS */
 body[data-page] section[data-p]{display:none}
 body[data-page="inicio"] section[data-p="inicio"],body[data-page="programa"] section[data-p="programa"],body[data-page="aprende"] section[data-p="aprende"],body[data-page="formacion"] section[data-p="formacion"],body[data-page="participa"] section[data-p="participa"],body[data-page="contacto"] section[data-p="contacto"]{display:block}
@@ -557,6 +622,26 @@ body[data-page="inicio"] .cierre[data-p]{display:flex}
 .a11y-btn{position:fixed;left:18px;bottom:calc(env(safe-area-inset-bottom,0px) + 18px);z-index:60;width:52px;height:52px;border-radius:50%;border:0;background:#3A66B0;color:#fff;box-shadow:0 10px 24px rgba(0,0,0,.25);display:flex;align-items:center;justify-content:center}
 .a11y-panel{position:fixed;left:18px;bottom:calc(env(safe-area-inset-bottom,0px) + 80px);z-index:60;background:var(--papel);color:var(--tinta);border:1px solid var(--linea);border-radius:20px;box-shadow:0 20px 50px rgba(0,0,0,.25);padding:18px;width:min(300px,calc(100vw - 36px));display:none}
 .a11y-panel.open{display:block}
+.a11y-panel{max-height:min(78vh,640px);overflow:auto;width:min(340px,calc(100vw - 36px))}
+.a11y-top{display:flex;justify-content:space-between;align-items:center}
+.a11y-x{width:40px;height:40px;border-radius:12px;border:1.5px solid var(--linea);background:var(--blanco);font-size:22px;font-weight:800;color:var(--tinta)}
+.a11y-nota{font-size:13px;color:var(--tinta2);margin:-4px 0 6px}
+.a11y-panel h3{font-family:var(--fd);font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#3A66B0;margin:14px 0 2px}
+.a11y-row small{display:block;font-size:12px;font-weight:600;color:var(--tinta2)}
+.a11y-reset{width:100%;margin-top:12px;min-height:44px;border-radius:12px;border:1.5px solid var(--tinta);background:transparent;font-family:var(--fd);font-weight:800;color:var(--tinta)}
+.a11y-btn::after{content:"";position:absolute;inset:-6px;border-radius:50%;border:2px solid #3A66B0;opacity:.5;animation:pulso 2.6s ease-out infinite}
+html.gris section,html.gris footer,html.gris .pagehead,html.gris .nav-in{filter:grayscale(1)}
+html.cur,html.cur *{cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 24 24'%3E%3Cpath d='M4 2l15 11-7 1 4 8-3 1-4-8-5 5z' fill='%23000' stroke='%23fff' stroke-width='1.5'/%3E%3C/svg%3E") 4 2,auto!important}
+html.fuente body,html.fuente h1,html.fuente h2,html.fuente h3,html.fuente h4,html.fuente button,html.fuente input{font-family:'Atkinson Hyperlegible',Verdana,Tahoma,sans-serif!important}
+html.esp body{letter-spacing:.05em;word-spacing:.14em}
+html.esp p,html.esp li,html.esp .lead,html.esp span{line-height:1.95!important}
+html.foco *:focus{outline:4px solid #FFD24D!important;outline-offset:3px!important;box-shadow:0 0 0 7px #141414!important}
+html.voz main,html.voz section p,html.voz section h1,html.voz section h2,html.voz section h3,html.voz section li{cursor:pointer}
+.leyendo{outline:3px dashed #3A66B0!important;outline-offset:4px;background:rgba(58,102,176,.08)}
+#reglaLect{position:fixed;left:0;right:0;height:46px;z-index:55;pointer-events:none;border-top:3px solid #E3A83B;border-bottom:3px solid #E3A83B;background:rgba(227,168,59,.12);box-shadow:0 0 0 100vmax rgba(0,0,0,.28);display:none}
+html.regla #reglaLect{display:block}
+#vozAviso{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 18px);transform:translateX(-50%);z-index:70;background:#141414;color:#fff;border-radius:999px;padding:10px 16px;font-size:14px;font-weight:700;display:none;gap:10px;align-items:center}
+#vozAviso button{border:0;background:#E3A83B;color:#141414;border-radius:999px;padding:6px 12px;font-weight:800;min-height:32px}
 .a11y-panel h2{font-size:17px;font-weight:800;margin-bottom:12px}
 .a11y-row{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:8px 0;border-top:1px solid var(--linea);font-size:15px;font-weight:700}
 .a11y-row .grp{display:flex;gap:6px}
@@ -711,9 +796,11 @@ footer a{color:#E3A83B}
 <header class="pagehead"><div class="wrap"><div class="logos"><img src="assets/40524d3023.webp" alt="Ministerio de Comercio, Industria y Turismo y FONTUR"></div>
 <nav class="migas" aria-label="Ruta de navegación"><a href="index.html">Inicio</a><span aria-hidden="true">/</span><span aria-current="page">Aprende</span></nav>
 <h1>Aprende</h1><p>La Ruta Implementadora, el Manual NTC 6725, la caja de herramientas, el autodiagnóstico y la plataforma tecnológica.</p>
-<nav class="subnav" aria-label="Secciones de esta página"><a href="#ruta">Ruta PHVA</a><a href="#manual">Manual NTC 6725</a><a href="#herramientas">Herramientas</a><a href="#autodiagnostico">Autodiagnóstico</a><a href="#plataforma">Plataforma</a></nav></div></header>
+<nav class="subnav" aria-label="Secciones de esta página"><a href="#ruta">Ruta PHVA</a><a href="#manual">Manual NTC 6725</a><a href="#herramientas">Herramientas</a><a href="#autodiagnostico">Autodiagnóstico</a><a href="#plataforma">Plataforma</a></nav></div><div class="pj-head"><img src="assets/c219acc404.webp" alt=""></div><div class="bub-head">Aquí está todo lo que necesitas para implementar la norma.</div></header>
 <!-- HERO -->
 <section class="hero" id="inicio" data-p="inicio">
+  <video class="hero-bg" id="vHero" muted loop playsinline preload="none" data-poster="assets/anfitriones_clip1.jpg" aria-hidden="true" tabindex="-1" src="assets/anfitriones_clip1.mp4"></video>
+  <div class="hero-velo"></div>
   <div class="orb" style="width:900px;height:900px;left:-420px;bottom:-560px"></div>
   <div class="orb" style="width:520px;height:520px;right:-240px;top:-200px;animation-duration:80s"></div>
   <div class="hero-logos wrap"><img loading="lazy" decoding="async" src="assets/40524d3023.webp" alt="Ministerio de Comercio, Industria y Turismo y FONTUR"></div>
@@ -721,6 +808,7 @@ footer a{color:#E3A83B}
     <div class="reveal">
       <div class="eyebrow" style="color:var(--oro)">Programa de Calidad Turística · 50 Nuevos Destinos</div>
       <h1 style="margin-top:18px">De la calidez<br><em>a la calidad</em></h1>
+      <p class="rota" aria-live="off">Destinos <span class="rw" id="rw">sostenibles</span></p>
       <p class="lead">Una apuesta estratégica para que cualquier destino y cualquier prestador del país, sin importar su tamaño o su trayectoria, construya un turismo más competitivo, seguro, sostenible y accesible.</p>
       <div class="acts">
         <a class="btn oro" href="#programa">Conoce la ruta
@@ -734,21 +822,24 @@ footer a{color:#E3A83B}
         <div><b data-count="70" data-suffix=" %">0</b><span>de avance del proyecto</span></div>
       </div>
     </div>
-    <div class="hero-art reveal d2">
-      <img loading="lazy" decoding="async" class="foto" src="assets/908e05e518.jpg" alt="Fachada colonial con la puerta abierta">
-      <div class="logo50 flotar2"><img loading="lazy" decoding="async" src="assets/086c1c23c6.webp" alt="50 Nuevos Destinos, Anfitriones de Colombia"></div>
-      <div class="mapa"><img loading="lazy" decoding="async" src="assets/2cdbcc37db.webp" alt="Mapa de Colombia con los destinos del programa">
-        <span class="dot" style="left:44%;top:30%"></span><span class="dot" style="left:56%;top:48%;animation-delay:.8s"></span><span class="dot" style="left:36%;top:60%"></span></div>
-      <img loading="lazy" decoding="async" class="pers flotar" src="assets/9d1090079c.webp" alt="Personaje implementador del programa">
-      <div class="bubble flotar2">¡Hola, anfitrión! Te acompaño en la ruta de la calidad.</div>
+    <div class="guia reveal d2" id="guia" aria-roledescription="carrusel" aria-label="Personajes guía del portal">
+      <div class="halo"></div><div class="aro"></div>
+      <img loading="lazy" decoding="async" class="mapa-g" src="assets/2cdbcc37db.webp" alt="">
+      <img loading="lazy" decoding="async" class="sello s1" src="assets/ba8cf12514.webp" alt="">
+      <img loading="lazy" decoding="async" class="sello s2" src="assets/5fa4fd8bf2.webp" alt="">
+      <img loading="lazy" decoding="async" class="sello s3" src="assets/b7878f8988.webp" alt="">
+      <div class="pj on" data-g="0"><img loading="lazy" decoding="async" src="assets/9d1090079c.webp" alt=""></div><div class="pj" data-g="1"><img loading="lazy" decoding="async" src="assets/eaf61cf9d5.webp" alt=""></div><div class="pj" data-g="2"><img loading="lazy" decoding="async" src="assets/c219acc404.webp" alt=""></div><div class="pj" data-g="3"><img loading="lazy" decoding="async" src="assets/7b6bcf5bd3.webp" alt=""></div><div class="pj" data-g="4"><img loading="lazy" decoding="async" src="assets/866cd323fb.webp" alt=""></div><div class="pj" data-g="5"><img loading="lazy" decoding="async" src="assets/c19e9461b1.webp" alt=""></div>
+      <div class="bub" id="guiaBub" aria-live="polite"><small id="guiaTag"></small><p id="guiaTxt"></p><a class="btn oro sm" id="guiaBtn" href="#mi-avance"></a></div>
+      <div class="guia-dots" id="guiaDots"></div>
     </div>
   </div>
   <nav class="wrap accesos reveal" aria-label="Accesos rápidos">
-    <a class="acceso" href="#mi-avance"><small>Participo en la capacitación</small><strong>Consulta tu avance</strong><span>Tus sesiones y tu estado, con tu número de documento.</span></a>
-    <a class="acceso" href="#resultados"><small>Me postulé al curso de auditores</small><strong>Consulta tu resultado</strong><span>Convocatoria 006: resultados publicados.</span></a>
-    <a class="acceso" href="#diplomado"><small>Quiero formarme</small><strong>Diplomado virtual NTC 6725</strong><span id="accDip">Inscripciones desde el 29 de octubre.</span></a>
-    <a class="acceso" href="#charlas"><small>Quiero aprender más</small><strong>Charlas especializadas</strong><span>22 oct · 28 oct · 4 nov, virtuales.</span></a>
+    <a class="acceso" data-x="1" href="#mi-avance"><span class="ir" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E3A83B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><small>Participo en la capacitación</small><strong>Consulta tu avance</strong><span>Tus sesiones y tu estado, con tu número de documento.</span></a>
+    <a class="acceso" data-x="1" href="#resultados"><span class="ir" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E3A83B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><small>Me postulé al curso de auditores</small><strong>Consulta tu resultado</strong><span>Convocatoria 006: resultados publicados.</span></a>
+    <a class="acceso" data-x="1" href="#diplomado"><span class="ir" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E3A83B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><small>Quiero formarme</small><strong>Diplomado virtual NTC 6725</strong><span id="accDip">Inscripciones abiertas.</span></a>
+    <a class="acceso" data-x="1" href="#charlas"><span class="ir" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E3A83B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><small>Quiero aprender más</small><strong>Charlas especializadas</strong><span>22 oct · 28 oct · 4 nov, virtuales.</span></a>
   </nav>
+  <svg class="ola" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path fill="var(--papel)" d="M0,38 C240,70 480,4 720,30 C960,56 1200,14 1440,36 L1440,70 L0,70Z"><animate attributeName="d" dur="12s" repeatCount="indefinite" values="M0,38 C240,70 480,4 720,30 C960,56 1200,14 1440,36 L1440,70 L0,70Z;M0,30 C240,8 480,62 720,40 C960,18 1200,60 1440,30 L1440,70 L0,70Z;M0,38 C240,70 480,4 720,30 C960,56 1200,14 1440,36 L1440,70 L0,70Z"/></path></svg>
   <a class="scroll-hint" href="#novedades" style="text-decoration:none">Desliza para recorrer
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></a>
 </section>
@@ -762,9 +853,9 @@ footer a{color:#E3A83B}
     </div>
     <div class="novs">
       <a class="nov reveal" href="#charlas"><div class="im"><img loading="lazy" decoding="async" src="assets/charlas_flyer.jpg" alt="Pieza del ciclo de charlas Conocimiento que inspira ideas que transforman territorios"></div><div class="tx"><time>22 oct · 28 oct · 4 nov</time><strong>Ciclo de charlas especializadas</strong><p>Tres conversaciones virtuales sobre certificación, patrimonio biocultural y destinos inteligentes.</p><span class="mas">Ver la agenda →</span></div></a>
-      <a class="nov reveal d1" href="#diplomado"><div class="im"><img loading="lazy" decoding="async" src="assets/diplomado_1.jpg" alt="Pieza del diplomado virtual en implementación de la NTC 6725"></div><div class="tx"><time>Inscripciones desde el 29 de octubre</time><strong>Diplomado virtual NTC 6725</strong><p>8 módulos, 120 horas, a tu ritmo y sin costo. Inicia el 3 de noviembre.</p><span class="mas">Conoce el diplomado →</span></div></a>
+      <a class="nov reveal d1" href="#diplomado"><div class="im"><img loading="lazy" decoding="async" src="assets/diplomado_1.jpg" alt="Pieza del diplomado virtual en implementación de la NTC 6725"></div><div class="tx"><time>Inscripciones abiertas</time><strong>Diplomado virtual NTC 6725</strong><p>8 módulos, 120 horas, a tu ritmo y sin costo. Matrículas desde el 29 de octubre; inicia el 3 de noviembre.</p><span class="mas">Conoce el diplomado →</span></div></a>
       <a class="nov reveal d2" href="#resultados"><div class="im"><img loading="lazy" decoding="async" src="assets/convocatoria_006.jpg" alt="Pieza de la convocatoria del curso de auditores en normas técnicas de turismo"></div><div class="tx"><time>21 de octubre de 2026</time><strong>Resultados de la Convocatoria 006</strong><p>130 personas seleccionadas para el curso de auditores en normas técnicas de turismo.</p><span class="mas">Consulta tu resultado →</span></div></a>
-      <a class="nov reveal d3" href="#manual"><div class="im"><img loading="lazy" decoding="async" src="assets/manual_poster.jpg" alt="Portada del Manual de Implementación NTC 6725"></div><div class="tx"><time>Octubre de 2026</time><strong>Manual de Implementación NTC 6725</strong><p>Recorre en video todas sus páginas. Muy pronto estará disponible para consulta.</p><span class="mas">Ver el manual →</span></div></a>
+      <a class="nov reveal d3" href="#manual"><div class="im"><img loading="lazy" decoding="async" src="assets/manual_poster.jpg" alt="Portada del Manual de Implementación NTC 6725"></div><div class="tx"><time>Octubre de 2026</time><strong>Manual de Implementación NTC 6725</strong><p>Conoce en video cómo está organizado. Muy pronto estará disponible para consulta.</p><span class="mas">Ver el manual →</span></div></a>
     </div>
   </div>
 </section>
@@ -939,8 +1030,8 @@ footer a{color:#E3A83B}
       <p class="lead">Una norma técnica dice qué hay que cumplir, pero no siempre dice cómo hacerlo en un municipio de montaña, en un pueblo costero o en una capital con miles de prestadores. Así nació el Manual, un hito nacional en calidad turística.</p>
     </div>
     <div class="manual-grid">
-      <div class="reveal"><div class="vid libro"><video id="vManual" src="assets/manual_preliminar.mp4" poster="assets/manual_poster.jpg" playsinline controls preload="none" controlslist="nodownload noplaybackrate" disablepictureinpicture oncontextmenu="return false" aria-label="Recorrido en video por las páginas del Manual de Implementación NTC 6725, versión preliminar"></video></div>
-        <p class="vid-nota"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E3A83B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg><span>Versión preliminar. Recorre aquí todas sus páginas; el Manual estará disponible para consulta próximamente.</span></p></div>
+      <div class="reveal"><div class="vid libro"><video id="vManual" src="assets/manual_animado.mp4" data-poster="assets/manual_animado.jpg" playsinline controls preload="none" controlslist="nodownload noplaybackrate" disablepictureinpicture oncontextmenu="return false" aria-label="Video animado del Manual de Implementación NTC 6725, versión preliminar"></video></div>
+        <p class="vid-nota"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E3A83B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg><span>Versión preliminar. El Manual estará disponible para consulta próximamente.</span></p></div>
       <div class="reveal d2">
         <h3 style="font-size:clamp(22px,2.2vw,28px);font-weight:700;line-height:1.25">No lo escribimos desde un escritorio. <span style="color:var(--oro)">Lo construimos escuchando:</span></h3>
         <div class="stats4">
@@ -1093,7 +1184,7 @@ footer a{color:#E3A83B}
       <div class="car-dots" id="carDots"></div>
     </div>
     <div class="reveal d2">
-      <span class="tag" id="dipEstado" style="background:var(--sost);color:#fff">Inscripciones desde el 29 de octubre</span>
+      <span class="tag" id="dipEstado" style="background:var(--sost);color:#fff">Inscripciones abiertas</span>
       <h2 class="h2" style="margin-top:16px">Diplomado virtual: implementación de la NTC 6725</h2>
       <p style="font-family:var(--fd);font-weight:700;font-size:clamp(17px,1.6vw,20px);color:var(--sost);margin-top:8px">Requisitos de sostenibilidad para destinos turísticos</p>
       <p class="lead" style="margin-top:16px">Adquiere conocimientos y herramientas prácticas para comprender y avanzar en la implementación de la NTC 6725. Aprende a integrar la sostenibilidad en la gestión del territorio, fortalecer las capacidades locales e impulsar un turismo responsable que valore el patrimonio natural y cultural.</p>
@@ -1104,11 +1195,20 @@ footer a{color:#E3A83B}
         <div><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2F7A24" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg>Sin costo para los participantes</div>
       </div>
       <p style="font-size:15px"><strong>Dirigido a</strong> prestadores de servicios turísticos, funcionarios y contratistas de entidades públicas, representantes de comunidades, estudiantes, gremios y profesionales del sector turístico.</p>
-      <p style="font-size:15px;margin-top:8px"><strong>Inscripciones:</strong> desde el 29 de octubre de 2026 · <strong>Inicio:</strong> 3 de noviembre de 2026</p>
+      <p style="font-size:15px;margin-top:8px"><strong>Inscripciones:</strong> abiertas · <strong>Matrículas:</strong> desde el 29 de octubre de 2026 · <strong>Inicio:</strong> 3 de noviembre de 2026</p>
       <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:22px;align-items:center">
-        <a class="btn oro" id="dipBtn" href="https://q.me-qr.com/zaoxkl49" target="_blank" rel="noopener">¡Inscríbete ya!</a>
+        <a class="btn oro" id="dipBtn" href="https://docs.google.com/forms/d/e/1FAIpQLSe5ML3qFmiu_GzhlBmo_hFPiL4CNpDjwkLkJZZF7CxjNZHD9w/viewform" target="_blank" rel="noopener">Inscríbete aquí</a>
         <span style="font-size:14px;color:var(--tinta2)">Es un proceso distinto de la capacitación certificada y del curso de auditores.</span>
       </div>
+    </div>
+  </div>
+  <div class="wrap ova-vid">
+    <div class="vbox reveal"><video id="vOva" src="assets/ova_elearning.mp4" data-poster="assets/ova_elearning.jpg" playsinline controls preload="none" aria-label="Recorrido por la plataforma de e-learning y los OVA"></video></div>
+    <div class="reveal d1">
+      <div class="eyebrow">Entorno de aprendizaje</div>
+      <h3 style="font-size:clamp(24px,2.6vw,32px);font-weight:800;margin-top:12px">Así se navega en los OVA</h3>
+      <p style="font-size:16px;margin-top:12px">Recorre la plataforma de e-learning: los Objetos Virtuales de Aprendizaje de la NTC 6725 y de la GTC-ISO 19011, con videos, podcast, recursos interactivos y actividades para avanzar a tu ritmo.</p>
+      <p style="font-size:14px;color:var(--tinta2);margin-top:10px">Video con audio. Actívalo con el botón de sonido del reproductor.</p>
     </div>
   </div>
 </section>
@@ -1247,9 +1347,10 @@ footer a{color:#E3A83B}
       <div class="plat-tabs" role="tablist" id="platTabs"></div>
       <div class="plat-panel fade-swap" id="platPanel" role="tabpanel"></div>
     </div>
-    <div class="plat-art reveal d2">
-      <div class="alc"><strong style="font-family:var(--fd);font-size:20px;color:var(--oro)">Alcance nacional</strong><p style="margin-top:6px;font-size:15px">Abierta a todos los destinos y prestadores de servicios turísticos de Colombia: gestión de la calidad y gestión del turismo.</p></div>
-      <img loading="lazy" decoding="async" class="flotar" src="assets/7b6bcf5bd3.webp" alt="Personaje trabajando en la plataforma">
+    <div class="reveal d2" style="display:flex;flex-direction:column;gap:16px">
+      <div class="plat-tabs-v" role="tablist" aria-label="Videos de la plataforma"><button type="button" role="tab" aria-selected="true" data-v="assets/plataforma_clip.mp4" data-p="assets/plataforma_clip.jpg">Tablero de indicadores</button><button type="button" role="tab" aria-selected="false" data-v="assets/plataforma_clip2.mp4" data-p="assets/plataforma_clip2.jpg">Mapa y capas del destino</button></div>
+      <div class="vbox plat-vid"><video id="vPlat" src="assets/plataforma_clip.mp4" data-poster="assets/plataforma_clip.jpg" muted loop playsinline controls preload="none" aria-label="Vista previa de la Plataforma de Calidad Turística"></video></div>
+      <div class="alc" style="background:var(--verde);border-radius:22px;padding:20px 22px"><strong style="font-family:var(--fd);font-size:19px;color:var(--oro)">Así se verá la plataforma</strong><p style="margin-top:6px;font-size:15px">Tablero de indicadores, cumplimiento de la NTC 6725 y un mapa por capas para que cada destino ubique sus atractivos, prestadores y oferta complementaria. Abierta a todos los destinos y prestadores de servicios turísticos de Colombia.</p></div>
     </div>
   </div>
 </section>
@@ -1262,7 +1363,7 @@ footer a{color:#E3A83B}
       <p class="lead">La calidez es la esencia, la calidad turística es el camino y la confianza del visitante es el resultado. Estamos grabando la campaña con 15 destinos que ya avanzan en este proceso.</p>
     </div>
     <div class="anf-grid reveal d1">
-      <div class="main"><video id="vAnf" src="assets/58c2e2ba86.mp4" poster="assets/bbc7eb88e4.jpg" muted loop playsinline controls preload="none" aria-label="Clip 1 de la campaña Anfitriones de Colombia"></video><span class="lbl"><i class="brillo" style="width:10px;height:10px;border-radius:50%;background:var(--tierra);display:inline-block"></i>Clip 1 · En rodaje</span></div>
+      <div class="main"><video id="vAnf" src="assets/anfitriones_clip1.mp4" data-poster="assets/anfitriones_clip1.jpg" muted loop playsinline controls preload="none" aria-label="Clip 1 de la campaña Anfitriones de Colombia"></video><span class="lbl"><i class="brillo" style="width:10px;height:10px;border-radius:50%;background:var(--tierra);display:inline-block"></i>Clip 1 · En producción</span></div>
       <img loading="lazy" decoding="async" src="assets/33f2f59462.jpg" alt="Acompañamiento en territorio">
       <img loading="lazy" decoding="async" src="assets/8a2aea08fc.jpg" alt="Taller con actores del destino">
       <img loading="lazy" decoding="async" src="assets/cd2c147061.jpg" alt="Recorrido por el área turística">
@@ -1342,7 +1443,7 @@ footer a{color:#E3A83B}
       <details><summary>¿Qué es la Unidad de Gestión del destino?</summary><p>Es una instancia técnica independiente que lidera y acompaña la implementación de la NTC 6725 en el destino. Identifica y mapea las fuentes de recursos existentes y prioriza las acciones frente a ellas; no ordena gasto ni crea rubros presupuestales.</p></details>
       <details><summary>¿Qué es el Comité de Seguimiento Local?</summary><p>Es el espacio del destino que aprueba el cronograma y la metodología al inicio del proceso y acompaña el avance de cada fase de la implementación.</p></details>
       <details><summary>¿Cuánto dura el acompañamiento técnico?</summary><p>Cada destino del proyecto recibe 120 horas de asistencia técnica en la norma que implementa, con sesiones presenciales y virtuales, cápsulas de video y soporte técnico continuo. Estas horas son distintas de la capacitación certificada de 120 horas y del curso de auditores de 75 horas.</p></details>
-      <details><summary>¿Cómo me vinculo a la formación?</summary><p>Inscríbete en el diplomado virtual en implementación de la NTC 6725 (inscripciones desde el 29 de octubre de 2026 e inicio el 3 de noviembre) y participa en el ciclo de charlas especializadas. La convocatoria del curso de auditores ya cerró y su resultado se consulta en esta página.</p></details>
+      <details><summary>¿Cómo me vinculo a la formación?</summary><p>Inscríbete al diplomado virtual en implementación de la NTC 6725 (inscripciones abiertas, matrículas desde el 29 de octubre de 2026 e inicio el 3 de noviembre) y participa en el ciclo de charlas especializadas. La convocatoria del curso de auditores ya cerró y su resultado se consulta en esta página.</p></details>
     </div>
   </div>
 </section>
@@ -1374,12 +1475,25 @@ footer a{color:#E3A83B}
 </footer>
 <div class="buscador" id="buscador" role="dialog" aria-modal="true" aria-label="Buscar en el portal"><div class="bus-box"><div class="bus-in"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><input id="busIn" type="search" placeholder="Busca un destino, una norma, una herramienta o un tema" autocomplete="off" aria-label="Buscar"><button class="icon-btn" id="busX" type="button" aria-label="Cerrar buscador" style="color:var(--tinta);border-color:var(--linea)">×</button></div><div class="bus-res" id="busRes"><p class="bus-vacio">Escribe al menos dos letras. Por ejemplo: Duitama, diplomado, indicadores, certificado.</p></div></div></div>
 <button class="a11y-btn" id="a11yBtn" type="button" aria-label="Opciones de accesibilidad" aria-expanded="false" aria-controls="a11yPanel"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="4.5" r="2"/><path d="M5 8l7 1.5L19 8M12 9.5V14l-3 6M12 14l3 6"/></svg></button>
-<div class="a11y-panel" id="a11yPanel" role="dialog" aria-label="Opciones de accesibilidad"><h2>Accesibilidad</h2>
+<div class="a11y-panel" id="a11yPanel" role="dialog" aria-label="Opciones de accesibilidad"><div class="a11y-top"><h2>Accesibilidad</h2><button type="button" class="a11y-x" id="a11yX" aria-label="Cerrar opciones de accesibilidad">×</button></div>
+  <p class="a11y-nota">Activa solo lo que necesites. Las opciones quedan guardadas en este navegador.</p>
+  <h3>Visión</h3>
   <div class="a11y-row"><span>Tamaño del texto</span><span class="grp"><button type="button" data-fs="0" aria-label="Texto normal">A</button><button type="button" data-fs="1" aria-label="Texto grande">A+</button><button type="button" data-fs="2" aria-label="Texto muy grande">A++</button></span></div>
   <div class="a11y-row"><span>Alto contraste</span><button type="button" data-tg="hc" aria-pressed="false">Activar</button></div>
+  <div class="a11y-row"><span>Escala de grises</span><button type="button" data-tg="gris" aria-pressed="false">Activar</button></div>
+  <div class="a11y-row"><span>Cursor grande</span><button type="button" data-tg="cur" aria-pressed="false">Activar</button></div>
+  <h3>Lectura</h3>
+  <div class="a11y-row"><span>Leer en voz alta<small>Toca cualquier texto para escucharlo</small></span><button type="button" data-tg="voz" aria-pressed="false">Activar</button></div>
+  <div class="a11y-row"><span>Letra de fácil lectura</span><button type="button" data-tg="fuente" aria-pressed="false">Activar</button></div>
+  <div class="a11y-row"><span>Más espacio entre líneas</span><button type="button" data-tg="esp" aria-pressed="false">Activar</button></div>
+  <div class="a11y-row"><span>Guía de lectura<small>Una franja sigue el cursor</small></span><button type="button" data-tg="regla" aria-pressed="false">Activar</button></div>
+  <h3>Navegación y movimiento</h3>
   <div class="a11y-row"><span>Subrayar enlaces</span><button type="button" data-tg="subr" aria-pressed="false">Activar</button></div>
-  <div class="a11y-row"><span>Detener animaciones</span><button type="button" data-tg="nomo" aria-pressed="false">Activar</button></div>
+  <div class="a11y-row"><span>Resaltar el foco del teclado</span><button type="button" data-tg="foco" aria-pressed="false">Activar</button></div>
+  <div class="a11y-row"><span>Detener animaciones y videos</span><button type="button" data-tg="nomo" aria-pressed="false">Activar</button></div>
+  <button type="button" class="a11y-reset" id="a11yReset">Restablecer todo</button>
 </div>
+<div id="reglaLect" aria-hidden="true"></div><div id="vozAviso" role="status"><span>Leyendo en voz alta</span><button type="button" id="vozStop">Detener</button></div>
 <button class="totop" id="totop" type="button" aria-label="Volver arriba"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg></button>
 
 <script>
@@ -1416,7 +1530,7 @@ var io=new IntersectionObserver(function(ents){ents.forEach(function(en){if(en.i
 document.querySelectorAll('.reveal,[data-count]').forEach(function(e){io.observe(e)});
 
 /* VIDEOS autoplay al verse */
-['vAnf'].forEach(function(id){var v=$(id);if(!v)return;v.muted=true;new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var p=v.play();if(p&&p.catch)p.catch(function(){})}else v.pause()})},{threshold:.4}).observe(v)});
+['vAnf','vManual','vPlat'].forEach(function(id){var v=$(id);if(!v)return;v.muted=true;new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var p=v.play();if(p&&p.catch)p.catch(function(){})}else v.pause()})},{threshold:.4}).observe(v)});
 
 /* RETOS */
 var retos=[
@@ -1686,13 +1800,12 @@ f.addEventListener('submit',function(e){e.preventDefault();var k=clave(inp.value
 
 /* DIPLOMADO */
 (function(){
-var b=$('dipBtn'),e=$('dipEstado'),acc=$('accDip'),n=Date.now(),ap=new Date('2026-10-29T00:00:00-05:00').getTime(),ini=new Date('2026-11-03T00:00:00-05:00').getTime();
-if(b){if(n<ap){e.textContent='Inscripciones desde el 29 de octubre';b.classList.add('off');b.setAttribute('aria-disabled','true');b.setAttribute('tabindex','-1');b.textContent='Inscripciones desde el 29 de octubre'}
-  else{e.textContent=n<ini?'Inscripciones abiertas':'Inscripciones abiertas · en curso';if(acc)acc.textContent='Inscripciones abiertas.'}}
+var e=$('dipEstado'),acc=$('accDip'),n=Date.now(),mat=new Date('2026-10-29T00:00:00-05:00').getTime(),ini=new Date('2026-11-03T00:00:00-05:00').getTime();
+if(e){e.textContent=n<mat?'Inscripciones abiertas':(n<ini?'Inscripciones abiertas · matrículas en curso':'Inscripciones abiertas · diplomado en curso')}
 var car=$('car');if(!car)return;var im=[].slice.call(car.querySelectorAll('img')),dots=$('carDots'),k=0,t=null,red=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 im.forEach(function(_,i){var d=document.createElement('button');d.type='button';d.setAttribute('aria-label','Ver pieza '+(i+1));d.onclick=function(){ir(i);reinicia()};dots.appendChild(d)});
 function ir(i){k=i;im.forEach(function(x,j){x.classList.toggle('on',j===i)});[].forEach.call(dots.children,function(d,j){d.setAttribute('aria-current',j===i?'true':'false')})}
-function reinicia(){if(red)return;clearInterval(t);t=setInterval(function(){ir((k+1)%im.length)},5000)}
+function reinicia(){if(red)return;clearInterval(t);t=setInterval(function(){ir((k+1)%im.length)},3000)}
 car.addEventListener('mouseenter',function(){clearInterval(t)});car.addEventListener('mouseleave',reinicia);ir(0);reinicia();
 })();
 
@@ -1716,6 +1829,31 @@ L.innerHTML=CH.map(function(c,i){var ini=new Date(c.d+'T09:30:00-05:00').getTime
 [].forEach.call(L.querySelectorAll('[data-ics]'),function(b){b.onclick=function(){ics(CH[+b.dataset.ics])}});
 })();
 
+/* PORTADA ANIMADA */
+(function(){
+var esIni=(document.body.dataset.page||'inicio')==='inicio',red=window.matchMedia('(prefers-reduced-motion: reduce)').matches||document.documentElement.classList.contains('nomo');
+var v=$('vHero');if(v&&esIni&&!red){v.preload='auto';v.muted=true;var pr=v.play();if(pr&&pr.catch)pr.catch(function(){})}
+var rw=$('rw'),W=['sostenibles','accesibles','seguros','competitivos','que inspiran'],k=0;
+if(rw&&!red)setInterval(function(){rw.classList.add('out');setTimeout(function(){k=(k+1)%W.length;rw.textContent=W[k];rw.classList.remove('out')},450)},2600);
+var G=[["9d1090079c", "Hola, anfitrión", "¿Ya consultaste cómo vas en la capacitación certificada?", "Consulta tu avance", "#mi-avance"], ["eaf61cf9d5", "Formación abierta", "Inscríbete al diplomado virtual NTC 6725: 8 módulos, a tu ritmo y sin costo.", "Quiero inscribirme", "#diplomado"], ["c219acc404", "Conocimiento", "Mira en video el Manual de Implementación NTC 6725.", "Ver el Manual", "#manual"], ["7b6bcf5bd3", "Lo que viene", "Así se verá la Plataforma de Calidad Turística. ¡Échale un vistazo!", "Ver la plataforma", "#plataforma"], ["866cd323fb", "Territorio", "Explora en el mapa los 50 destinos que ya empezaron la ruta.", "Ver el mapa", "#destinos"], ["c19e9461b1", "Para tu destino", "¿Tu destino está listo para empezar? Haz el autodiagnóstico.", "Hacer el autodiagnóstico", "#autodiagnostico"]],g=$('guia');if(!g)return;
+var pjs=[].slice.call(g.querySelectorAll('.pj')),bub=$('guiaBub'),txt=$('guiaTxt'),tag=$('guiaTag'),bt=$('guiaBtn'),dots=$('guiaDots'),i=0,t=null,ty=null,pausa=false;
+G.forEach(function(x,j){var d=document.createElement('button');d.type='button';d.setAttribute('aria-label','Guía '+(j+1)+': '+x[3]);d.onclick=function(){ir(j);reinicia()};dots.appendChild(d)});
+function escribir(s){clearInterval(ty);bub.classList.remove('listo');if(red){txt.textContent=s;bub.classList.add('listo');return}
+  var n=0;txt.innerHTML='<span class="cursor"></span>';ty=setInterval(function(){n++;txt.innerHTML=esc(s.slice(0,n))+'<span class="cursor"></span>';if(n>=s.length){clearInterval(ty);txt.textContent=s;bub.classList.add('listo')}},28)}
+function ir(j){i=j;var x=G[j];pjs.forEach(function(p,q){p.classList.toggle('on',q===j)});[].forEach.call(dots.children,function(d,q){d.setAttribute('aria-current',q===j?'true':'false')});
+  tag.textContent=x[1];bt.textContent=x[3];bt.setAttribute('href',x[4]);escribir(x[2])}
+function reinicia(){clearInterval(t);if(red)return;t=setInterval(function(){if(!pausa)ir((i+1)%G.length)},6500)}
+g.addEventListener('mouseenter',function(){pausa=true});g.addEventListener('mouseleave',function(){pausa=false});
+g.addEventListener('focusin',function(){pausa=true});g.addEventListener('focusout',function(){pausa=false});
+ir(0);reinicia();
+})();
+
+/* VIDEOS DE LA PLATAFORMA */
+(function(){var tb=[].slice.call(document.querySelectorAll('.plat-tabs-v button')),v=$('vPlat');if(!v)return;
+tb.forEach(function(b){b.onclick=function(){tb.forEach(function(x){x.setAttribute('aria-selected',x===b?'true':'false')});v.poster=b.dataset.p;v.src=b.dataset.v;v.muted=true;var p=v.play();if(p&&p.catch)p.catch(function(){})}});})();
+
+/* POSTERS */
+[].forEach.call(document.querySelectorAll('video[data-poster]'),function(v){var s=v.closest('[data-p]');if(!s||s.dataset.p===(document.body.dataset.page||'inicio'))v.poster=v.dataset.poster});
 /* PAGINAS Y ENLACES */
 (function(){
 var pg=document.body.dataset.page||'inicio',F={inicio:'index.html',programa:'programa.html',aprende:'aprende.html',formacion:'formacion.html',participa:'participa.html',contacto:'contacto.html'};
@@ -1771,16 +1909,37 @@ res.addEventListener('click',function(e){var a=e.target.closest('a');if(!a)retur
 
 /* ACCESIBILIDAD */
 (function(){
-var H=document.documentElement,b=$('a11yBtn'),p=$('a11yPanel'),K='ct_a11y',st={};
+var H=document.documentElement,b=$('a11yBtn'),p=$('a11yPanel'),K='ct_a11y',st={},TG=['hc','gris','cur','voz','fuente','esp','regla','subr','foco','nomo'];
 try{st=JSON.parse(localStorage.getItem(K)||'{}')}catch(e){st={}}
-function apl(){H.setAttribute('data-fs',st.fs||0);['hc','subr','nomo'].forEach(function(k){H.classList.toggle(k,!!st[k])});
+var regla=$('reglaLect'),aviso=$('vozAviso'),sel=null,fontOk=false;
+function fuente(){if(fontOk)return;fontOk=true;var l=document.createElement('link');l.rel='stylesheet';l.href='https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap';document.head.appendChild(l)}
+function videos(){[].forEach.call(document.querySelectorAll('video'),function(v){if(st.nomo){v.pause()}})}
+function parar(){try{speechSynthesis.cancel()}catch(e){}if(sel)sel.classList.remove('leyendo');sel=null;aviso.style.display='none'}
+function apl(){H.setAttribute('data-fs',st.fs||0);TG.forEach(function(k){H.classList.toggle(k,!!st[k])});
+  if(st.fuente)fuente();if(st.nomo)videos();if(!st.voz)parar();
   [].forEach.call(p.querySelectorAll('[data-fs]'),function(x){x.setAttribute('aria-pressed',String((st.fs||0)==+x.dataset.fs))});
-  [].forEach.call(p.querySelectorAll('[data-tg]'),function(x){var on=!!st[x.dataset.tg];x.setAttribute('aria-pressed',on?'true':'false');x.textContent=on?'Desactivar':'Activar'});
+  [].forEach.call(p.querySelectorAll('[data-tg]'),function(x){var on=!!st[x.dataset.tg];x.setAttribute('aria-pressed',on?'true':'false');x.textContent=on?'Activo':'Activar'});
   try{localStorage.setItem(K,JSON.stringify(st))}catch(e){}}
-b.onclick=function(){var o=p.classList.toggle('open');b.setAttribute('aria-expanded',o)};
+b.onclick=function(){var o=p.classList.toggle('open');b.setAttribute('aria-expanded',o);if(o)setTimeout(function(){p.querySelector('button').focus()},30)};
+$('a11yX').onclick=function(){p.classList.remove('open');b.setAttribute('aria-expanded','false');b.focus()};
 [].forEach.call(p.querySelectorAll('[data-fs]'),function(x){x.onclick=function(){st.fs=+x.dataset.fs;apl()}});
-[].forEach.call(p.querySelectorAll('[data-tg]'),function(x){x.onclick=function(){st[x.dataset.tg]=!st[x.dataset.tg];apl()}});
-document.addEventListener('keydown',function(e){if(e.key==='Escape'&&p.classList.contains('open')){p.classList.remove('open');b.focus()}});
+[].forEach.call(p.querySelectorAll('[data-tg]'),function(x){x.onclick=function(){var k=x.dataset.tg;if(k==='voz'&&!('speechSynthesis' in window)){alert('Tu navegador no permite la lectura en voz alta. Prueba con Chrome, Edge o Safari actualizados.');return}st[k]=!st[k];apl();if(k==='voz'&&st.voz)decir('Lectura en voz alta activada. Toca cualquier texto para escucharlo.')}});
+$('a11yReset').onclick=function(){st={};apl()};
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){if(p.classList.contains('open')){p.classList.remove('open');b.focus()}parar()}});
+document.addEventListener('mousemove',function(e){if(st.regla)regla.style.top=(e.clientY-23)+'px'},{passive:true});
+document.addEventListener('touchmove',function(e){if(st.regla&&e.touches[0])regla.style.top=(e.touches[0].clientY-23)+'px'},{passive:true});
+var voz=null;
+function elegirVoz(){try{var vs=speechSynthesis.getVoices();voz=vs.filter(function(v){return /^es[-_]CO/i.test(v.lang)})[0]||vs.filter(function(v){return /^es[-_](419|MX|US)/i.test(v.lang)})[0]||vs.filter(function(v){return /^es/i.test(v.lang)})[0]||null}catch(e){}}
+if('speechSynthesis' in window){elegirVoz();speechSynthesis.onvoiceschanged=elegirVoz}
+function decir(t,el){parar();var u=new SpeechSynthesisUtterance(t.replace(/\s+/g,' ').trim().slice(0,1200));u.lang=voz?voz.lang:'es-CO';if(voz)u.voice=voz;u.rate=.95;
+  u.onend=function(){if(sel)sel.classList.remove('leyendo');aviso.style.display='none'};if(el){sel=el;el.classList.add('leyendo')}aviso.style.display='flex';speechSynthesis.speak(u)}
+$('vozStop').onclick=parar;
+document.addEventListener('click',function(e){if(!st.voz)return;if(e.target.closest('#a11yPanel,#a11yBtn,#vozAviso'))return;
+  var it=e.target.closest('a,button,input,label,summary,video');
+  var el=e.target.closest('h1,h2,h3,h4,p,li,summary,.acceso,.nov,.tool,.cav,.rec,.charla,.chip,td,th,label,a,button');
+  if(!el)return;var t=(el.getAttribute('aria-label')||el.innerText||'').trim();if(!t)return;
+  if(it&&it.tagName==='A'&&!it.getAttribute('href').startsWith('#')){decir(t,el);return}
+  decir(t,el)},true);
 apl();
 })();
 
