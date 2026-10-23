@@ -921,8 +921,8 @@ footer a{color:#E3A83B}
 <section class="sec cream" id="resultados">
   <div class="wrap">
     <div class="head reveal">
-      <div class="txt"><div class="eyebrow">Convocatoria 006 · Curso de auditores en normas técnicas de turismo</div><h2 class="h2">Resultados de la convocatoria</h2></div>
-      <p class="lead">El Comité de Seguimiento del Convenio FNTC-732-2025 aprobó el 21 de octubre de 2026 la selección de las 130 personas beneficiarias, conforme a los requisitos habilitantes, los criterios de puntaje y de desempate de los términos de referencia.</p>
+      <div class="txt"><div class="eyebrow">Convocatoria 006 · Curso de auditores en normas técnicas de turismo</div><h2 class="h2">¡Felicitaciones a las 130 personas seleccionadas!</h2><p style="font-family:var(--fd);font-size:clamp(18px,1.8vw,22px);font-weight:700;color:var(--tierra)">Estás a un paso de confirmar tu cupo</p></div>
+      <p class="lead">Ya están publicados los resultados de la Convocatoria 006 «Calidad que transforma, excelencia que inspira», Curso de auditores en normas técnicas de turismo. Si estás en el listado, sigue los pasos que encuentras abajo para confirmar tu cupo.</p>
     </div>
     <div class="res-stats reveal">
       <div><b data-count="329">0</b><span>postulaciones recibidas</span></div>
@@ -937,12 +937,12 @@ footer a{color:#E3A83B}
         <label class="buscar" for="resBusca" style="margin:14px 0 0"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
           <input id="resBusca" type="search" placeholder="Ej.: María Pérez" autocomplete="off"></label>
         <div class="res-out" id="resOut" aria-live="polite"></div>
-        <h3 style="font-size:18px;font-weight:800;margin-top:26px">Próximos pasos</h3>
+        <h3 style="font-size:18px;font-weight:800;margin-top:26px">Si estás en el listado, confirma tu cupo</h3>
         <div class="pasos-res">
-          <div><b>1</b><span>Las personas seleccionadas recibirán la notificación en el correo registrado en el formulario.</span></div>
-          <div><b>2</b><span>Deben enviar el acta de compromiso dentro de los dos (2) días hábiles siguientes. Si no se envía en ese plazo, se entiende que la persona desiste y el cupo pasa a la lista de espera.</span></div>
-          <div><b>3</b><span>La lista de espera opera en estricto orden descendente para cubrir los cupos que se liberen.</span></div>
-          <div><b>4</b><span>El curso se desarrollará entre noviembre y diciembre de 2026.</span></div>
+          <div><b>1</b><span><strong>Revisa tu correo.</strong> Cada persona seleccionada recibirá una notificación con la confirmación de su selección en el correo electrónico que registró en el formulario de postulación. Revisa también las carpetas de spam y de correo no deseado.</span></div>
+          <div><b>2</b><span><strong>Diligencia la carta de compromiso.</strong> En ese mismo correo de notificación encontrarás anexo el modelo de carta. Diligénciala, fírmala y envíala respondiendo a ese correo.</span></div>
+          <div><b>3</b><span><strong>Envíala a tiempo.</strong> Tienes máximo dos (2) días hábiles después de recibir la notificación. Si no la recibimos en ese plazo, se entenderá que desistes del cupo, y este pasará a la siguiente persona de la lista de espera.</span></div>
+          <div><b>4</b><span><strong>Espera tu citación al inicio del curso.</strong> Entre el 26 y el 29 de octubre de 2026 te llegará al mismo correo la citación a la sesión virtual de inicio, con la fecha, la hora y el enlace de conexión.</span></div>
         </div>
         <a class="btn vino" href="acta_resultados_convocatoria_006.pdf" target="_blank" rel="noopener" style="margin-top:22px">Descargar el acta de resultados (PDF)</a>
       </div>
@@ -1383,7 +1383,7 @@ $('resBusca').addEventListener('input',function(){var q=nrm(this.value);hl=null;
   var ws=q.split(' '),m=function(x){var n=nrm(x.nom);return ws.every(function(w){return n.indexOf(w)>=0})};
   var s=R.sel.filter(m),e=R.esp.filter(m);
   if(s.length+e.length>3){out.className='res-out no';out.innerHTML='Hay varias coincidencias. Escribe tu nombre completo para afinar la búsqueda.';pintar();return}
-  if(s.length){hl=s[0];cur='sel';out.className='res-out ok';out.innerHTML='<strong style="font-family:var(--fd);font-size:17px">¡Felicitaciones, '+esc(s[0].nom.split(' ')[0])+'!</strong><br>Fuiste seleccionado(a) para el curso de auditores en normas técnicas de turismo. Revisa tu correo y envía el acta de compromiso dentro de los dos días hábiles siguientes a la notificación.'}
+  if(s.length){hl=s[0];cur='sel';out.className='res-out ok';out.innerHTML='<strong style="font-family:var(--fd);font-size:17px">¡Felicitaciones, '+esc(s[0].nom.split(' ')[0])+'!</strong><br>Fuiste seleccionado(a) para el Curso de auditores en normas técnicas de turismo. Revisa tu correo (también spam y correo no deseado): allí encontrarás la confirmación y el modelo de carta de compromiso, que debes devolver diligenciada y firmada por el mismo medio dentro de los dos días hábiles siguientes.'}
   else if(e.length){hl=e[0];cur='esp';out.className='res-out esp';out.innerHTML='<strong style="font-family:var(--fd);font-size:17px">Estás en la lista de espera</strong><br>Ocupas la posición '+e[0].p+'. Si se libera un cupo, la lista avanza en estricto orden y el equipo te contactará por correo.'}
   else{out.className='res-out no';out.innerHTML='No encontramos ese nombre en la lista de seleccionados ni en la lista de espera. Revisa la escritura o consulta el acta completa, donde están todas las postulaciones y su resultado.'}
   tabs.forEach(function(t){t.setAttribute('aria-selected',t.dataset.l===cur?'true':'false')});pintar()});
