@@ -776,6 +776,32 @@ footer .bot .r img{height:58px;width:auto}
 footer a{color:#E3A83B}
 .totop{position:fixed;right:18px;bottom:calc(env(safe-area-inset-bottom,0px) + 18px);width:52px;height:52px;border-radius:50%;border:0;background:var(--oro);color:#141414;box-shadow:0 10px 24px rgba(0,0,0,.25);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s ease;z-index:40}
 .totop.show{opacity:1;pointer-events:auto}
+
+/* AJUSTES: SIN SUPERPOSICIONES */
+.a11y-btn{display:none!important}
+.a11y-panel{left:auto!important;right:12px;bottom:auto!important;top:calc(env(safe-area-inset-top,0px) + 80px)}
+#a11yNav{border-color:rgba(251,248,241,.55)}
+@media (max-width:900px){.totop{display:none!important}.guia .s3{display:none}}
+.totop{width:48px;height:48px}
+.guia .pj{left:66%}
+.guia .halo,.guia .aro{left:66%}
+.guia .bub{width:min(250px,42%);top:14%}
+.guia .s2{left:30%;top:4%}
+.pagehead p{max-width:min(760px,56%)}
+@media (max-width:1240px){.pagehead .pj-head,.pagehead .bub-head{display:none}.pagehead p{max-width:760px}}
+@media (max-width:1200px){.cierre .mapa{width:min(300px,28vw);right:2%}.cierre h2{max-width:60%}.cierre .lead{max-width:56%!important}}
+@media (max-width:900px){
+  .cierre h2,.cierre .lead{max-width:none!important}
+  .guia .bub{top:0;left:0;right:0;width:auto}
+  .guia .pj{left:60%}
+  .guia .halo,.guia .aro{left:60%;top:64%}
+  .guia .s1{top:auto;bottom:16%;right:2%}
+  .guia .s3{top:auto;bottom:40%;right:0}
+}
+@media (max-width:620px){
+  .res img{position:static!important;align-self:flex-end;height:150px!important;margin:6px 0 -34px!important}
+  .curso img{position:static!important;width:190px!important;margin:12px auto 0!important;display:block}
+}
 </style>
 </head>
 <body data-page="programa">
@@ -793,7 +819,7 @@ footer a{color:#E3A83B}
       <li><a href="participa.html" data-pg="participa">Participa</a></li>
       <li><a href="contacto.html" data-pg="contacto">Contacto</a></li>
     </ul>
-    <div class="acc-tools"><button class="icon-btn" id="busBtn" type="button" aria-label="Buscar en el portal"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></button><a class="btn oro cta" href="participa.html#mi-avance">Consulta tu avance</a><span id="navCta" hidden></span></div>
+    <div class="acc-tools"><button class="icon-btn" id="a11yNav" type="button" aria-label="Opciones de accesibilidad" aria-controls="a11yPanel"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="4.5" r="2"/><path d="M5 8l7 1.5L19 8M12 9.5V14l-3 6M12 14l3 6"/></svg></button><button class="icon-btn" id="busBtn" type="button" aria-label="Buscar en el portal"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></button><a class="btn oro cta" href="participa.html#mi-avance">Consulta tu avance</a><span id="navCta" hidden></span></div>
     <button class="menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FBF8F1" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
   </div>
   <div class="progress" id="progress"></div>
@@ -1975,11 +2001,12 @@ function apl(){H.setAttribute('data-fs',st.fs||0);TG.forEach(function(k){H.class
   [].forEach.call(p.querySelectorAll('[data-tg]'),function(x){var on=!!st[x.dataset.tg];x.setAttribute('aria-pressed',on?'true':'false');x.textContent=on?'Activo':'Activar'});
   try{localStorage.setItem(K,JSON.stringify(st))}catch(e){}}
 b.onclick=function(){var o=p.classList.toggle('open');b.setAttribute('aria-expanded',o);if(o)setTimeout(function(){p.querySelector('button').focus()},30)};
-$('a11yX').onclick=function(){p.classList.remove('open');b.setAttribute('aria-expanded','false');b.focus()};
+var nb=$('a11yNav');if(nb)nb.onclick=function(){var o=p.classList.toggle('open');nb.setAttribute('aria-expanded',o);if(o)setTimeout(function(){p.querySelector('button').focus()},30)};
+$('a11yX').onclick=function(){p.classList.remove('open');var f=$('a11yNav')||b;f.setAttribute('aria-expanded','false');f.focus()};
 [].forEach.call(p.querySelectorAll('[data-fs]'),function(x){x.onclick=function(){st.fs=+x.dataset.fs;apl()}});
 [].forEach.call(p.querySelectorAll('[data-tg]'),function(x){x.onclick=function(){var k=x.dataset.tg;if(k==='voz'&&!('speechSynthesis' in window)){alert('Tu navegador no permite la lectura en voz alta. Prueba con Chrome, Edge o Safari actualizados.');return}st[k]=!st[k];apl();if(k==='voz'&&st.voz)decir('Lectura en voz alta activada. Toca cualquier texto para escucharlo.')}});
 $('a11yReset').onclick=function(){st={};apl()};
-document.addEventListener('keydown',function(e){if(e.key==='Escape'){if(p.classList.contains('open')){p.classList.remove('open');b.focus()}parar()}});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){if(p.classList.contains('open')){p.classList.remove('open');($('a11yNav')||b).focus()}parar()}});
 document.addEventListener('mousemove',function(e){if(st.regla)regla.style.top=(e.clientY-23)+'px'},{passive:true});
 document.addEventListener('touchmove',function(e){if(st.regla&&e.touches[0])regla.style.top=(e.touches[0].clientY-23)+'px'},{passive:true});
 var voz=null;
