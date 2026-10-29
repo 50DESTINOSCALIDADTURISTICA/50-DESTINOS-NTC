@@ -820,6 +820,8 @@ footer a{color:#E3A83B}
 .rep-box strong{display:block;font-family:var(--fd);font-size:16px}
 .rep-box span{display:block;font-size:14px;color:var(--tinta2)}
 @media (max-width:620px){.rep-box{grid-template-columns:48px minmax(0,1fr)}.rep-box img{width:48px;height:48px}.rep-btns{grid-column:1/-1;align-items:flex-start}}
+
+.prueba-banda{background:#FFF4D6;border:1.5px dashed #E3A83B;color:#141414;border-radius:12px;padding:8px 12px;font-family:var(--fd);font-weight:700;font-size:13px;margin-bottom:12px}
 </style>
 </head>
 <body data-page="inicio">
@@ -1832,7 +1834,7 @@ function render(res,id,cod){
   if(mk.length){var rb=document.createElement('div');rb.className='rep-box';rb.innerHTML='<img src="'+MAT[mk[0]].im+'" alt=""><div><strong>'+(mk.length>1?'Material de repaso de tus cursos':'Material de repaso del curso NTC '+mk[0])+'</strong><span>Temas, ejercicios y herramientas de cada sesión, solo para consulta en línea. Se actualiza después de cada sesión en vivo.</span></div><div class="rep-btns">'+mk.map(function(k){return '<a class="btn oro sm" href="'+MAT[k].u+'" data-rep="'+k+'">Abrir material NTC '+k+'</a>'}).join('')+'</div>';var ac=card.querySelector('.cert-box')||card.lastElementChild;card.insertBefore(rb,ac);
     [].forEach.call(rb.querySelectorAll('[data-rep]'),function(a){a.onclick=function(){try{localStorage.setItem('ct_rep'+a.dataset.rep,JSON.stringify({exp:Date.now()+30*864e5,src:'consulta'}))}catch(e){}}})}
   requestAnimationFrame(function(){requestAnimationFrame(function(){var fg=card.querySelector('.fg');if(fg)fg.style.strokeDashoffset=fg.dataset.off})});
-  card.querySelectorAll('[data-cod]').forEach(function(b){b.onclick=function(){render(res,id,b.dataset.cod)}});
+  card.querySelectorAll('[data-cod]').forEach(function(b){b.onclick=function(){render(res,id,b.dataset.cod);if(rec.v==='PRUEBA'){var bn=document.createElement('div');bn.className='prueba-banda';bn.textContent='Modo de prueba del equipo: datos de ejemplo, no corresponden a un participante.';card.insertBefore(bn,card.firstChild)}}});
   var cb=card.querySelector('[data-cert]');if(cb)cb.onclick=function(){certificado(rec,id,c,cb.dataset.cert==='0',cb)};
   $('avOtro').onclick=function(){inp.value='';inp.focus();card.innerHTML=vacio};
 }
@@ -1841,10 +1843,16 @@ var T_=function(t){return '<strong style="font-family:var(--fd);font-size:19px;c
 form.addEventListener('submit',function(e){e.preventDefault();var id=normId(inp.value);
   if(id.length<5){msg(T_('Revisa el número')+'<p>Escribe tu número de documento completo, sin puntos ni espacios.</p>');return}
   btn.disabled=true;msg('<div class="av-load"><span class="spin"></span>Buscando tu registro…</div>');
+  if(window.crypto&&crypto.subtle){crypto.subtle.digest('SHA-256',new TextEncoder().encode(id)).then(function(hb){var hx=Array.prototype.map.call(new Uint8Array(hb),function(x){return('0'+x.toString(16)).slice(-2)}).join('');
+    if(hx!=='b02a0b9dc7d5066344b9c4de0fce22a052ee14e22ed725e70ed850fb3aad832d'){seguir();return}
+    cargar().then(function(D){btn.disabled=false;var res={};CURSOS.forEach(function(k){if(D[k]&&D[k].meta)res[k]={n:'Usuario de prueba',t:'C.C.',d:'Modo de prueba del equipo',z:false,s:(D[k].meta.realizadas||[]).slice(),v:'PRUEBA'}});
+      if(!Object.keys(res).length){msg(T_('Modo de prueba')+'<p>No hay cursos cargados todavía.</p>');return}
+      render(res,id);var bn=document.createElement('div');bn.className='prueba-banda';bn.textContent='Modo de prueba del equipo: datos de ejemplo, no corresponden a un participante.';card.insertBefore(bn,card.firstChild)}).catch(function(){btn.disabled=false;msg(T_('No pudimos cargar la información')+'<p>Intenta de nuevo en unos minutos.</p>')})}).catch(seguir)}else seguir();
+  function seguir(){
   cargar().then(function(D){return buscarTodo(id,D).then(function(res){btn.disabled=false;
     if(!res){var pend=CURSOS.filter(function(k){return !D[k]||!D[k].meta.realizadas.length}).map(function(k){return 'NTC '+k});
       msg(T_('No encontramos ese número')+'<p>Revisa que esté escrito tal como lo registraste en el formulario de asistencia, sin puntos ni espacios. Si el problema sigue, escríbenos a <a href="mailto:'+MAIL+'" style="font-weight:700">'+MAIL+'</a>.</p>'+(pend.length?'<p style="font-size:14px">Si estás inscrito en la '+pend.join(' o la ')+', la consulta se habilita cuando el curso inicie y se registre la primera sesión.</p>':''));return}
-    render(res,id)})}).catch(function(){btn.disabled=false;msg(T_('No pudimos cargar la información')+'<p>Intenta de nuevo en unos minutos. Si el problema sigue, escríbenos a <a href="mailto:'+MAIL+'" style="font-weight:700">'+MAIL+'</a>.</p>')})});
+    render(res,id)})}).catch(function(){btn.disabled=false;msg(T_('No pudimos cargar la información')+'<p>Intenta de nuevo en unos minutos. Si el problema sigue, escríbenos a <a href="mailto:'+MAIL+'" style="font-weight:700">'+MAIL+'</a>.</p>')})}});
 function jspdf(){return window.jspdf?Promise.resolve(window.jspdf):new Promise(function(ok,ko){var s=document.createElement('script');s.src='https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js';s.onload=function(){ok(window.jspdf)};s.onerror=ko;document.head.appendChild(s)})}
 function fmtDoc(id){return /^\d+$/.test(id)?id.replace(/\B(?=(\d{3})+(?!\d))/g,'.'):id}
 function certificado(rec,id,c,prev,b){var t0=b.textContent;b.textContent='Generando…';b.disabled=true;
