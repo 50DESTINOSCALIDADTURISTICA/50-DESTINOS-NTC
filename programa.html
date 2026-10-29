@@ -802,6 +802,24 @@ footer a{color:#E3A83B}
   .res img{position:static!important;align-self:flex-end;height:150px!important;margin:6px 0 -34px!important}
   .curso img{position:static!important;width:190px!important;margin:12px auto 0!important;display:block}
 }
+
+/* NOVEDADES AUTOMATICAS */
+.nov .fin{display:inline-block;align-self:flex-start;font-family:var(--fd);font-size:12px;font-weight:800;padding:4px 10px;border-radius:999px;background:var(--gris);color:var(--tinta)}
+.nov-arch{margin-top:24px;background:transparent;border:1px dashed var(--linea);border-radius:18px;padding:0 18px}
+.nov-arch summary{padding:16px 0;font-size:15px;justify-content:flex-start;gap:8px}
+.nov-arch summary::after{margin-left:auto}
+.nov-arch .novs{padding-bottom:18px}
+.nov-arch .nov{opacity:.78}
+.nov-arch .nov .im{aspect-ratio:16/9}
+.nov-arch .nov .im img{filter:grayscale(.6)}
+
+/* ACCESO AL MATERIAL DE REPASO */
+.rep-box{display:grid;grid-template-columns:64px minmax(0,1fr) auto;gap:14px;align-items:center;background:#E3EAF7;border:1.5px solid #3A66B0;border-radius:18px;padding:14px 16px}
+.rep-box img{width:64px;height:64px;object-fit:contain}
+.rep-btns{display:flex;flex-direction:column;gap:8px;align-items:flex-end}
+.rep-box strong{display:block;font-family:var(--fd);font-size:16px}
+.rep-box span{display:block;font-size:14px;color:var(--tinta2)}
+@media (max-width:620px){.rep-box{grid-template-columns:48px minmax(0,1fr)}.rep-box img{width:48px;height:48px}.rep-btns{grid-column:1/-1;align-items:flex-start}}
 </style>
 </head>
 <body data-page="programa">
@@ -912,12 +930,14 @@ footer a{color:#E3A83B}
       <div class="txt"><div class="eyebrow">Novedades</div><h2 class="h2">Lo más reciente del programa</h2></div>
       <p class="lead">Formación abierta, resultados de convocatorias y nuevos contenidos para seguir avanzando en la calidad turística de los destinos.</p>
     </div>
-    <div class="novs">
-      <a class="nov reveal" href="#charlas"><div class="im"><img loading="lazy" decoding="async" src="assets/charla2_flyer.jpg" alt="Pieza de la charla 2: Territorios vivos, patrimonio biocultural y ciencia ciudadana"></div><div class="tx"><time>Charla 2 · miércoles 28 de octubre</time><strong>Territorios vivos, patrimonio biocultural y ciencia ciudadana</strong><p>Con Carol Andrea Ruiz Barajas y panelistas de MinCultura, Parques Nacionales y MinAmbiente. 9:30 a. m., virtual.</p><span class="mas">Ver la agenda →</span></div></a>
-      <a class="nov reveal d1" href="#diplomado"><div class="im"><img loading="lazy" decoding="async" src="assets/dipl_1.jpg" alt="Pieza del diplomado virtual en implementación de la NTC 6725"></div><div class="tx"><time>Inscripciones abiertas</time><strong>Diplomado virtual NTC 6725</strong><p>8 módulos, 120 horas, 100 % virtual y gratuito. Inicio de inscripciones: 29 de octubre.</p><span class="mas">Conoce el diplomado →</span></div></a>
-      <a class="nov reveal d2" href="#resultados"><div class="im"><img loading="lazy" decoding="async" src="assets/convocatoria_006.jpg" alt="Pieza de la convocatoria del curso de auditores en normas técnicas de turismo"></div><div class="tx"><time>21 de octubre de 2026</time><strong>Resultados de la Convocatoria 006</strong><p>130 personas seleccionadas para el curso de auditores en normas técnicas de turismo.</p><span class="mas">Consulta tu resultado →</span></div></a>
-      <a class="nov reveal d3" href="#curso6654"><div class="im"><img loading="lazy" decoding="async" src="assets/curso_6654.jpg" alt="Pieza del curso de formación NTC 6654"></div><div class="tx"><time>Inicia el 27 de octubre</time><strong>Curso NTC 6654: turismo accesible e inclusivo</strong><p>40 horas, virtual y gratuito, abierto a los actores turísticos de los destinos. Martes y jueves de 3:00 a 6:00 p. m.</p><span class="mas">Inscríbete →</span></div></a>
+    <div class="novs" id="novs">
+      <a class="nov reveal" href="#charlas" data-desde="2026-10-22T12:00:00-05:00" data-vence="2026-10-28T12:00:00-05:00" data-orden="1" data-fin="Realizada"><div class="im"><img loading="lazy" decoding="async" src="assets/charla2_flyer.jpg" alt="Pieza de la charla 2: Territorios vivos, patrimonio biocultural y ciencia ciudadana"></div><div class="tx"><time>Charla 2 · miércoles 28 de octubre</time><strong>Territorios vivos, patrimonio biocultural y ciencia ciudadana</strong><p>Con Carol Andrea Ruiz Barajas y panelistas de MinCultura, Parques Nacionales y MinAmbiente. 9:30 a. m., virtual.</p><span class="mas">Ver la agenda →</span></div></a>
+      <a class="nov reveal" href="#charlas" data-desde="2026-10-28T12:00:00-05:00" data-vence="2026-11-04T12:00:00-05:00" data-orden="1" data-fin="Realizada"><div class="im"><img loading="lazy" decoding="async" src="assets/charlas_flyer.jpg" alt="Pieza del ciclo de charlas: tercera charla, Destinos inteligentes"></div><div class="tx"><time>Charla 3 · miércoles 4 de noviembre</time><strong>Destinos inteligentes: marketing con datos e IA</strong><p>Última charla del ciclo Conocimiento que inspira ideas que transforman territorios. 9:30 a. m., virtual.</p><span class="mas">Ver la agenda →</span></div></a>
+      <a class="nov reveal" href="#diplomado" data-orden="2"><div class="im"><img loading="lazy" decoding="async" src="assets/dipl_1.jpg" alt="Pieza del diplomado virtual en implementación de la NTC 6725"></div><div class="tx"><time>Inscripciones abiertas</time><strong>Diplomado virtual NTC 6725</strong><p>8 módulos, 120 horas, 100 % virtual y gratuito. Inicio de inscripciones: 29 de octubre.</p><span class="mas">Conoce el diplomado →</span></div></a>
+      <a class="nov reveal" href="#curso6654" data-vence="2026-11-07T23:59:00-05:00" data-orden="3" data-fin="Inscripciones cerradas"><div class="im"><img loading="lazy" decoding="async" src="assets/curso_6654.jpg" alt="Pieza del curso de formación NTC 6654"></div><div class="tx"><time>Inicia el 27 de octubre</time><strong>Curso NTC 6654: turismo accesible e inclusivo</strong><p>40 horas, virtual y gratuito, abierto a los actores turísticos de los destinos. Martes y jueves de 3:00 a 6:00 p. m.</p><span class="mas">Inscríbete →</span></div></a>
+      <a class="nov reveal" href="#resultados" data-vence="2026-11-15T23:59:00-05:00" data-orden="4" data-fin="Cerrada"><div class="im"><img loading="lazy" decoding="async" src="assets/convocatoria_006.jpg" alt="Pieza de la convocatoria del curso de auditores en normas técnicas de turismo"></div><div class="tx"><time>21 de octubre de 2026</time><strong>Resultados de la Convocatoria 006</strong><p>130 personas seleccionadas para el curso de auditores en normas técnicas de turismo.</p><span class="mas">Consulta tu resultado →</span></div></a>
     </div>
+    <details class="nov-arch" id="novArch" hidden><summary>Ver novedades anteriores <span id="novArchN"></span></summary><div class="novs" id="novsArch"></div></details>
   </div>
 </section>
 
@@ -1250,6 +1270,7 @@ footer a{color:#E3A83B}
         <a class="btn oro" href="https://forms.gle/6noP9NPpwijPcJqG8" target="_blank" rel="noopener">Inscríbete aquí</a>
         <span style="font-size:14px;color:var(--tinta2)">Información: <a href="mailto:convenio732fontur@fundacionactivaterritorio.org" style="font-weight:700">convenio732fontur@fundacionactivaterritorio.org</a></span>
       </div>
+      <p style="font-size:15px;margin-top:14px;background:#E3EAF7;border-radius:12px;padding:10px 14px"><strong>¿Ya participas?</strong> Ingresa a <a href="#mi-avance" style="font-weight:800">Consulta tu avance</a> con tu número de documento para ver tus sesiones y abrir el material de repaso del curso.</p>
       <p style="font-family:var(--fd);font-weight:700;font-size:16px;margin-top:18px;color:var(--tinta)">La inclusión se construye entre todos. Avancemos hacia un destino sin barreras.</p>
       <p style="font-size:13px;color:var(--tinta2);margin-top:6px">#50NuevosDestinosAnfitriones</p>
     </div>
@@ -1811,6 +1832,9 @@ function render(res,id,cod){
    '<div class="leyenda" style="margin-top:10px"><span><i style="background:#2F7A24"></i>Con registro</span><span><i style="border:2px solid var(--linea)"></i>Sin registro</span><span><i style="background:repeating-linear-gradient(45deg,#ddd,#ddd 3px,#fff 3px,#fff 6px)"></i>No se cuenta</span><span><i style="border:2px dashed var(--linea)"></i>Por realizar</span></div></div>'+
    notas+cert+
    '<div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center;font-size:14px"><button type="button" class="btn line" id="avOtro" style="color:var(--tinta);min-height:44px;padding:10px 18px">Consultar otro documento</button><a href="mailto:'+MAIL+'?subject='+encodeURIComponent('Revisión de asistencia · '+c.nombre)+'&body='+encodeURIComponent('Hola. Solicito revisar mi registro de asistencia.\nDocumento: '+id+'\nNombre: '+rec.n+'\nSesión a revisar: ')+'" style="font-weight:700">¿Algo no coincide? Escríbenos</a></div>';
+  var MAT={'6654':{u:'repaso-6654/',t:'Curso NTC 6654 · Turismo accesible',im:'assets/eaf61cf9d5.webp'}},mk=Object.keys(res).filter(function(k){return MAT[k]});
+  if(mk.length){var rb=document.createElement('div');rb.className='rep-box';rb.innerHTML='<img src="'+MAT[mk[0]].im+'" alt=""><div><strong>'+(mk.length>1?'Material de repaso de tus cursos':'Material de repaso del curso NTC '+mk[0])+'</strong><span>Temas, ejercicios y herramientas de cada sesión, solo para consulta en línea. Se actualiza después de cada sesión en vivo.</span></div><div class="rep-btns">'+mk.map(function(k){return '<a class="btn oro sm" href="'+MAT[k].u+'" data-rep="'+k+'">Abrir material NTC '+k+'</a>'}).join('')+'</div>';var ac=card.querySelector('.cert-box')||card.lastElementChild;card.insertBefore(rb,ac);
+    [].forEach.call(rb.querySelectorAll('[data-rep]'),function(a){a.onclick=function(){try{localStorage.setItem('ct_rep'+a.dataset.rep,JSON.stringify({exp:Date.now()+30*864e5,src:'consulta'}))}catch(e){}}})}
   requestAnimationFrame(function(){requestAnimationFrame(function(){var fg=card.querySelector('.fg');if(fg)fg.style.strokeDashoffset=fg.dataset.off})});
   card.querySelectorAll('[data-cod]').forEach(function(b){b.onclick=function(){render(res,id,b.dataset.cod)}});
   var cb=card.querySelector('[data-cert]');if(cb)cb.onclick=function(){certificado(rec,id,c,cb.dataset.cert==='0',cb)};
@@ -1931,6 +1955,20 @@ ir(0);reinicia();
 /* VIDEOS DE LA PLATAFORMA */
 (function(){var tb=[].slice.call(document.querySelectorAll('.plat-tabs-v button')),v=$('vPlat');if(!v)return;
 tb.forEach(function(b){b.onclick=function(){tb.forEach(function(x){x.setAttribute('aria-selected',x===b?'true':'false')});v.poster=b.dataset.p;v.src=b.dataset.v;v.muted=true;var p=v.play();if(p&&p.catch)p.catch(function(){})}});})();
+
+/* NOVEDADES AUTOMATICAS */
+(function(){
+var box=$('novs'),arch=$('novArch'),ab=$('novsArch');if(!box)return;var n=Date.now(),MAX=4;
+var cs=[].slice.call(box.querySelectorAll('.nov')),vig=[],ven=[];
+cs.forEach(function(c){var d=c.dataset.desde?new Date(c.dataset.desde).getTime():0,v=c.dataset.vence?new Date(c.dataset.vence).getTime():Infinity;
+  if(n<d){c.remove();return}if(n>v)ven.push(c);else vig.push(c)});
+vig.sort(function(a,b){return (+a.dataset.orden||9)-(+b.dataset.orden||9)});
+vig.slice(MAX).forEach(function(c){ven.unshift(c)});vig=vig.slice(0,MAX);
+vig.forEach(function(c,i){c.classList.remove('d1','d2','d3');if(i)c.classList.add('d'+Math.min(i,3));box.appendChild(c)});
+ven.forEach(function(c){var tx=c.querySelector('.tx');if(c.dataset.fin&&tx&&!tx.querySelector('.fin')){var f=document.createElement('span');f.className='fin';f.textContent=c.dataset.fin;tx.insertBefore(f,tx.firstChild)}
+  var m=c.querySelector('.mas');if(m&&c.dataset.fin)m.textContent='Ver más →';c.classList.add('in');ab.appendChild(c)});
+if(ven.length){arch.hidden=false;$('novArchN').textContent='('+ven.length+')'}
+})();
 
 /* POSTERS */
 [].forEach.call(document.querySelectorAll('video[data-poster]'),function(v){var s=v.closest('[data-p]');if(!s||s.dataset.p===(document.body.dataset.page||'inicio'))v.poster=v.dataset.poster});
