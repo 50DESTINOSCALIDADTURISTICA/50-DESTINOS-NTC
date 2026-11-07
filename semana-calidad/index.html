@@ -396,6 +396,13 @@ html[data-movimiento="reducido"] .pj{transition:none}
 .falta-logo.listo{background:#E3F4EA;border-color:var(--ok)}
 @media (max-width:700px){.falta-logo{grid-template-columns:1fr}}
 .sin-logo{position:absolute;left:6px;top:6px;background:var(--amarillo);color:var(--azul);font-weight:800;font-size:.75rem;border-radius:6px;padding:3px 7px;pointer-events:none}
+
+.tutorial{margin:34px 0 0;background:#fff;border-radius:18px;box-shadow:var(--sombra);display:grid;grid-template-columns:minmax(0,280px) minmax(0,1fr);gap:28px;align-items:center;padding:22px}
+.tutorial video{width:100%;aspect-ratio:9/16;border-radius:14px;background:#0C5A66;display:block}
+.tutorial h3{margin:0 0 8px;color:var(--azul);font-size:1.4rem}
+.tutorial p{margin:0 0 14px}
+.tutorial .acciones{display:flex;flex-wrap:wrap;gap:10px}
+@media (max-width:700px){.tutorial{grid-template-columns:1fr}.tutorial video{max-width:300px;margin:auto}}
 </style>
 </head>
 <body>
@@ -499,6 +506,21 @@ html[data-movimiento="reducido"] .pj{transition:none}
       <li><div><h3>Elige tu registro</h3><p>Solo aparecen los destinos y organizaciones que hacen parte del Programa de Calidad Turística.</p></div></li>
       <li><div><h3>Descarga y publica</h3><p>Baja tus piezas en JPG, copia el texto sugerido y agrega la descripción de cada imagen.</p></div></li>
     </ol>
+    <div class="tutorial">
+      <video controls playsinline preload="none" poster="difusion/tutorial-portada.jpg" aria-label="Video tutorial: cómo descargar tus piezas en tres pasos">
+        <source src="difusion/tutorial.mp4" type="video/mp4">
+        <track kind="captions" srclang="es" label="Español" src="difusion/tutorial.vtt" default>
+      </video>
+      <div>
+        <h3>¿Prefieres verlo? Mira el tutorial</h3>
+        <p>En menos de un minuto te mostramos cómo buscar tu destino u organización, descargar tus piezas y publicarlas. El video tiene voz y subtítulos en español.</p>
+        <p>Si eres prestador de servicios turísticos, destino certificado o actor de un SITCAT, al final verás cómo agregar tu logo para que tus piezas se armen solas.</p>
+        <div class="acciones">
+          <a class="btn btn-primario" href="#buscar">Buscar mis piezas</a>
+          <a class="btn btn-borde" href="difusion/paso-a-paso.jpg" download="paso-a-paso-semana-calidad.jpg">Descargar la guía en imagen</a>
+        </div>
+      </div>
+    </div>
   </section>
 
   <section class="seccion" id="buscar" aria-labelledby="tBuscar">
