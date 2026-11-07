@@ -900,6 +900,49 @@ footer a{color:#E3A83B}
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></a>
 </section>
 
+<!-- SEMANA NACIONAL DE LA CALIDAD TURÍSTICA 2026 (visible del 6 al 16 de noviembre) -->
+<section class="sec" id="semana-calidad" data-p="inicio" data-desde="2026-11-06T00:00:00-05:00" data-vence="2026-11-16T23:59:00-05:00" style="background:linear-gradient(135deg,#DDF1F3 0%,#FBF8F1 60%)">
+  <div class="wrap dip">
+    <div class="reveal">
+      <div class="carrusel" style="background:#127C8C">
+        <video id="sncVideo" muted loop playsinline preload="metadata" poster="semana-calidad/difusion/semana-calidad-historia-portada.jpg" aria-label="Video de la Semana Nacional de la Calidad Turística 2026" aria-describedby="sncDesc" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+          <source src="semana-calidad/difusion/semana-calidad-historia.mp4" type="video/mp4">
+        </video>
+        <button type="button" id="sncPausa" aria-pressed="false" style="position:absolute;left:14px;bottom:14px;background:rgba(255,255,255,.94);color:#24405E;border:0;border-radius:999px;padding:8px 16px;font-weight:700;font-size:14px;cursor:pointer;font-family:inherit">Pausar video</button>
+      </div>
+    </div>
+    <div class="reveal d2">
+      <div class="eyebrow" style="color:#127C8C">Colombia te llama · Semana Nacional de la Calidad Turística · Del 9 al 13 de noviembre</div>
+      <h2 class="h2" style="margin-top:14px">Si eres parte del Programa de Calidad Turística, tus piezas ya están listas</h2>
+      <p class="lead" style="margin-top:16px">Ingresa y descarga las piezas oficiales de tu destino u organización, con el texto sugerido y la descripción de cada imagen, <strong style="color:var(--tinta)">listas para publicar</strong> en tus redes durante la Semana Nacional de la Calidad Turística.</p>
+      <div class="dip-feat">
+        <div><span style="display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:#127C8C;color:#fff;flex-shrink:0">1</span>Escribe el nombre de tu destino u organización</div>
+        <div><span style="display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:#127C8C;color:#fff;flex-shrink:0">2</span>Toca tu nombre y aparecen tus piezas</div>
+        <div><span style="display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:#127C8C;color:#fff;flex-shrink:0">3</span>Descarga, copia el texto y publica</div>
+        <div><span style="display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:#127C8C;color:#fff;flex-shrink:0">+</span>Prestadores y SITCAT: suben su logo</div>
+      </div>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:20px;align-items:center">
+        <a class="btn oro" href="semana-calidad/">Ingresar y descargar mis piezas</a>
+      </div>
+      <p style="font-size:13px;color:var(--tinta2);margin-top:14px">#SemanaNacionalDeLaCalidadTuristica #AnfitrionesDeColombia #ColombiaTeLlama #CalidadTuristica</p>
+      <details style="margin-top:10px;font-size:14px;color:var(--tinta2)"><summary style="cursor:pointer;font-weight:700">Descripción del video</summary><p id="sncDesc" style="margin-top:8px">Nos unimos a la celebración de la Semana Nacional de la Calidad Turística 2026, World Quality Week, del 9 al 13 de noviembre. Nuestra calidez nos identifica, ¡la calidad nos impulsa! Estamos llevando la calidez que nos caracteriza a un nuevo nivel: una gestión turística de calidad que impulsa nuestro desempeño, genera mayores oportunidades para nuestras comunidades y crea mejores experiencias para quienes nos visitan. ¡Ser Anfitriones de Colombia es mucho más que dar una buena bienvenida! Por eso, avanzamos en la implementación de buenas prácticas y estándares de calidad que fortalecen la gestión turística y generan valor para nuestros destinos. ¡Somos Anfitriones de Colombia! ¡Ven y vive nuestro país! Colombia te llama.</p></details>
+    </div>
+  </div>
+</section>
+<script>
+(function(){
+  var sec=document.getElementById('semana-calidad');if(!sec)return;
+  var n=Date.now(),d=Date.parse(sec.getAttribute('data-desde')),v=Date.parse(sec.getAttribute('data-vence'));
+  if(n<d||n>v){sec.parentNode.removeChild(sec);return}
+  var vid=document.getElementById('sncVideo'),b=document.getElementById('sncPausa');
+  function est(){b.textContent=vid.paused?'Reproducir video':'Pausar video';b.setAttribute('aria-pressed',String(vid.paused))}
+  b.addEventListener('click',function(){vid.paused?vid.play():vid.pause()});vid.addEventListener('play',est);vid.addEventListener('pause',est);
+  var quieto=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!quieto&&'IntersectionObserver' in window){new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var p=vid.play();if(p&&p.catch)p.catch(function(){})}else vid.pause()})},{threshold:.4}).observe(vid)}
+  est();
+})();
+</script>
+
 <!-- INVITACION DIPLOMADO -->
 <section class="sec" id="invitacion" data-p="inicio" style="background:linear-gradient(135deg,#EAF5DA 0%,#FBF8F1 60%)">
   <div class="wrap dip">
@@ -935,6 +978,7 @@ footer a{color:#E3A83B}
       <p class="lead">Formación abierta, resultados de convocatorias y nuevos contenidos para seguir avanzando en la calidad turística de los destinos.</p>
     </div>
     <div class="novs" id="novs">
+      <a class="nov reveal" href="semana-calidad/" data-desde="2026-11-06T00:00:00-05:00" data-vence="2026-11-16T23:59:00-05:00" data-orden="0.5" data-fin="Finalizada"><div class="im"><img loading="lazy" decoding="async" src="semana-calidad/difusion/semana-calidad-historia-portada.jpg" alt="Pieza de la Semana Nacional de la Calidad Turística 2026"></div><div class="tx"><time>Del 9 al 13 de noviembre</time><strong>Semana Nacional de la Calidad Turística</strong><p>Si eres parte del Programa de Calidad Turística, ingresa y descarga tus piezas listas para publicar.</p><span class="mas">Descargar mis piezas →</span></div></a>
       <a class="nov reveal" href="#charlas" data-desde="2026-10-22T12:00:00-05:00" data-vence="2026-10-28T12:00:00-05:00" data-orden="1" data-fin="Realizada"><div class="im"><img loading="lazy" decoding="async" src="assets/charla2_flyer.jpg" alt="Pieza de la charla 2: Territorios vivos, patrimonio biocultural y ciencia ciudadana"></div><div class="tx"><time>Charla 2 · miércoles 28 de octubre</time><strong>Territorios vivos, patrimonio biocultural y ciencia ciudadana</strong><p>Con Carol Andrea Ruiz Barajas y panelistas de MinCultura, Parques Nacionales y MinAmbiente. 9:30 a. m., virtual.</p><span class="mas">Ver la agenda →</span></div></a>
       <a class="nov reveal" href="#charlas" data-desde="2026-10-28T12:00:00-05:00" data-vence="2026-11-04T12:00:00-05:00" data-orden="1" data-fin="Realizada"><div class="im"><img loading="lazy" decoding="async" src="assets/charla3_flyer.jpg" alt="Pieza de la charla 3: Destinos inteligentes, marketing con datos e IA"></div><div class="tx"><time>Charla 3 · miércoles 4 de noviembre</time><strong>Destinos inteligentes: marketing con datos e IA</strong><p>Con Jesús Alejandro Vargas Quintero (MinCIT) y panelistas de EDEQ, la Red Iberoamericana de Destinos Turísticos Inteligentes y el IDT de Bogotá. 9:30 a. m., virtual.</p><span class="mas">Ver la agenda →</span></div></a>
       <a class="nov reveal" href="#diplomado" data-orden="2"><div class="im"><img loading="lazy" decoding="async" src="assets/dip_impl_1.jpg" alt="Pieza del diplomado virtual en implementación de la NTC 6725"></div><div class="tx"><time>Inscripciones abiertas</time><strong>Diplomado virtual NTC 6725</strong><p>Conviértete en implementador de la sostenibilidad. 8 módulos, 120 horas, 100 % virtual y gratuito. Inicia en la segunda semana de noviembre.</p><span class="mas">Conoce el diplomado →</span></div></a>
