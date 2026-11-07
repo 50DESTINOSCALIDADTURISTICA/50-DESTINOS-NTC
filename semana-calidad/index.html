@@ -403,6 +403,15 @@ html[data-movimiento="reducido"] .pj{transition:none}
 .tutorial p{margin:0 0 14px}
 .tutorial .acciones{display:flex;flex-wrap:wrap;gap:10px}
 @media (max-width:700px){.tutorial{grid-template-columns:1fr}.tutorial video{max-width:300px;margin:auto}}
+
+.historia{margin:22px 0 0;background:#fff;border-radius:18px;box-shadow:var(--sombra);display:grid;grid-template-columns:minmax(0,280px) minmax(0,1fr);gap:28px;align-items:center;padding:22px}
+.historia video{width:100%;aspect-ratio:4/5;border-radius:14px;background:#0C5A66;display:block}
+.historia h3{margin:0 0 8px;color:var(--azul);font-size:1.4rem}
+.historia p{margin:0 0 12px}
+.historia ul{margin:0 0 14px;padding-left:20px;line-height:1.55}
+.historia .copy{background:var(--teal-claro);border-radius:12px;padding:12px 14px;margin:0 0 14px;white-space:pre-line;font-size:.95rem}
+.historia .acciones{display:flex;flex-wrap:wrap;gap:10px}
+@media (max-width:700px){.historia{grid-template-columns:1fr}.historia video{max-width:320px;margin:auto}}
 </style>
 </head>
 <body>
@@ -519,6 +528,25 @@ html[data-movimiento="reducido"] .pj{transition:none}
           <a class="btn btn-primario" href="#buscar">Buscar mis piezas</a>
           <a class="btn btn-borde" href="difusion/paso-a-paso.jpg" download="paso-a-paso-semana-calidad.jpg">Descargar la guía en imagen</a>
         </div>
+      </div>
+    </div>
+    <div class="historia" id="videoHistoria">
+      <video controls playsinline muted loop preload="none" poster="difusion/semana-calidad-historia-portada.jpg" aria-label="Video de la Semana Nacional de la Calidad Turística para historias y estados" aria-describedby="descHistoria">
+        <source src="difusion/semana-calidad-historia.mp4" type="video/mp4">
+      </video>
+      <div>
+        <h3>Comparte también el video en tus historias y estados</h3>
+        <p>Descarga el video oficial de la Semana Nacional de la Calidad Turística y súbelo a tus historias de Instagram y Facebook o a tus estados de WhatsApp, del 9 al 13 de noviembre.</p>
+        <p><strong>En WhatsApp:</strong> entra a Novedades, agrega un estado, elige el video y pega el texto sugerido.</p>
+        <p><strong>En Instagram y Facebook:</strong> crea una historia con el video, agrega el texto o una mención a tu destino u organización, y publícala.</p>
+        <p class="copy" id="copyHistoria">¡Nos unimos a la Semana Nacional de la Calidad Turística 2026! 🇨🇴
+Del 9 al 13 de noviembre celebramos la calidez que nos identifica y la calidad que nos impulsa.
+#SemanaNacionalDeLaCalidadTuristica #AnfitrionesDeColombia #ColombiaTeLlama</p>
+        <div class="acciones">
+          <a class="btn btn-primario" href="difusion/semana-calidad-historia.mp4" download="Video-Semana-Nacional-Calidad-Turistica-2026.mp4">Descargar el video</a>
+          <button type="button" class="btn btn-borde" id="btnCopyHistoria">Copiar texto para el estado</button>
+        </div>
+        <p id="descHistoria" class="sr">Video sin audio de 21 segundos: nos unimos a la celebración de la Semana Nacional de la Calidad Turística 2026, World Quality Week, del 9 al 13 de noviembre. Nuestra calidez nos identifica, ¡la calidad nos impulsa! ¡Ser Anfitriones de Colombia es mucho más que dar una buena bienvenida! ¡Somos Anfitriones de Colombia! ¡Ven y vive nuestro país! Colombia te llama.</p>
       </div>
     </div>
   </section>
@@ -820,6 +848,8 @@ window.syncPausaExt=syncPausa;
 bP.addEventListener('click',function(){prefs.movimiento=prefs.movimiento?'':'reducido';aplicarPrefs();syncPausa();if(prefs.movimiento)revelarTodo()});
 syncPausa();
 
+
+var bch=document.getElementById('btnCopyHistoria');if(bch)bch.addEventListener('click',function(){copiar(document.getElementById('copyHistoria').textContent);toast('Texto copiado. Pégalo al publicar tu estado o historia.')});
 /* ---------- búsqueda ---------- */
 var trabajo=$('#trabajo'),cont=$('#trabajoContenido');
 REG.forEach(function(r){r._q=norm(r.n+' '+(r.m||'')+' '+(r.dp||''));r._n=norm(r.n)});
