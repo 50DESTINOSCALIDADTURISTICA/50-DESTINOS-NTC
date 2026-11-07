@@ -1,0 +1,1237 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Semana Nacional de la Calidad Turística 2026 | Piezas para publicar</title>
+<meta name="description" content="Repositorio oficial de piezas para la Semana Nacional de la Calidad Turística 2026, del 9 al 13 de noviembre. Programa de Calidad Turística del Ministerio de Comercio, Industria y Turismo.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23127C8C'/%3E%3Crect x='12' y='40' width='14' height='6' fill='%23F2C200'/%3E%3Crect x='26' y='40' width='13' height='6' fill='%231F3C8C'/%3E%3Crect x='39' y='40' width='13' height='6' fill='%23C8102E'/%3E%3Ccircle cx='32' cy='24' r='9' fill='%23fff'/%3E%3C/svg%3E">
+<style>
+@font-face{font-family:"Atkinson";src:url("assets/fuentes/atkinson-next.woff2") format("woff2");font-weight:200 800;font-display:swap}
+:root{
+  --teal:#127C8C; --teal-hondo:#0C5A66; --teal-claro:#E3F1F2;
+  --azul:#24405E; --tinta:#1E2B37; --tinta-suave:#4A5A68;
+  --naranja:#D2663A; --cielo:#2A9BC6;
+  --amarillo:#F2C200; --azul-bandera:#1F3C8C; --rojo:#C8102E;
+  --papel:#F3F5F4; --blanco:#FFFFFF; --linea:#D5DDE1; --gris:#E9EEF0;
+  --ok:#1E7A4C; --alerta:#9A3B12;
+  --radio:14px; --radio-chico:8px;
+  --sombra:0 10px 30px rgba(18,60,70,.12);
+  --fs:1rem; --interlineado:1.55; --tracking:0;
+  color-scheme:light;
+}
+html{font-size:100%}
+html[data-texto="2"]{font-size:112.5%} html[data-texto="3"]{font-size:125%} html[data-texto="4"]{font-size:137.5%}
+html[data-espaciado="si"]{--interlineado:1.9;--tracking:.04em}
+html[data-espaciado="si"] p, html[data-espaciado="si"] li{word-spacing:.12em}
+html[data-contraste="alto"]{--teal:#00434C;--teal-hondo:#002A30;--teal-claro:#FFFFFF;--azul:#000;--tinta:#000;--tinta-suave:#000;--naranja:#8A2E00;--papel:#FFFFFF;--linea:#000;--gris:#FFFFFF;--sombra:none}
+html[data-contraste="alto"] .tarjeta, html[data-contraste="alto"] .pub, html[data-contraste="alto"] .resultado{border:2px solid #000}
+html[data-subrayar="si"] a{text-decoration:underline !important;text-decoration-thickness:2px !important}
+*{box-sizing:border-box}
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 80px);scroll-behavior:smooth}
+body{margin:0;background:var(--papel);color:var(--tinta);font-family:"Atkinson",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;font-size:var(--fs);line-height:var(--interlineado);letter-spacing:var(--tracking);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--teal-hondo);text-underline-offset:3px}
+button,input,select,textarea{font:inherit;letter-spacing:inherit}
+:focus-visible{outline:3px solid var(--amarillo);outline-offset:3px;box-shadow:0 0 0 6px var(--azul)}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.saltar{position:absolute;left:12px;top:-60px;background:var(--azul);color:#fff;padding:10px 16px;border-radius:8px;z-index:100}
+.saltar:focus{top:12px}
+.contenedor{width:min(1120px,100% - 40px);margin-inline:auto}
+
+/* Encabezado */
+.encabezado{background:#fff;border-bottom:1px solid var(--linea);position:sticky;top:0;z-index:30}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:#fff;z-index:31}
+.encabezado .contenedor{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;min-height:68px;gap:12px;padding-top:env(safe-area-inset-top,0px)}
+.encabezado .logos{grid-column:2;display:flex;align-items:center;gap:18px}
+.encabezado .logos img{height:44px;width:auto}
+.encabezado .logos .div{width:1px;height:34px;background:var(--linea)}
+.btn-a11y{grid-column:3;justify-self:end;display:inline-flex;align-items:center;gap:8px;border:2px solid var(--azul);background:#fff;color:var(--azul);border-radius:999px;padding:7px 14px 7px 8px;cursor:pointer;font-weight:700}
+.btn-a11y svg{width:30px;height:30px;flex:none}
+.btn-a11y[aria-expanded="true"]{background:var(--azul);color:#fff}
+@media (max-width:560px){.encabezado .logos img{height:34px}.btn-a11y .txt{display:none}.btn-a11y{padding:6px}}
+.panel-a11y{position:fixed;right:16px;top:calc(env(safe-area-inset-top,0px) + 76px);width:min(360px,calc(100% - 32px));background:#fff;border:2px solid var(--azul);border-radius:var(--radio);box-shadow:0 20px 50px rgba(0,0,0,.18);padding:18px;z-index:40}
+.panel-a11y[hidden]{display:none}
+.panel-a11y h2{font-size:1.15rem;margin:0 0 12px;color:var(--azul)}
+.panel-a11y .fila{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0;border-top:1px solid var(--gris)}
+.panel-a11y .fila:first-of-type{border-top:0}
+.grupo-botones{display:inline-flex;border:1px solid var(--linea);border-radius:10px;overflow:hidden}
+.grupo-botones button{border:0;background:#fff;padding:6px 12px;min-width:44px;min-height:40px;cursor:pointer;font-weight:700;color:var(--azul)}
+.grupo-botones button+button{border-left:1px solid var(--linea)}
+.interruptor{position:relative;width:52px;height:30px;border-radius:999px;border:2px solid var(--azul);background:#fff;cursor:pointer;flex:none}
+.interruptor::after{content:"";position:absolute;top:3px;left:3px;width:20px;height:20px;border-radius:50%;background:var(--azul);transition:transform .2s}
+.interruptor[aria-checked="true"]{background:var(--azul)}
+.interruptor[aria-checked="true"]::after{transform:translateX(22px);background:#fff}
+.panel-a11y .restablecer{margin-top:10px;background:none;border:0;color:var(--teal-hondo);text-decoration:underline;cursor:pointer;padding:6px 0}
+.panel-a11y{max-height:calc(100vh - 100px - env(safe-area-inset-top,0px));overflow:auto;width:min(390px,calc(100% - 32px))}
+.panel-a11y h3{font-size:.95rem;margin:16px 0 2px;color:var(--teal-hondo);border-bottom:2px solid var(--gris);padding-bottom:6px}
+.panel-a11y h3:first-of-type{margin-top:4px}
+.panel-a11y .fila:first-of-type{border-top:1px solid var(--gris)}
+.panel-a11y h3+.fila{border-top:0}
+.lector{display:grid;gap:10px;padding:10px 0}
+.lector .botones{display:flex;flex-wrap:wrap;gap:8px}
+.lector .botones button{display:inline-flex;align-items:center;gap:6px}
+.lector .nota{font-size:.88rem;color:var(--tinta-suave);margin:0}
+.lector select{min-height:40px;border:1px solid var(--linea);border-radius:8px;padding:4px 8px;background:#fff;color:var(--azul);font-weight:700}
+.panel-a11y .fila select{min-height:40px;border:1px solid var(--linea);border-radius:8px;padding:4px 8px;background:#fff;color:var(--azul);font-weight:700}
+.leyendo{background:#FFF3B0!important;outline:3px solid var(--amarillo);outline-offset:3px;border-radius:4px;color:#1E2B37!important}
+html[data-cursor="grande"],html[data-cursor="grande"] *{cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44' viewBox='0 0 24 24'%3E%3Cpath d='M4 2l15 11-7 1 4 8-3 1-4-8-5 5z' fill='%23000' stroke='%23fff' stroke-width='1.4'/%3E%3C/svg%3E") 6 3,auto!important}
+html[data-saturacion="baja"] main,html[data-saturacion="baja"] .encabezado,html[data-saturacion="baja"] .pie-pagina{filter:grayscale(1)}
+html[data-interactivos="si"] a,html[data-interactivos="si"] button,html[data-interactivos="si"] input,html[data-interactivos="si"] select,html[data-interactivos="si"] summary,html[data-interactivos="si"] .chip span{outline:3px solid var(--amarillo)!important;outline-offset:2px}
+html[data-titulos="si"] main h1,html[data-titulos="si"] main h2,html[data-titulos="si"] main h3{background:#FFF3B0;color:#1E2B37!important;box-shadow:0 0 0 6px #FFF3B0;border-radius:4px}
+html[data-alineado="si"] main *{text-align:left!important}
+html[data-imagenes="no"] main img[alt=""],html[data-imagenes="no"] .escena,html[data-imagenes="no"] .apoyo,html[data-imagenes="no"] .banda-guia .personajes{visibility:hidden}
+#guiaLinea{position:fixed;left:0;right:0;height:14px;margin-top:-7px;background:rgba(242,194,0,.45);border-top:2px solid #24405E;border-bottom:2px solid #24405E;pointer-events:none;z-index:55}
+.mascara{position:fixed;left:0;right:0;background:rgba(10,25,35,.62);pointer-events:none;z-index:55}
+#guiaLinea[hidden],.mascara[hidden]{display:none}
+
+/* Portada */
+.portada{position:relative;overflow:hidden;color:#fff;background:var(--teal);isolation:isolate}
+.portada::before{content:"";position:absolute;inset:0;z-index:-1;opacity:.32;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .5 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");mix-blend-mode:soft-light}
+.portada::after{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(120% 90% at 0% 0%,rgba(255,255,255,.14),transparent 60%)}
+.portada .contenedor{display:grid;grid-template-columns:1.15fr .85fr;gap:24px;align-items:end;padding:48px 0 0;min-height:540px}
+.portada .texto{padding-bottom:84px}
+.portada .fecha{display:inline-flex;align-items:center;gap:10px;background:#fff;color:var(--azul);border-radius:999px;padding:6px 16px 6px 8px;font-weight:700;margin-bottom:22px}
+.portada .fecha img{height:30px;width:auto;border-radius:4px}
+.portada h1{font-size:clamp(2.3rem,5.4vw,4.25rem);line-height:1.02;margin:0;font-weight:800;letter-spacing:-.02em;max-width:13ch}
+.portada .bajada{font-size:clamp(1.05rem,1.7vw,1.28rem);max-width:46ch;margin:22px 0 30px;color:#E9F6F7}
+.franja{display:flex;width:240px;height:8px;margin:0 0 10px}
+.franja i{flex:2;background:var(--amarillo)} .franja i+i{flex:1;background:var(--azul-bandera)} .franja i+i+i{flex:1;background:var(--rojo)}
+.colombia-llama{font-weight:800;letter-spacing:.06em;font-size:1.05rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:12px;padding:13px 22px;font-weight:800;border:2px solid transparent;cursor:pointer;text-decoration:none;min-height:48px;line-height:1.2}
+.btn-primario{background:var(--amarillo);color:var(--azul)}
+.btn-primario:hover{background:#FFD326}
+.btn-azul{background:var(--azul);color:#fff}
+.btn-azul:hover{background:#1A3149}
+.btn-borde{background:#fff;color:var(--azul);border-color:var(--azul)}
+.btn-borde:hover{background:var(--teal-claro)}
+.btn-chico{padding:8px 14px;min-height:40px;font-size:.95rem;border-radius:10px}
+.btn[disabled]{opacity:.55;cursor:not-allowed}
+.escena{position:relative;align-self:stretch;min-height:420px;isolation:isolate}
+.escena .valentina{position:absolute;left:0;right:0;bottom:0;margin:auto;width:min(470px,100%);filter:drop-shadow(0 18px 24px rgba(0,30,40,.25))}
+@media (max-width:860px){.portada .contenedor{grid-template-columns:1fr;padding-top:40px}.portada .texto{padding-bottom:0}.escena{min-height:330px}.escena .valentina{width:340px}}
+
+/* Pasos */
+.pasos{padding:56px 0 24px}
+.pasos ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:28px;counter-reset:paso}
+.pasos li{counter-increment:paso;display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start}
+.pasos li::before{content:counter(paso);display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--azul);color:#fff;font-weight:800;font-size:1.25rem}
+.pasos h3{font-size:1.15rem;margin:6px 0 4px;color:var(--azul)}
+.pasos p{margin:0;color:var(--tinta-suave)}
+@media (max-width:760px){.pasos ol{grid-template-columns:1fr}}
+
+/* Buscador */
+.seccion{padding:40px 0}
+.seccion h2.titulo{font-size:clamp(1.6rem,3vw,2.2rem);line-height:1.15;margin:0 0 10px;color:var(--azul);letter-spacing:-.01em}
+.seccion .intro{max-width:62ch;color:var(--tinta-suave);margin:0 0 24px}
+.buscador{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:28px;align-items:start}
+@media (max-width:900px){.buscador{grid-template-columns:1fr}.buscador .apoyo{display:none}}
+.caja{background:#fff;border-radius:var(--radio);box-shadow:var(--sombra);padding:26px}
+.campo label{display:block;font-weight:800;color:var(--azul);margin-bottom:8px}
+.campo .ayuda{display:block;color:var(--tinta-suave);font-size:.95rem;margin-top:6px}
+.entrada{width:100%;min-height:52px;border:2px solid var(--linea);border-radius:12px;padding:12px 16px;font-size:1.08rem;background:#fff;color:var(--tinta)}
+.entrada:focus{border-color:var(--azul);outline:none;box-shadow:0 0 0 4px rgba(242,194,0,.55)}
+.buscar-envoltura{position:relative}
+.buscar-envoltura svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);width:22px;height:22px;color:var(--tinta-suave);pointer-events:none}
+.buscar-envoltura .entrada{padding-left:46px}
+.filtros{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 4px;padding:0;border:0}
+.filtros legend{font-weight:700;color:var(--tinta-suave);margin-bottom:8px;font-size:.95rem;padding:0}
+.chip{position:relative}
+.chip input{position:absolute;opacity:0;inset:0;cursor:pointer}
+.chip span{display:inline-block;border:2px solid var(--linea);border-radius:999px;padding:6px 14px;font-weight:700;color:var(--azul);background:#fff}
+.chip input:checked+span{background:var(--azul);border-color:var(--azul);color:#fff}
+.chip input:focus-visible+span{outline:3px solid var(--amarillo);outline-offset:2px}
+.resultados{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:10px}
+.resultado button{width:100%;text-align:left;background:#fff;border:2px solid var(--gris);border-radius:12px;padding:14px 16px;cursor:pointer;display:grid;grid-template-columns:1fr auto;gap:4px 14px;align-items:center;color:var(--tinta)}
+.resultado button:hover{border-color:var(--teal)}
+.resultado .nombre{font-weight:800;color:var(--azul);font-size:1.05rem}
+.resultado .detalle{color:var(--tinta-suave);font-size:.95rem;grid-column:1}
+.resultado .etiqueta{grid-row:1/3;grid-column:2}
+.etiqueta{display:inline-block;font-size:.82rem;font-weight:800;border-radius:6px;padding:4px 9px;background:var(--teal-claro);color:var(--teal-hondo);white-space:nowrap}
+.etiqueta.n{background:#FFF4CC;color:#6B4E00}.etiqueta.d{background:#E1EEF8;color:#1F3C8C}.etiqueta.s{background:#FBE7DE;color:#8A3613}
+.estado-busqueda{margin:14px 0 0;color:var(--tinta-suave)}
+.mas{margin-top:12px}
+.apoyo{position:sticky;top:96px}
+.apoyo img{width:100%;max-width:260px;margin:0 auto}
+.globo{background:#fff;border-radius:16px;padding:16px 18px;box-shadow:var(--sombra);position:relative;margin-bottom:14px;font-size:.98rem}
+.globo::after{content:"";position:absolute;bottom:-10px;left:50%;border:10px solid transparent;border-top-color:#fff;border-bottom:0;transform:translateX(-50%)}
+
+/* Validación */
+.fila-form{display:flex;gap:12px;flex-wrap:wrap;align-items:flex-end;margin-top:14px}
+.fila-form .campo{flex:1 1 280px}
+
+/* Espacio de trabajo */
+#trabajo[hidden]{display:none}
+.cabecera-trabajo{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:end;background:var(--azul);color:#fff;border-radius:var(--radio) var(--radio) 0 0;padding:28px 28px 0;overflow:hidden;position:relative}
+.cabecera-trabajo h2{margin:0 0 6px;font-size:clamp(1.6rem,3.2vw,2.4rem);line-height:1.1}
+.cabecera-trabajo p{margin:0 0 22px;color:#DCE7F1;max-width:60ch}
+.cabecera-trabajo .personaje{width:190px;align-self:end}
+.cabecera-trabajo .ruta{display:inline-block;background:var(--amarillo);color:var(--azul);font-weight:800;border-radius:8px;padding:4px 10px;margin-bottom:12px}
+@media (max-width:640px){.cabecera-trabajo{grid-template-columns:1fr}.cabecera-trabajo .personaje{width:140px;justify-self:end;margin-top:-20px}}
+.controles{background:#fff;border-radius:0 0 var(--radio) var(--radio);box-shadow:var(--sombra);padding:20px 28px;display:flex;flex-wrap:wrap;gap:18px 28px;align-items:flex-end}
+.controles .campo{min-width:220px}
+.controles .entrada{min-height:46px;font-size:1rem}
+.aviso{margin:18px 0 0;background:#FFF8DD;border-left:5px solid var(--amarillo);border-radius:10px;padding:12px 16px}
+.aviso[hidden]{display:none}
+.linea-tiempo{list-style:none;margin:28px 0 0;padding:0;position:relative}
+.linea-tiempo::before{content:"";position:absolute;left:23px;top:10px;bottom:10px;width:4px;background:linear-gradient(var(--amarillo) 0 50%,var(--azul-bandera) 50% 75%,var(--rojo) 75%);border-radius:4px}
+.pub{position:relative;margin:0 0 30px 64px;background:#fff;border-radius:var(--radio);box-shadow:var(--sombra);padding:24px 24px 20px}
+.pub .num{position:absolute;left:-64px;top:18px;width:50px;height:50px;border-radius:50%;background:var(--azul);color:#fff;display:grid;place-items:center;font-weight:800;font-size:1.25rem;border:4px solid var(--papel)}
+.pub .cabeza{display:flex;gap:16px;align-items:flex-start}
+.pub .cabeza .txt{flex:1}
+.pub .cuando{display:inline-block;font-weight:800;color:var(--teal-hondo);background:var(--teal-claro);border-radius:6px;padding:3px 10px;margin-bottom:6px;font-size:.95rem}
+.pub .cuando.fuera{background:#FDECE6;color:var(--alerta)}
+.pub h3{margin:0;font-size:1.35rem;line-height:1.2;color:var(--azul)}
+.pub .cabeza img{width:96px;flex:none;margin-top:-8px}
+@media (max-width:640px){.pub{margin-left:44px;padding:18px}.pub .num{left:-50px;width:40px;height:40px;font-size:1.05rem}.linea-tiempo::before{left:16px}.pub .cabeza img{width:64px}}
+.carrusel{display:flex;gap:6px;overflow-x:auto;padding:16px 2px 10px;scroll-snap-type:x mandatory}
+.carrusel figure{margin:0;flex:0 0 auto;width:min(210px,58vw);scroll-snap-align:start;position:relative}
+.carrusel button.ver{display:block;padding:0;border:0;background:none;cursor:zoom-in;width:100%;border-radius:8px;overflow:hidden}
+.carrusel img{width:100%;aspect-ratio:4/5;object-fit:cover;background:var(--gris)}
+.carrusel figcaption{display:flex;justify-content:space-between;align-items:center;font-size:.88rem;color:var(--tinta-suave);padding-top:6px;gap:6px}
+.carrusel .bajar{border:1px solid var(--linea);background:#fff;border-radius:8px;padding:4px 8px;font-weight:700;color:var(--azul);cursor:pointer;text-decoration:none;font-size:.85rem}
+.carrusel .es-video .ver{position:relative}
+.carrusel .es-video .ver::after{content:"";position:absolute;inset:0;margin:auto;width:56px;height:56px;border-radius:50%;background:rgba(36,64,94,.85) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 7v10l8-5z' fill='white'/%3E%3C/svg%3E") center/30px no-repeat}
+.acciones{display:flex;flex-wrap:wrap;gap:10px;margin:6px 0 14px}
+.texto-copy{border:2px solid var(--gris);border-radius:12px;background:#FBFCFC}
+.texto-copy summary, .alts summary{cursor:pointer;font-weight:800;color:var(--azul);padding:12px 16px;list-style:none;display:flex;justify-content:space-between;gap:10px}
+.texto-copy summary::-webkit-details-marker,.alts summary::-webkit-details-marker{display:none}
+.texto-copy summary::after,.alts summary::after{content:"+";font-size:1.3rem;line-height:1}
+.texto-copy[open] summary::after,.alts[open] summary::after{content:"–"}
+.texto-copy pre{white-space:pre-wrap;font-family:inherit;margin:0;padding:0 16px 14px;max-height:340px;overflow:auto}
+.texto-copy .pie{padding:0 16px 14px}
+.alts{border:2px solid var(--gris);border-radius:12px;margin-top:10px}
+.alts ol{margin:0;padding:0 16px 14px 36px}
+.alts li{margin-bottom:10px}
+.alts li button{margin-top:4px}
+.pendiente{background:#fff;border-radius:var(--radio);box-shadow:var(--sombra);padding:28px;margin-top:24px;display:flex;gap:20px;align-items:center}
+.pendiente img{width:140px}
+
+/* Generador */
+.generador{display:grid;grid-template-columns:360px minmax(0,1fr);gap:28px;margin-top:24px;align-items:start}
+@media (max-width:980px){.generador{grid-template-columns:1fr}}
+.formulario{background:#fff;border-radius:var(--radio);box-shadow:var(--sombra);padding:22px;display:grid;gap:18px;position:sticky;top:92px}
+@media (max-width:980px){.formulario{position:static}}
+.formulario .entrada{min-height:46px;font-size:1rem}
+.subir{border:2px dashed var(--teal);border-radius:12px;padding:16px;text-align:center;background:var(--teal-claro);cursor:pointer;display:block}
+.subir input{position:absolute;opacity:0;width:1px;height:1px}
+.subir:focus-within{outline:3px solid var(--amarillo);outline-offset:2px}
+.subir .vista{display:flex;align-items:center;justify-content:center;gap:12px}
+.subir .vista img{max-height:64px;max-width:120px;background:#fff;border-radius:8px;padding:4px}
+.previas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media (max-width:640px){.previas{grid-template-columns:1fr;max-width:420px}}
+.previas figure{margin:0}
+.previas canvas{width:100%;height:auto;border-radius:10px;box-shadow:var(--sombra);background:var(--gris);display:block}
+.previas figcaption{display:flex;justify-content:space-between;align-items:center;gap:6px;padding-top:8px;font-size:.9rem;color:var(--tinta-suave)}
+
+/* Guía */
+.guia{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+@media (max-width:900px){.guia{grid-template-columns:1fr}}
+.consejo{background:#fff;border-radius:var(--radio);padding:22px;box-shadow:var(--sombra);position:relative;overflow:hidden}
+.consejo h3{margin:0 0 8px;color:var(--azul);font-size:1.15rem}
+.consejo p{margin:0;color:var(--tinta-suave)}
+.consejo ul{margin:8px 0 0;padding-left:20px;color:var(--tinta-suave)}
+.banda-guia{display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:center;margin-bottom:28px}
+.banda-guia .personajes{display:flex;align-items:flex-end;gap:4px}
+.banda-guia .personajes img{height:200px;width:auto}
+@media (max-width:700px){.banda-guia{grid-template-columns:1fr}.banda-guia .personajes img{height:150px}}
+.no-esta{margin-top:26px;background:var(--azul);color:#fff;border-radius:var(--radio);padding:24px 26px;display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center}
+.no-esta h3{margin:0 0 6px}
+.no-esta p{margin:0;color:#DCE7F1;max-width:70ch}
+.no-esta img{width:150px}
+@media (max-width:700px){.no-esta{grid-template-columns:1fr}.no-esta img{display:none}}
+
+/* Pie */
+.pie-pagina{background:#fff;border-top:1px solid var(--linea);margin-top:40px}
+.pie-pagina .contenedor{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:end;padding:28px 0}
+.pie-pagina p{margin:0;color:var(--tinta-suave);font-size:.95rem;max-width:70ch}
+.pie-pagina .logos-pie{display:flex;gap:22px;align-items:center;justify-self:end}
+.pie-pagina .logos-pie img{height:40px;width:auto}
+@media (max-width:700px){.pie-pagina .contenedor{grid-template-columns:1fr}.pie-pagina .logos-pie{justify-self:end}}
+
+/* Visor */
+dialog.visor{border:0;padding:0;background:transparent;max-width:min(96vw,1100px);width:100%}
+dialog.visor::backdrop{background:rgba(10,30,40,.82)}
+.visor .marco{background:#fff;border-radius:16px;display:grid;grid-template-columns:minmax(0,1fr) 320px;overflow:hidden;max-height:92vh}
+.visor .medio{background:#0F2230;display:grid;place-items:center;min-height:300px}
+.visor .medio img,.visor .medio video{max-height:88vh;width:auto;max-width:100%}
+.visor .info{padding:20px;display:flex;flex-direction:column;gap:12px;overflow:auto}
+.visor .info h3{margin:0;color:var(--azul)}
+.visor .info p{margin:0;color:var(--tinta-suave);font-size:.95rem}
+.visor .nav{display:flex;gap:8px;margin-top:auto;flex-wrap:wrap}
+@media (max-width:820px){.visor .marco{grid-template-columns:1fr}.visor .medio img,.visor .medio video{max-height:60vh}}
+.toast{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 22px);transform:translateX(-50%);background:var(--azul);color:#fff;padding:12px 18px;border-radius:12px;font-weight:700;z-index:60;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.toast[hidden]{display:none}
+
+/* Animación de personajes: solo al aparecer en pantalla */
+.anima{opacity:0;transform:translateY(26px) scale(.98)}
+.anima.entra{animation:subir .9s cubic-bezier(.2,.75,.25,1) forwards}
+.anima.entra.saluda{animation:subir .9s cubic-bezier(.2,.75,.25,1) forwards,mecer 1.6s .9s ease-in-out 1}
+@keyframes subir{to{opacity:1;transform:none}}
+@keyframes mecer{0%,100%{transform:rotate(0)}30%{transform:rotate(-3deg)}65%{transform:rotate(2deg)}}
+html[data-movimiento="reducido"] .anima, html[data-movimiento="reducido"] .gallito{opacity:1!important;transform:none!important;animation:none!important}
+@media (prefers-reduced-motion:reduce){.anima,.gallito,html{scroll-behavior:auto}}
+.paisaje{position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.paisaje .sol{position:absolute;right:6%;top:26px;width:150px;height:150px}
+.paisaje .nube{position:absolute;left:0;opacity:.3;animation:nube linear infinite}
+.paisaje .montanas{position:absolute;left:0;right:0;bottom:-2px;width:100%;height:170px}
+.paisaje .palma{position:absolute;bottom:92px;width:92px}
+.paisaje .flor{position:absolute;bottom:96px;width:46px}
+.paisaje .mariposa{position:absolute;width:42px}
+.paisaje .colibri{position:absolute;width:118px;right:30%;top:150px}
+.paisaje .colibri img{width:100%}
+.paisaje .gallito-vuelo{position:absolute;width:104px;right:calc(10% - 40px);bottom:236px}
+.paisaje .gallito-vuelo img{width:100%}
+.portada .contenedor{position:relative;z-index:1}
+.portada .texto{padding-bottom:170px!important}
+.escena .valentina{bottom:84px!important}
+.logo-programa{height:78px;width:auto;margin:0 0 18px;filter:drop-shadow(0 4px 10px rgba(0,40,50,.25))}
+.pausa-mov{position:absolute;left:16px;bottom:14px;z-index:3;background:rgba(255,255,255,.94);color:var(--azul);border:0;border-radius:999px;padding:6px 14px;font-weight:700;font-size:.85rem;cursor:pointer;min-height:36px}
+@media (max-width:860px){.paisaje .montanas{height:120px}.paisaje .palma{width:62px;bottom:64px}.paisaje .flor{bottom:66px;width:34px}.paisaje .sol{width:96px;height:96px}.paisaje .colibri{width:84px;right:6%;top:auto;bottom:300px}.portada .texto{padding-bottom:20px!important}.escena .valentina{bottom:56px!important}.logo-programa{height:60px}}
+.vivo *,.vivo{animation-play-state:paused!important}
+.vivo.activa *,.vivo.activa{animation-play-state:running!important}
+@keyframes nube{from{transform:translateX(-30vw)}to{transform:translateX(120vw)}}
+.sol .rayos{transform-origin:75px 75px;animation:girar 50s linear infinite}
+.sol .brillo{transform-origin:75px 75px;animation:brillo 4.5s ease-in-out infinite}
+@keyframes girar{to{transform:rotate(360deg)}}
+@keyframes brillo{0%,100%{opacity:.35;transform:scale(1)}50%{opacity:.75;transform:scale(1.14)}}
+.palma .copa{transform-box:fill-box;transform-origin:50% 60%;animation:copa 5.5s ease-in-out infinite}
+.palma .tronco{transform-box:fill-box;transform-origin:50% 100%;animation:tronco 5.5s ease-in-out infinite}
+.palma.b .copa,.palma.b .tronco{animation-duration:6.8s;animation-delay:-2s}
+@keyframes copa{0%,100%{transform:rotate(-4deg)}45%{transform:rotate(5deg)}70%{transform:rotate(1deg)}}
+@keyframes tronco{0%,100%{transform:rotate(-1deg)}45%{transform:rotate(1.4deg)}}
+.flor{transform-origin:50% 100%;animation:flor 4s ease-in-out infinite}
+.flor:nth-of-type(2n){animation-duration:5.2s;animation-delay:-1.5s}
+@keyframes flor{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+.mariposa .ala-i{transform-box:fill-box;transform-origin:100% 50%;animation:aleteo .19s ease-in-out infinite alternate}
+.mariposa .ala-d{transform-box:fill-box;transform-origin:0% 50%;animation:aleteo .19s ease-in-out infinite alternate}
+@keyframes aleteo{from{transform:scaleX(1)}to{transform:scaleX(.18)}}
+.mariposa.m1{animation:revolotear1 19s ease-in-out infinite}
+.mariposa.m2{animation:revolotear2 23s ease-in-out infinite}
+.mariposa.m3{animation:revolotear3 27s ease-in-out infinite}
+@keyframes revolotear1{0%{left:58%;top:62%}12%{left:63%;top:48%}20%{left:61%;top:55%}33%{left:70%;top:40%}45%{left:76%;top:52%}52%{left:74%;top:46%}66%{left:66%;top:34%}80%{left:60%;top:50%}90%{left:62%;top:44%}100%{left:58%;top:62%}}
+@keyframes revolotear2{0%{left:84%;top:58%}15%{left:80%;top:44%}25%{left:86%;top:36%}40%{left:92%;top:48%}55%{left:88%;top:60%}62%{left:90%;top:54%}75%{left:82%;top:40%}88%{left:78%;top:54%}100%{left:84%;top:58%}}
+@keyframes revolotear3{0%{left:56%;top:72%}20%{left:62%;top:58%}30%{left:66%;top:64%}45%{left:72%;top:34%}60%{left:78%;top:42%}75%{left:88%;top:22%}100%{left:108%;top:30%}}
+.colibri{animation:colibri 15s cubic-bezier(.6,0,.25,1) infinite}
+.colibri img{animation:suspendido .11s ease-in-out infinite alternate}
+@keyframes suspendido{from{transform:translateY(-2px) rotate(-1deg)}to{transform:translateY(3px) rotate(1deg)}}
+@keyframes colibri{0%,14%{transform:translate(0,0) scaleX(1)}18%,34%{transform:translate(-140px,40px) scaleX(1)}38%,55%{transform:translate(-60px,-50px) scaleX(1)}58%,61%{transform:translate(-60px,-50px) scaleX(-1)}64%,80%{transform:translate(-260px,10px) scaleX(-1)}83%,86%{transform:translate(-260px,10px) scaleX(1)}92%,100%{transform:translate(0,0) scaleX(1)}}
+.gallito-vuelo{animation:gallitoVuela 3.6s cubic-bezier(.35,.1,.25,1) .4s both}
+.gallito-vuelo .f1{position:relative;animation:aleteoGallo .26s steps(1) .4s 13 both}
+.gallito-vuelo .f2{position:absolute;inset:0;opacity:0;animation:aleteoGallo2 .26s steps(1) .4s 13 both}
+@keyframes gallitoVuela{0%{transform:translate(-75vw,-60px) rotate(-8deg) scale(.7);opacity:0}8%{opacity:1}35%{transform:translate(-50vw,-180px) rotate(-4deg) scale(.82)}55%{transform:translate(-26vw,-140px) rotate(2deg) scale(.9)}80%{transform:translate(-6vw,-40px) rotate(-3deg) scale(.98)}92%{transform:translate(-1vw,-6px) rotate(4deg) scale(1)}100%{transform:translate(0,0) rotate(0) scale(1);opacity:1}}
+@keyframes aleteoGallo{0%{opacity:1}50%{opacity:0}100%{opacity:0}}
+@keyframes aleteoGallo2{0%{opacity:0}50%{opacity:1}100%{opacity:1}}
+.farol .luz{opacity:0}
+.farol.encendido .luz{animation:encender 1.6s ease-out forwards,titilar 3.5s 1.6s ease-in-out infinite}
+@keyframes encender{0%{opacity:0}20%{opacity:.8}28%{opacity:.15}40%{opacity:.9}55%{opacity:.4}100%{opacity:1}}
+@keyframes titilar{0%,100%{opacity:1}50%{opacity:.82}}
+.saluda{transform-origin:50% 100%}
+.anima.entra.saluda{animation:subir .9s cubic-bezier(.2,.75,.25,1) forwards,saludar 2.4s .9s ease-in-out 2}
+@keyframes saludar{0%,100%{transform:rotate(0)}15%{transform:rotate(-4deg) translateY(-3px)}30%{transform:rotate(3deg)}45%{transform:rotate(-4deg) translateY(-3px)}60%{transform:rotate(2deg)}}
+.banda-paisaje{position:relative;height:230px;overflow:hidden;margin-top:30px;pointer-events:none}
+.banda-paisaje .montanas{position:absolute;left:0;right:0;bottom:-2px;width:100%;height:120px}
+.banda-paisaje .palma{position:absolute;bottom:58px;width:70px}
+.banda-paisaje .mariposa{position:absolute;width:34px}
+.cabecera-trabajo .farol{position:absolute;right:230px;bottom:0;width:54px;height:200px}
+@media (max-width:640px){.cabecera-trabajo .farol{display:none}}
+html[data-movimiento="reducido"] .paisaje *,html[data-movimiento="reducido"] .banda-paisaje *,html[data-movimiento="reducido"] .farol *{animation:none!important}
+html[data-movimiento="reducido"] .gallito-vuelo{animation:none!important;transform:none}
+html[data-movimiento="reducido"] .gallito-vuelo .f2{opacity:0!important}
+html[data-movimiento="reducido"] .farol .luz{opacity:1}
+html[data-movimiento="reducido"] .mariposa.m3{display:none}
+@media (prefers-reduced-motion:reduce){.paisaje *,.banda-paisaje *,.farol *{animation:none!important}.gallito-vuelo{animation:none!important;transform:none}.farol .luz{opacity:1}.mariposa.m3{display:none}}
+
+/* Navegación por pasos */
+.pasos-nav{background:#fff;border-top:1px solid var(--gris)}
+.pasos-nav ol{list-style:none;margin:0 auto;padding:0;display:flex;gap:6px;width:min(1120px,100% - 40px)}
+.pasos-nav li{flex:1}
+.pasos-nav button{width:100%;display:flex;align-items:center;gap:10px;background:none;border:0;border-bottom:4px solid transparent;padding:10px 6px;cursor:pointer;color:var(--tinta-suave);font-weight:700;text-align:left}
+.pasos-nav button .n{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--gris);color:var(--azul);font-weight:800;flex:none}
+.pasos-nav button[aria-current="step"]{color:var(--azul);border-bottom-color:var(--amarillo)}
+.pasos-nav button[aria-current="step"] .n{background:var(--azul);color:#fff}
+.pasos-nav button.hecho .n{background:var(--ok);color:#fff}
+.pasos-nav button[disabled]{opacity:.45;cursor:not-allowed}
+@media (max-width:640px){.pasos-nav .t{font-size:.82rem;line-height:1.15}.pasos-nav button{gap:6px;padding:8px 2px}}
+/* Buscador en la portada */
+.busca-portada{background:#fff;border-radius:16px;padding:16px;max-width:560px;box-shadow:0 14px 34px rgba(0,30,40,.25);margin:0 0 26px}
+.busca-portada label{display:block;font-weight:800;color:var(--azul);margin-bottom:8px;font-size:1.05rem}
+.busca-portada .fila{display:flex;gap:10px}
+.busca-portada .entrada{flex:1;min-width:0}
+@media (max-width:520px){.busca-portada .fila{flex-direction:column}}
+/* Tarjetas de tipo */
+.filtros.tarjetas{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.filtros.tarjetas legend{grid-column:1/-1}
+.filtros.tarjetas .chip span{display:block;border-radius:12px;padding:10px 12px;height:100%}
+.filtros.tarjetas .chip small{display:block;font-weight:400;font-size:.82rem;opacity:.85;margin-top:2px;line-height:1.3}
+.sugerencias[hidden]{display:none}
+.sugerencias{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:12px 0 0}
+.sugerencias button{border:1px dashed var(--teal);background:var(--teal-claro);color:var(--teal-hondo);border-radius:999px;padding:5px 12px;font-weight:700;cursor:pointer}
+/* Avance de publicaciones */
+.avance{display:flex;align-items:center;gap:14px;margin:24px 0 0;background:#fff;border-radius:12px;padding:14px 18px;box-shadow:var(--sombra)}
+.avance .barra{flex:1;height:12px;border-radius:999px;background:var(--gris);overflow:hidden}
+.avance .barra i{display:block;height:100%;background:linear-gradient(90deg,var(--amarillo),var(--ok));width:0;transition:width .5s}
+.avance strong{color:var(--azul);white-space:nowrap}
+.marca{display:inline-flex;align-items:center;gap:10px;font-weight:800;color:var(--azul);cursor:pointer;margin:2px 0 10px;padding:8px 12px;border:2px solid var(--gris);border-radius:10px}
+.marca input{width:22px;height:22px;accent-color:var(--ok)}
+.pub.publicada{box-shadow:0 0 0 3px var(--ok),var(--sombra)}
+.pub.publicada .num{background:var(--ok)}
+/* Bosque de palmas */
+.palma .copa{animation-duration:var(--d,5.5s)!important;animation-delay:var(--dl,0s)!important}
+.palma .tronco{animation-duration:var(--d,5.5s)!important;animation-delay:var(--dl,0s)!important}
+.palma.fondo{opacity:.72}
+.portada .texto{padding-bottom:230px!important}
+@media (max-width:860px){.portada .texto{padding-bottom:30px!important}}
+
+.pj{position:absolute;bottom:2px;left:0;width:116px;height:170px;background-repeat:no-repeat;background-size:600% 100%;background-position:0 0;will-change:transform}
+html[data-movimiento="reducido"] .pj{transition:none}
+@media (max-width:600px){.resultado button{grid-template-columns:1fr}.resultado .etiqueta{grid-row:auto;grid-column:1;justify-self:start;margin-top:4px}.caja{padding:18px}}
+.caminantes{position:absolute;inset:0}
+
+.falta-logo{margin:18px 0 0;background:#FFF8DD;border:2px dashed var(--amarillo);border-radius:14px;padding:18px 20px;display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center}
+.falta-logo h3{margin:0 0 4px;color:var(--azul);font-size:1.15rem}
+.falta-logo p{margin:0;color:var(--tinta)}
+.falta-logo .subir{background:#fff;min-width:240px}
+.falta-logo.listo{background:#E3F4EA;border-color:var(--ok)}
+@media (max-width:700px){.falta-logo{grid-template-columns:1fr}}
+.sin-logo{position:absolute;left:6px;top:6px;background:var(--amarillo);color:var(--azul);font-weight:800;font-size:.75rem;border-radius:6px;padding:3px 7px;pointer-events:none}
+</style>
+</head>
+<body>
+<a class="saltar" href="#buscar">Ir al buscador</a>
+
+<header class="encabezado">
+  <div class="contenedor">
+    <div class="logos">
+      <img src="assets/logos/mincit-hd.png" alt="Ministerio de Comercio, Industria y Turismo" style="height:46px">
+      <span class="div" aria-hidden="true"></span>
+      <img src="assets/logos/fontur-hd.png" alt="FONTUR Colombia" style="height:28px">
+    </div>
+    <button class="btn-a11y" id="btnA11y" aria-expanded="false" aria-controls="panelA11y" title="Herramientas de accesibilidad (Alt + A)">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="currentColor" opacity=".12"/><circle cx="24" cy="24" r="20" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="24" cy="12.5" r="3.2" fill="currentColor"/><path d="M12.5 18.2c3.8 1 7.6 1.5 11.5 1.5s7.7-.5 11.5-1.5" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M21 20v8l-3.2 9.5M27 20v8l3.2 9.5" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+      <span class="txt">Accesibilidad</span>
+    </button>
+  </div>
+  <nav class="pasos-nav" aria-label="Pasos para obtener tus piezas">
+    <ol>
+      <li><button type="button" data-paso="1" aria-current="step"><span class="n">1</span><span class="t">Busca tu destino u organización</span></button></li>
+      <li><button type="button" data-paso="2" disabled><span class="n">2</span><span class="t">Revisa y descarga tus piezas</span></button></li>
+      <li><button type="button" data-paso="3"><span class="n">3</span><span class="t">Publica de forma accesible</span></button></li>
+    </ol>
+  </nav>
+</header>
+
+<div class="panel-a11y" id="panelA11y" role="dialog" aria-modal="false" aria-labelledby="tA11y" hidden>
+  <h2 id="tA11y">Ajusta la página a tu manera</h2>
+
+  <h3>Lectura en voz alta</h3>
+  <div class="lector">
+    <div class="botones">
+      <button type="button" class="btn btn-azul btn-chico" id="vozLeer">Leer la página</button>
+      <button type="button" class="btn btn-borde btn-chico" id="vozPausa" disabled>Pausar</button>
+      <button type="button" class="btn btn-borde btn-chico" id="vozDetener" disabled>Detener</button>
+    </div>
+    <div class="fila" style="border:0;padding:0"><label for="vozVel">Velocidad</label>
+      <select id="vozVel"><option value=".75">Lenta</option><option value="1" selected>Normal</option><option value="1.25">Rápida</option></select></div>
+    <p class="nota" id="vozNota">También puedes leer un solo texto: activa la opción de abajo y toca el párrafo que quieras escuchar.</p>
+  </div>
+  <div class="fila"><span id="lClic">Leer el texto que toque o seleccione</span><button type="button" class="interruptor" role="switch" aria-checked="false" aria-labelledby="lClic" data-pref="leerclic" data-valor="si"></button></div>
+
+  <h3>Texto</h3>
+  <div class="fila">
+    <span id="lTexto">Tamaño del texto</span>
+    <div class="grupo-botones" role="group" aria-labelledby="lTexto">
+      <button type="button" data-texto="-" aria-label="Reducir texto">A−</button>
+      <button type="button" data-texto="0" aria-label="Texto normal">A</button>
+      <button type="button" data-texto="+" aria-label="Aumentar texto">A+</button>
+    </div>
+  </div>
+  <div class="fila"><span id="lEsp">Más espacio entre líneas y letras</span><button type="button" class="interruptor" role="switch" aria-checked="false" aria-labelledby="lEsp" data-pref="espaciado" data-valor="si"></button></div>
+  <div class="fila"><span id="lAli">Alinear todo el texto a la izquierda</span><button type="button" class="interruptor" role="switch" aria-checked="false" aria-labelledby="lAli" data-pref="alineado" data-valor="si"></button></div>
+
+  <h3>Color y contraste</h3>
+  <div class="fila"><span id="lContraste">Alto contraste</span><button type="button" class="interruptor" role="switch" aria-checked="false" aria-labelledby="lContraste" data-pref="contraste" data-valor="alto"></button></div>
+  <div class="fila"><span id="lSat">Escala de grises</span><button type="button" class="interruptor" role="switch" aria-checked="false" aria-labelledby="lSat" data-pref="saturacion" data-valor="baja"></button></div>
+
+  <h3>Orientación</h3>
+  <div class="fila"><label for="selGuia">Guía de lectura</label><select id="selGuia"><option value="">Ninguna</option><option value="linea">Línea</option><option value="mascara">Ventana</option></select></div>
+  <div class="fila"><span id="lTit">Resaltar títulos</span><button type="button" class="interruptor" role="switch" aria-checked="false" aria-labelledby="lTit" data-pref="titulos" data-valor="si"></button></div>
+  <div class="fila"><span id="lInt">Resaltar botones y campos</span><button type="button" class="interruptor" role="switch" aria-checked="false" aria-labelledby="lInt" data-pref="interactivos" data-valor="si"></button></div>
+  <div class="fila"><span id="lSub">Subrayar enlaces</span><button type="button" class="interruptor" role="switch" aria-checked="false" aria-labelledby="lSub" data-pref="subrayar" data-valor="si"></button></div>
+  <div class="fila"><span id="lCur">Cursor grande</span><button type="button" class="interruptor" role="switch" aria-checked="false" aria-labelledby="lCur" data-pref="cursor" data-valor="grande"></button></div>
+
+  <h3>Movimiento e imágenes</h3>
+  <div class="fila"><span id="lMov">Detener animaciones</span><button type="button" class="interruptor" role="switch" aria-checked="false" aria-labelledby="lMov" data-pref="movimiento" data-valor="reducido"></button></div>
+  <div class="fila"><span id="lImg">Ocultar ilustraciones decorativas</span><button type="button" class="interruptor" role="switch" aria-checked="false" aria-labelledby="lImg" data-pref="imagenes" data-valor="no"></button></div>
+
+  <button type="button" class="restablecer" id="a11yReset">Volver a la configuración inicial</button>
+</div>
+<div id="guiaLinea" hidden></div><div class="mascara" id="mascaraArriba" hidden></div><div class="mascara" id="mascaraAbajo" hidden></div>
+
+<main id="contenido">
+  <section class="portada" aria-labelledby="tituloPortada">
+    <div class="paisaje vivo" id="paisaje" aria-hidden="true"></div>
+    <button type="button" class="pausa-mov" id="pausaMov" aria-pressed="false">Pausar movimiento</button>
+    <div class="contenedor">
+      <div class="texto">
+        <img class="logo-programa" src="assets/logos/calidad-turistica-blanco.png" alt="Calidad Turística Colombia, Programa de Calidad Turística">
+        <p class="fecha"><img src="assets/logos/wqw.png" alt="World Quality Week 2026">Del 9 al 13 de noviembre</p>
+        <h1 id="tituloPortada">Semana Nacional de la Calidad Turística 2026</h1>
+        <p class="bajada">Encuentra las piezas oficiales de tu destino u organización, con el texto sugerido y la descripción de cada imagen, listas para publicar en tus redes.</p>
+        <form class="busca-portada" id="formPortada" role="search">
+          <label for="qPortada">¿Cuál es tu destino u organización?</label>
+          <div class="fila"><input class="entrada" id="qPortada" type="search" autocomplete="off" placeholder="Ej.: Paipa, Jardín, Hotel Casa Pablo"><button class="btn btn-primario" type="submit">Buscar</button></div>
+        </form>
+        <div class="franja" aria-hidden="true"><i></i><i></i><i></i></div>
+        <p class="colombia-llama" style="margin:0">COLOMBIA TE LLAMA</p>
+      </div>
+      <div class="escena" aria-hidden="true">
+        <img class="valentina anima" src="assets/personajes/valentina-escritorio.webp" alt="">
+      </div>
+    </div>
+  </section>
+
+  <section class="pasos contenedor" aria-labelledby="tPasos">
+    <h2 id="tPasos" class="sr">Cómo funciona</h2>
+    <ol>
+      <li><div><h3>Busca tu destino u organización</h3><p>Escribe el nombre o el municipio. El buscador consulta la base oficial del programa.</p></div></li>
+      <li><div><h3>Elige tu registro</h3><p>Solo aparecen los destinos y organizaciones que hacen parte del Programa de Calidad Turística.</p></div></li>
+      <li><div><h3>Descarga y publica</h3><p>Baja tus piezas en JPG, copia el texto sugerido y agrega la descripción de cada imagen.</p></div></li>
+    </ol>
+  </section>
+
+  <section class="seccion" id="buscar" aria-labelledby="tBuscar">
+    <div class="contenedor">
+      <h2 class="titulo" id="tBuscar">Busca tus piezas</h2>
+      <p class="intro">El repositorio incluye a los 49 destinos del proyecto 50 Nuevos Destinos, los destinos certificados, los prestadores de servicios turísticos vinculados al programa y los actores de los SITCAT.</p>
+      <div class="buscador">
+        <div class="caja">
+          <div class="campo">
+            <label for="q">Nombre del destino u organización</label>
+            <div class="buscar-envoltura">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              <input class="entrada" id="q" type="search" autocomplete="off" spellcheck="false" placeholder="Ej.: Paipa, Hotel Casa Pablo, Jardín" aria-describedby="qAyuda" aria-controls="listaResultados">
+            </div>
+            <span class="ayuda" id="qAyuda">Escribe al menos 3 letras. Puedes buscar también por municipio.</span>
+          </div>
+          <fieldset class="filtros tarjetas">
+            <legend>¿Quién eres? Elige para afinar la búsqueda</legend>
+            <label class="chip"><input type="radio" name="cat" value="" checked><span>Todos<small>Busca en toda la base</small></span></label>
+            <label class="chip"><input type="radio" name="cat" value="n"><span>50 Nuevos Destinos<small>Secuencia de publicaciones lista</small></span></label>
+            <label class="chip"><input type="radio" name="cat" value="d"><span>Destino certificado<small>Arma tu pieza con tu logo</small></span></label>
+            <label class="chip"><input type="radio" name="cat" value="p"><span>Prestador de servicios turísticos<small>Arma tu pieza con tu logo</small></span></label>
+            <label class="chip"><input type="radio" name="cat" value="s"><span>SITCAT<small>Arma tu pieza con tu logo</small></span></label>
+          </fieldset>
+          <div class="sugerencias" id="sugerencias"><span>Prueba con:</span><button type="button">Paipa</button><button type="button">Villa de Leyva</button><button type="button">Jardín</button><button type="button">Hotel</button></div>
+          <p class="estado-busqueda" id="estadoBusqueda" aria-live="polite"></p>
+          <ul class="resultados" id="listaResultados" aria-label="Resultados de la búsqueda"></ul>
+          <div class="mas" id="masResultados" hidden><button class="btn btn-borde btn-chico" type="button" id="btnMas">Ver más resultados</button></div>
+
+        </div>
+        <aside class="apoyo" aria-hidden="true">
+          <div class="globo">Si no encuentras tu registro, revisa la nota al final de la página.</div>
+          <img class="anima" src="assets/personajes/valentina.webp" alt="">
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion" id="trabajo" aria-labelledby="tTrabajo" hidden tabindex="-1">
+    <div class="contenedor" id="trabajoContenido"></div>
+  </section>
+
+  <section class="seccion" id="guia" aria-labelledby="tGuia">
+    <div class="contenedor">
+      <div class="banda-guia">
+        <div class="personajes" aria-hidden="true">
+          <img class="anima" src="assets/personajes/joven-audifonos.webp" alt="">
+          <img class="anima saluda" src="assets/personajes/alcalde-saluda.webp" alt="" style="height:170px">
+        </div>
+        <div>
+          <h2 class="titulo" id="tGuia">Publica para que todas las personas te lean</h2>
+          <p class="intro" style="margin:0">Una publicación accesible llega a más gente: personas que usan lectores de pantalla, que tienen baja visión o que ven el contenido sin sonido.</p>
+        </div>
+      </div>
+      <div class="guia">
+        <div class="consejo"><h3>Describe cada imagen</h3><p>Copia el texto alternativo de cada pieza en el campo correspondiente. En Instagram está en Configuración avanzada, Accesibilidad. En Facebook, al editar la foto.</p></div>
+        <div class="consejo"><h3>Escribe el texto completo</h3><p>Pega el texto sugerido en la descripción, para que el mensaje no quede solo dentro de la imagen.</p></div>
+        <div class="consejo"><h3>Hashtags con mayúscula inicial</h3><p>Escribe #SemanaNacionalDeLaCalidadTuristica y no #semananacionaldelacalidadturistica: así los lectores de pantalla separan bien cada palabra.</p></div>
+        <div class="consejo"><h3>Pocos emojis</h3><p>Los lectores de pantalla leen el nombre de cada emoji. Úsalos con moderación y nunca en lugar de palabras.</p></div>
+        <div class="consejo"><h3>Enlaces en Instagram</h3><p>Instagram no permite abrir enlaces escritos en la publicación. Pon el enlace en tu perfil; el texto sugerido se ajusta solo cuando eliges esa red.</p></div>
+        <div class="consejo"><h3>Etiqueta y respeta el orden</h3><p>Etiqueta al Ministerio de Comercio, Industria y Turismo, a FONTUR y a tu alcaldía. Publica cada carrusel completo y en el orden indicado.</p></div>
+      </div>
+      <div class="banda-paisaje vivo" id="bandaGuia" aria-hidden="true"></div>
+      <div class="no-esta">
+        <div>
+          <h3>¿No encuentras tu destino u organización?</h3>
+          <p>Este repositorio solo incluye a los destinos y organizaciones vinculados oficialmente al Programa de Calidad Turística. Prueba con otra forma del nombre o con el municipio. Si crees que falta tu registro, comunícate con el equipo que acompaña tu proceso de calidad: implementador, gremio, certificadora o SITCAT.</p>
+        </div>
+        <img class="anima" src="assets/personajes/consultora-celebra.webp" alt="">
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pie-pagina">
+  <div class="contenedor">
+    <p>Programa de Calidad Turística del Ministerio de Comercio, Industria y Turismo, con el apoyo de FONTUR. Proyecto 50 Nuevos Destinos, Anfitriones de Colombia, con el acompañamiento de la Fundación Activa Territorio. Las piezas son de uso exclusivo de los beneficiarios del programa.</p>
+    <div class="logos-pie">
+      <img src="assets/logos/calidad-turistica.png" alt="Calidad Turística Colombia">
+      <img src="assets/logos/activa-territorio.png" alt="Fundación Activa Territorio">
+    </div>
+  </div>
+</footer>
+
+<dialog class="visor" id="visor" aria-labelledby="visorTitulo">
+  <div class="marco">
+    <div class="medio" id="visorMedio"></div>
+    <div class="info">
+      <h3 id="visorTitulo"></h3>
+      <p><strong>Texto alternativo</strong></p>
+      <p id="visorAlt"></p>
+      <div class="nav">
+        <button class="btn btn-borde btn-chico" type="button" id="visorCopiar">Copiar texto alternativo</button>
+        <a class="btn btn-azul btn-chico" id="visorBajar" download>Descargar</a>
+      </div>
+      <div class="nav">
+        <button class="btn btn-borde btn-chico" type="button" id="visorAnt">Anterior</button>
+        <button class="btn btn-borde btn-chico" type="button" id="visorSig">Siguiente</button>
+        <button class="btn btn-borde btn-chico" type="button" id="visorCerrar">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<script src="data/registros.js"></script>
+<script src="data/destinos.js"></script>
+<script src="data/contenidos.js"></script>
+<script src="assets/js/jszip.min.js"></script>
+<script>
+(function(){
+'use strict';
+var $=function(s,r){return (r||document).querySelector(s)};
+var $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+var REG=window.REGISTROS||[], DES=window.DESTINOS||[], CON=window.CONTENIDOS||{}, PLA=window.PLANTILLA||{};
+var EMB=window.EMBED||null;function R(p){return (EMB&&EMB[p])||p}
+var estado={reg:null};
+
+/* ---------- utilidades ---------- */
+function norm(s){return (s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9ñ&@.\s-]/g,' ').replace(/\s+/g,' ').trim()}
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+var MENORES=['de','del','la','las','los','y','e','en','el','a','al','por','para','con','o','u'];
+var SIGLAS=/^(s\.?a\.?s\.?|s\.?a\.?|ltda\.?|bic|sas|zomac|ocd|ctm|gbt|bh|ek|mta|imca|pnn|e\.?d\.?s\.?|ntc|nts|sitcat|d\.?c\.?|s\.? en c\.?|opc|asa|g\.?m\.?h\.?|cb|c\.?b\.?)$/i;
+function tituloSiMayus(s){
+  if(!s) return s;
+  var letras=s.replace(/[^A-Za-zÁÉÍÓÚÑáéíóúñ]/g,'');
+  if(!letras || letras!==letras.toUpperCase()) return s;
+  return s.toLowerCase().split(/(\s+)/).map(function(w,i){
+    if(/^\s+$/.test(w)) return w;
+    if(SIGLAS.test(w)) return w.toUpperCase();
+    if(/\d/.test(w)) return w.toUpperCase();
+    if(i>0 && MENORES.indexOf(w)>=0) return w;
+    return w.replace(/^([¿¡("'«]*)(\S)/,function(m,a,b){return a+b.toUpperCase()}).replace(/([-\/])(\S)/g,function(m,a,b){return a+b.toUpperCase()});
+  }).join('');
+}
+function lugar(r){
+  var m=tituloSiMayus(r.m||''), d=tituloSiMayus(r.dp||'');
+  if(!m && !d) return '';
+  if(norm(m)===norm(d) || !d) return m;
+  if(!m) return d;
+  return m+', '+d;
+}
+var CAT={n:'50 Nuevos Destinos',d:'Destino certificado',p:'Prestador de servicios turísticos',s:'SITCAT'};
+var EST={c:'Certificado en',i:'En implementación de',b:'Con',s:''};
+function resumenNormas(r){
+  return r.nr.map(function(x){
+    if(x[1]==='s') return 'Sistema Territorial de Calidad Turística';
+    if(x[1]==='b') return 'Distintivo de Buenas Prácticas';
+    return EST[x[1]]+' '+x[0];
+  }).join('; ');
+}
+function toast(t){var el=$('#toast');el.textContent=t;el.hidden=false;clearTimeout(toast._t);toast._t=setTimeout(function(){el.hidden=true},2600)}
+function copiar(t){
+  if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(t).then(function(){toast('Texto copiado')},function(){copiarViejo(t)})}else copiarViejo(t);
+}
+function copiarViejo(t){var a=document.createElement('textarea');a.value=t;a.setAttribute('readonly','');a.style.position='fixed';a.style.opacity='0';document.body.appendChild(a);a.select();try{document.execCommand('copy');toast('Texto copiado')}catch(e){toast('Selecciona el texto y cópialo')}document.body.removeChild(a)}
+function descargarBlob(blob,nombre){var u=URL.createObjectURL(blob);var a=document.createElement('a');a.href=u;a.download=nombre;document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(u);a.remove()},1500)}
+var fmtDia=new Intl.DateTimeFormat('es-CO',{weekday:'long',day:'numeric',month:'long',timeZone:'UTC'});
+function sumarDias(iso,n){var d=new Date(iso+'T00:00:00Z');d.setUTCDate(d.getUTCDate()+n);return d}
+function isoDe(d){return d.toISOString().slice(0,10)}
+
+/* ---------- accesibilidad ---------- */
+var PREFS_KEY='snct2026-accesibilidad';
+var PREF0={texto:1,contraste:'',espaciado:'',subrayar:'',movimiento:'',leerclic:'',alineado:'',saturacion:'',guia:'',titulos:'',interactivos:'',cursor:'',imagenes:'',vel:'1'};
+var prefs=Object.assign({},PREF0);
+try{var g=JSON.parse(localStorage.getItem(PREFS_KEY)||'null');if(g)prefs=Object.assign(prefs,g)}catch(e){}
+function aplicarPrefs(){
+  var h=document.documentElement;
+  h.dataset.texto=String(prefs.texto);
+  ['contraste','espaciado','subrayar','movimiento','alineado','saturacion','titulos','interactivos','cursor','imagenes'].forEach(function(k){if(prefs[k])h.dataset[k]=prefs[k];else delete h.dataset[k]});
+  if(window.aplicarGuia)aplicarGuia();var sv=document.getElementById('vozVel');if(sv)sv.value=prefs.vel;var sg=document.getElementById('selGuia');if(sg)sg.value=prefs.guia;
+  $$('.interruptor').forEach(function(b){b.setAttribute('aria-checked',prefs[b.dataset.pref]?'true':'false')});
+  try{localStorage.setItem(PREFS_KEY,JSON.stringify(prefs))}catch(e){}
+}
+aplicarPrefs();
+var btnA=$('#btnA11y'),panA=$('#panelA11y');
+document.addEventListener('keydown',function(e){if(e.altKey&&(e.key==='a'||e.key==='A')){e.preventDefault();btnA.click()}});
+btnA.addEventListener('click',function(){var abre=panA.hidden;panA.hidden=!abre;btnA.setAttribute('aria-expanded',String(abre));if(abre)panA.querySelector('button').focus()});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!panA.hidden){panA.hidden=true;btnA.setAttribute('aria-expanded','false');btnA.focus()}});
+document.addEventListener('click',function(e){if(!panA.hidden&&!panA.contains(e.target)&&!btnA.contains(e.target)){panA.hidden=true;btnA.setAttribute('aria-expanded','false')}});
+$$('[data-texto]',panA).forEach(function(b){b.addEventListener('click',function(){var v=b.dataset.texto;prefs.texto=v==='0'?1:Math.min(4,Math.max(1,prefs.texto+(v==='+'?1:-1)));aplicarPrefs()})});
+$$('.interruptor').forEach(function(b){b.addEventListener('click',function(){var k=b.dataset.pref;prefs[k]=prefs[k]?'':b.dataset.valor;aplicarPrefs();if(k==='movimiento'){revelarTodo();if(window.syncPausaExt)syncPausaExt()}})});
+$('#a11yReset').addEventListener('click',function(){detenerVoz();prefs=Object.assign({},PREF0);aplicarPrefs()});
+
+/* guía de lectura */
+var gL=$('#guiaLinea'),mA=$('#mascaraArriba'),mB=$('#mascaraAbajo'),yG=window.innerHeight/2;
+function moverGuia(y){yG=y;gL.style.top=y+'px';mA.style.top='0';mA.style.height=Math.max(0,y-70)+'px';mB.style.top=(y+70)+'px';mB.style.bottom='0'}
+window.aplicarGuia=function(){gL.hidden=prefs.guia!=='linea';mA.hidden=mB.hidden=prefs.guia!=='mascara';moverGuia(yG)};
+document.addEventListener('mousemove',function(e){if(prefs.guia)moverGuia(e.clientY)},{passive:true});
+document.addEventListener('touchmove',function(e){if(prefs.guia&&e.touches[0])moverGuia(e.touches[0].clientY)},{passive:true});
+$('#selGuia').addEventListener('change',function(){prefs.guia=this.value;aplicarPrefs()});
+aplicarGuia();
+
+/* lectura en voz alta (Web Speech API, voz en español del dispositivo) */
+var SS=window.speechSynthesis,voz=null,cola=[],iCola=0,leyendo=false,pausado=false,elActual=null;
+function elegirVoz(){if(!SS)return;var vs=SS.getVoices(),pref=['es-CO','es-419','es-US','es-MX','es-ES'];for(var i=0;i<pref.length;i++){var v=vs.filter(function(x){return x.lang&&x.lang.replace('_','-').toLowerCase()===pref[i].toLowerCase()})[0];if(v){voz=v;return}}voz=vs.filter(function(x){return /^es/i.test(x.lang)})[0]||null}
+if(SS){elegirVoz();if(SS.addEventListener)SS.addEventListener('voiceschanged',elegirVoz);else SS.onvoiceschanged=elegirVoz}
+else{['vozLeer','vozPausa','vozDetener'].forEach(function(id){$('#'+id).disabled=true});$('#vozNota').textContent='Este navegador no tiene lectura en voz alta. Prueba con Chrome, Edge o Safari actualizados.'}
+function textoDe(el){var t=(el.getAttribute('aria-label')&&el.matches('button,a,canvas,[role=img]'))?el.getAttribute('aria-label'):(el.innerText||el.textContent||'');if(el.tagName==='IMG')t=el.alt;return t.replace(/\s+/g,' ').trim()}
+function marcar(el){if(elActual)elActual.classList.remove('leyendo');elActual=el;if(el){el.classList.add('leyendo');var r=el.getBoundingClientRect();if(r.top<80||r.bottom>window.innerHeight)el.scrollIntoView({block:'center',behavior:prefs.movimiento?'auto':'smooth'})}}
+function decir(t,el,fin){if(!SS||!t){if(fin)fin();return}var u=new SpeechSynthesisUtterance(t);u.lang=voz?voz.lang:'es-CO';if(voz)u.voice=voz;u.rate=parseFloat(prefs.vel)||1;u.onstart=function(){marcar(el)};u.onend=function(){if(fin)fin()};u.onerror=function(){if(fin)fin()};SS.speak(u)}
+function estadoBotones(){$('#vozPausa').disabled=!leyendo;$('#vozDetener').disabled=!leyendo;$('#vozPausa').textContent=pausado?'Continuar':'Pausar';$('#vozLeer').textContent=leyendo?'Leer desde el inicio':'Leer la página'}
+function detenerVoz(){if(SS)SS.cancel();cola=[];leyendo=false;pausado=false;marcar(null);if($('#vozPausa'))estadoBotones()}
+function bloquesLegibles(){
+  var sel='main h1, main h2, main h3, main p, main li, main label, main legend, main summary, main pre, main figcaption, footer p';
+  return $$(sel).filter(function(el){if(el.closest('[hidden]')||el.closest('.sr')&&!el.matches('h2'))return false;if(el.closest('details:not([open])')&&!el.matches('summary'))return false;var cs=getComputedStyle(el);if(cs.display==='none'||cs.visibility==='hidden')return false;if(el.matches('li')&&el.querySelector('p,h3'))return false;if(el.parentElement&&el.parentElement.closest('li,p,label,summary,pre')&&!el.matches('h3'))return false;return textoDe(el).length>1});
+}
+function siguiente(){if(!leyendo)return;if(iCola>=cola.length){detenerVoz();return}var el=cola[iCola++];decir(textoDe(el),el,siguiente)}
+$('#vozLeer').addEventListener('click',function(){detenerVoz();elegirVoz();cola=bloquesLegibles();iCola=0;leyendo=true;estadoBotones();panA.hidden=true;btnA.setAttribute('aria-expanded','false');siguiente()});
+$('#vozPausa').addEventListener('click',function(){if(!SS)return;if(pausado){SS.resume();pausado=false}else{SS.pause();pausado=true}estadoBotones()});
+$('#vozDetener').addEventListener('click',detenerVoz);
+$('#vozVel').addEventListener('change',function(){prefs.vel=this.value;aplicarPrefs()});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&leyendo)detenerVoz()});
+document.addEventListener('click',function(e){
+  if(!prefs.leerclic||!SS||panA.contains(e.target)||btnA.contains(e.target))return;
+  var el=e.target.closest('h1,h2,h3,p,li,label,summary,pre,figcaption,button,a,.etiqueta,.globo,img[alt]:not([alt=""]),canvas');
+  if(!el||!document.body.contains(el))return;
+  var t=textoDe(el);if(!t)return;detenerVoz();leyendo=false;decir(t,el,function(){marcar(null)});
+},true);
+document.addEventListener('mouseup',function(){if(!prefs.leerclic||!SS)return;var t=String(window.getSelection()||'').trim();if(t.length>2){detenerVoz();decir(t,null,null)}});
+window.addEventListener('beforeunload',function(){if(SS)SS.cancel()});
+
+/* ---------- personajes: se animan solo al entrar en pantalla ---------- */
+var io=('IntersectionObserver' in window)?new IntersectionObserver(function(ents){ents.forEach(function(en){if(en.isIntersecting){en.target.classList.add('entra');io.unobserve(en.target)}})},{threshold:.25}):null;
+function observar(root){$$('.anima,.gallito',root||document).forEach(function(el){if(io&&!el.classList.contains('entra'))io.observe(el);else el.classList.add('entra')})}
+function revelarTodo(){$$('.anima,.gallito').forEach(function(el){el.classList.add('entra')})}
+observar();
+requestAnimationFrame(function(){$('.portada').classList.add('lista')});
+
+/* ---------- elementos ilustrados del manual, animados ---------- */
+var C={vO:'#1B6E3A',vM:'#3FA34D',vC:'#8CC63F',am:'#F9C80E',na:'#F7931E',ro:'#E5266F',mo:'#7E3F98',az:'#1D5FAD',tu:'#1FA9A4',tr:'#C9A77C'};
+function svgSol(){return '<svg class="sol" viewBox="0 0 150 150"><circle class="brillo" cx="75" cy="75" r="62" fill="#FFE27A"/><g class="rayos">'+Array.apply(null,{length:16}).map(function(_,i){return '<path d="M75 4 L80 22 L70 22Z" fill="'+(i%2?C.na:C.am)+'" transform="rotate('+(i*22.5)+' 75 75)"/>'}).join('')+'</g><circle cx="75" cy="75" r="40" fill="'+C.am+'"/><circle cx="75" cy="75" r="28" fill="'+C.na+'" opacity=".55"/></svg>'}
+function svgNube(w,top,dur,del){return '<svg class="nube" style="top:'+top+'px;width:'+w+'px;animation-duration:'+dur+'s;animation-delay:'+del+'s" viewBox="0 0 160 70"><path d="M20 62h118a20 20 0 0 0 0-40 26 26 0 0 0-48-10A30 30 0 0 0 40 28 18 18 0 0 0 20 62z" fill="#fff"/></svg>'}
+function svgMontanas(){return '<svg class="montanas" viewBox="0 0 1440 170" preserveAspectRatio="xMidYMax slice"><path d="M0 120 L120 60 L240 110 L380 40 L520 115 L660 70 L800 120 L960 50 L1110 118 L1260 62 L1440 116 V170 H0Z" fill="'+C.vC+'"/><path d="M380 40 L420 60 L400 58 L380 70 L360 58 L345 58Z" fill="#fff" opacity=".9"/><path d="M960 50 L995 68 L978 66 L960 76 L944 66 L928 67Z" fill="#fff" opacity=".9"/><path d="M0 140 L180 92 L330 138 L520 96 L700 142 L880 98 L1060 140 L1240 100 L1440 138 V170 H0Z" fill="'+C.vM+'"/><path d="M0 170 V150 C200 128 360 160 560 140 S940 128 1120 148 1340 136 1440 146 V170Z" fill="'+C.vO+'"/>'+[0,1,2,3,4,5,6,7,8].map(function(i){var x=70+i*160;return '<path d="M'+x+' 162 c8 -6 16 -6 24 0 s16 6 24 0" stroke="#145A2E" stroke-width="4" fill="none" stroke-linecap="round"/>'}).join('')+'</svg>'}
+function svgPalma(cls,left){
+  var hojas=[[-70,C.vO],[-40,C.vM],[-12,C.vC],[16,C.vM],[44,C.vO],[72,C.vC],[100,C.vM]].map(function(h){return '<path d="M60 70 C40 50 18 52 2 64 C22 58 40 62 60 72Z" fill="'+h[1]+'" transform="rotate('+h[0]+' 60 70)"/>'}).join('');
+  return '<svg class="palma '+(cls||'')+'" style="left:'+left+'" viewBox="0 0 120 300"><g class="tronco"><path d="M57 300 C58 220 60 140 61 72 L65 72 C65 140 64 220 65 300Z" fill="'+C.tr+'"/>'+[100,130,160,190,220,250,280].map(function(y){return '<rect x="57" y="'+y+'" width="8" height="3" fill="#A88458"/>'}).join('')+'<g class="copa">'+hojas+'<circle cx="62" cy="72" r="6" fill="#7A5A2E"/></g></g></svg>'}
+function svgFlor(left,color){return '<svg class="flor" style="left:'+left+'" viewBox="0 0 50 110"><path d="M25 110 V42" stroke="'+C.vO+'" stroke-width="4"/><path d="M25 80 C12 70 6 74 4 82 C14 82 20 84 25 86Z" fill="'+C.vM+'"/><path d="M25 66 C38 56 44 60 46 68 C36 68 30 70 25 72Z" fill="'+C.vM+'"/><path d="M25 44 C10 40 8 22 14 10 C18 22 22 26 25 28 C28 26 32 22 36 10 C42 22 40 40 25 44Z" fill="'+color+'"/><path d="M25 44 C18 36 18 20 25 4 C32 20 32 36 25 44Z" fill="#fff" opacity=".25"/></svg>'}
+function svgMariposa(cls,c1,c2){return '<svg class="mariposa '+cls+'" viewBox="0 0 60 50"><g class="ala-i"><path d="M29 24 C20 2 4 0 3 12 C2 22 16 26 29 25Z" fill="'+c1+'"/><path d="M29 26 C18 28 8 38 14 46 C20 50 27 38 29 28Z" fill="'+c2+'"/></g><g class="ala-d"><path d="M31 24 C40 2 56 0 57 12 C58 22 44 26 31 25Z" fill="'+c1+'"/><path d="M31 26 C42 28 52 38 46 46 C40 50 33 38 31 28Z" fill="'+c2+'"/></g><path d="M30 16 V40" stroke="#3B2A1A" stroke-width="3" stroke-linecap="round"/><path d="M30 17 L25 8 M30 17 L35 8" stroke="#3B2A1A" stroke-width="1.4"/></svg>'}
+function svgFarol(){return '<svg class="farol" viewBox="0 0 60 220" aria-hidden="true"><circle class="luz" cx="30" cy="48" r="30" fill="#FFE27A" opacity="0"/><rect x="27" y="70" width="6" height="150" fill="#0F1E2C"/><path d="M18 40 h24 l-4 28 h-16Z" fill="#0F1E2C"/><path class="luz" d="M21 42 h18 l-3 22 h-12Z" fill="#FFD23F"/><path d="M15 40 L30 26 L45 40Z" fill="#0F1E2C"/><rect x="20" y="214" width="20" height="6" fill="#0F1E2C"/></svg>'}
+
+function bosque(portada){
+  var w=window.innerWidth,html='',rnd=function(a,b){return a+Math.random()*(b-a)};
+  var filas=portada?[{paso:w<700?9:3.4,w:[30,40],b:[112,124],cls:'fondo'},{paso:w<700?16:6.2,w:[50,68],b:[84,96],cls:''}]:[{paso:w<700?10:3,w:[28,36],b:[78,88],cls:'fondo'},{paso:w<700?18:5.5,w:[44,58],b:[52,62],cls:''}];
+  filas.forEach(function(f){for(var x=-2;x<102;x+=f.paso*rnd(.8,1.2)){
+    var svg=svgPalma(f.cls+(Math.random()<.5?' b':''),x.toFixed(1)+'%');
+    svg=svg.replace('style="','style="width:'+rnd(f.w[0],f.w[1]).toFixed(0)+'px;bottom:'+rnd(f.b[0],f.b[1]).toFixed(0)+'px;--d:'+rnd(4.8,7.6).toFixed(2)+'s;--dl:-'+rnd(0,6).toFixed(2)+'s;');
+    html+=svg}});
+  return html;
+}
+
+/* Caminata: la viajera sigue al guía, él se detiene a señalar y luego continúan */
+function iniciarCaminata(banda){
+  var g=$('.pj.guia',banda),v=$('.pj.viajera',banda);if(!g||!v)return;
+  var CIC=[1,2,3,5],DUR=170,VEL=0.17; /* fotogramas del ciclo de paso, ms por fotograma, px por ms */
+  var t0=null,activo=false,raf=null;
+  function frame(el,i){el.style.backgroundPosition=(i*20)+'% 0'}
+  function quieto(){var W=banda.clientWidth;g.style.transform='translateX('+(W*.46)+'px)';v.style.transform='translateX('+(W*.46-150)+'px)';frame(g,4);frame(v,0)}
+  function plan(W){var stop=W*.46;var tWalk1=(stop+160)/VEL;return {stop:stop,t1:tWalk1,t2:tWalk1+3200,t3:tWalk1+3200+(W-stop+200)/VEL,ciclo:tWalk1+3200+(W-stop+200)/VEL+5000}}
+  function paso(ts){
+    if(!activo)return;
+    if(prefs.movimiento){quieto();raf=requestAnimationFrame(paso);return}
+    if(t0===null)t0=ts;var W=banda.clientWidth,P=plan(W),t=(ts-t0)%P.ciclo,c=Math.floor(t/DUR)%CIC.length;
+    var xg,fg,xv,fv,gap=150;
+    if(t<P.t1){xg=-160+t*VEL;fg=CIC[c];xv=xg-gap;fv=CIC[(c+2)%4]}
+    else if(t<P.t2){var e=t-P.t1;xg=P.stop;fg=e<500?0:4;
+      var tv=Math.min(e,420);xv=P.stop-gap+tv*VEL*.35;fv=e<420?CIC[(c+2)%4]:(e<1500?0:3)}
+    else if(t<P.t3){var e2=t-P.t2;xg=P.stop+e2*VEL;fg=CIC[c];var ev=Math.max(0,e2-450);xv=P.stop-gap+420*VEL*.35+ev*VEL;fv=e2<450?3:CIC[(c+2)%4]}
+    else{xg=W+300;xv=W+300;fg=fv=1}
+    g.style.transform='translateX('+xg.toFixed(1)+'px)';frame(g,fg);
+    v.style.transform='translateX('+xv.toFixed(1)+'px)';frame(v,fv);
+    raf=requestAnimationFrame(paso);
+  }
+  if('IntersectionObserver' in window){new IntersectionObserver(function(es){es.forEach(function(e){activo=e.isIntersecting;if(activo){cancelAnimationFrame(raf);raf=requestAnimationFrame(paso)}})},{threshold:.2}).observe(banda)}
+  else{activo=true;raf=requestAnimationFrame(paso)}
+}
+function montarPaisaje(){
+  var p=document.getElementById('paisaje');if(!p)return;
+  p.innerHTML=svgSol()+svgNube(180,40,95,-20)+svgNube(120,110,120,-70)+svgNube(150,70,140,-110)+
+    svgMontanas()+bosque(true)+svgFlor('62%',C.ro)+svgFlor('70%',C.mo)+svgFlor('78%',C.na)+
+    svgMariposa('m1',C.ro,'#B3124F')+svgMariposa('m2',C.mo,'#5A2A75')+svgMariposa('m3',C.am,C.na)+
+    '<div class="colibri"><img src="'+R('assets/manual/colibri.webp')+'" alt=""></div>'+
+    '<div class="gallito-vuelo"><img class="f1" src="'+R('assets/personajes/gallito.webp')+'" alt=""><img class="f2" src="'+R('assets/personajes/gallito-2.webp')+'" alt=""></div>';
+  var b=document.getElementById('bandaGuia');
+  if(b)b.innerHTML=svgMontanas()+bosque(false)+svgMariposa('m1',C.tu,C.az)+svgMariposa('m2',C.am,C.na)+
+    '<div class="caminantes"><div class="pj viajera" style="background-image:url('+R('assets/personajes/viajera-pasos.webp')+')"></div><div class="pj guia" style="background-image:url('+R('assets/personajes/guia-pasos.webp')+')"></div></div>';
+  iniciarCaminata(b);
+}
+montarPaisaje();
+var ioVivo=('IntersectionObserver' in window)?new IntersectionObserver(function(ents){ents.forEach(function(en){en.target.classList.toggle('activa',en.isIntersecting);if(en.isIntersecting&&en.target.classList.contains('farol'))en.target.classList.add('encendido')})},{threshold:.15}):null;
+function vigilarVivos(root){$$('.vivo,.farol',root||document).forEach(function(el){if(ioVivo)ioVivo.observe(el);else{el.classList.add('activa');el.classList.add('encendido')}})}
+vigilarVivos();
+var bP=document.getElementById('pausaMov');
+function syncPausa(){var on=!!prefs.movimiento;bP.setAttribute('aria-pressed',String(on));bP.textContent=on?'Reanudar movimiento':'Pausar movimiento'}
+window.syncPausaExt=syncPausa;
+bP.addEventListener('click',function(){prefs.movimiento=prefs.movimiento?'':'reducido';aplicarPrefs();syncPausa();if(prefs.movimiento)revelarTodo()});
+syncPausa();
+
+/* ---------- búsqueda ---------- */
+var trabajo=$('#trabajo'),cont=$('#trabajoContenido');
+REG.forEach(function(r){r._q=norm(r.n+' '+(r.m||'')+' '+(r.dp||''));r._n=norm(r.n)});
+var q=$('#q'),lista=$('#listaResultados'),estadoB=$('#estadoBusqueda'),limite=12,ultimos=[];
+function catSel(){var c=$('input[name=cat]:checked');return c?c.value:''}
+function buscar(){
+  var t=norm(q.value),cat=catSel();
+  if(estado.reg&&!trabajo.hidden&&t.length>=1){trabajo.hidden=true;cont.innerHTML='';estado.reg=null;if(window.marcarPaso){pasosBtns[1].disabled=true;marcarPaso(1)}}$('#sugerencias').hidden=t.length>=3;
+  lista.innerHTML='';$('#masResultados').hidden=true;
+  if(t.length<3){estadoB.textContent=t.length?'Escribe al menos 3 letras.':'';return}
+  var tok=t.split(' ');
+  var res=REG.filter(function(r){return (!cat||r.c===cat)&&tok.every(function(x){return r._q.indexOf(x)>=0})});
+  res.sort(function(a,b){var sa=a._n.indexOf(t)===0?0:(a._n.indexOf(t)>0?1:2),sb=b._n.indexOf(t)===0?0:(b._n.indexOf(t)>0?1:2);return sa-sb||a._n.localeCompare(b._n)});
+  ultimos=res;pintar();
+}
+function pintar(){
+  lista.innerHTML='';
+  var n=ultimos.length;
+  estadoB.textContent=n===0?'No encontramos coincidencias en la base del programa. Revisa la escritura o prueba con el municipio.':(n===1?'1 resultado.':n+' resultados.');
+  ultimos.slice(0,limite).forEach(function(r){
+    var li=document.createElement('li');li.className='resultado';
+    var lug=lugar(r);
+    li.innerHTML='<button type="button"><span class="nombre">'+esc(r.n)+'</span><span class="detalle">'+esc([lug,resumenNormas(r)].filter(Boolean).join(' | '))+'</span><span class="etiqueta '+r.c+'">'+esc(CAT[r.c])+'</span></button>';
+    li.querySelector('button').addEventListener('click',function(){elegir(r)});
+    lista.appendChild(li);
+  });
+  $('#masResultados').hidden=n<=limite;
+}
+var tB;q.addEventListener('input',function(){clearTimeout(tB);limite=12;tB=setTimeout(buscar,160)});
+$$('input[name=cat]').forEach(function(x){x.addEventListener('change',function(){limite=12;buscar()})});
+$('#btnMas').addEventListener('click',function(){limite+=12;pintar()});
+
+/* ---------- abrir directamente: el buscador solo muestra registros de la base oficial ---------- */
+function elegir(r){estado.reg=r;lista.innerHTML='';$('#masResultados').hidden=true;estadoB.textContent='';abrirTrabajo(r)}
+
+
+/* ---------- navegación más clara ---------- */
+var pasosBtns=$$('.pasos-nav button');
+window.marcarPaso=marcarPaso;
+function marcarPaso(n){pasosBtns.forEach(function(b){var k=+b.dataset.paso;if(k===n)b.setAttribute('aria-current','step');else b.removeAttribute('aria-current');b.classList.toggle('hecho',k<n)})}
+pasosBtns.forEach(function(b){b.addEventListener('click',function(){var k=+b.dataset.paso,dest=k===1?'#buscar':k===2?'#trabajo':'#guia';var el=$(dest);if(el&&!el.hidden){el.scrollIntoView({behavior:prefs.movimiento?'auto':'smooth'});if(k===1)setTimeout(function(){q.focus({preventScroll:true})},300)}})});
+if('IntersectionObserver' in window){var ioP=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;if(e.target.id==='guia'&&estado.reg)marcarPaso(3);else if(e.target.id==='trabajo')marcarPaso(2);else if(e.target.id==='buscar'&&!estado.reg)marcarPaso(1)})},{threshold:.25});['buscar','trabajo','guia'].forEach(function(id){ioP.observe(document.getElementById(id))})}
+$('#formPortada').addEventListener('submit',function(e){e.preventDefault();q.value=$('#qPortada').value;limite=12;buscar();$('#buscar').scrollIntoView({behavior:prefs.movimiento?'auto':'smooth'});setTimeout(function(){q.focus({preventScroll:true})},350)});
+$$('#sugerencias button').forEach(function(b){b.addEventListener('click',function(){q.value=b.textContent;limite=12;buscar();q.focus()})});
+q.addEventListener('keydown',function(e){if(e.key==='ArrowDown'){var f=$('#listaResultados button');if(f){e.preventDefault();f.focus()}}else if(e.key==='Enter'){e.preventDefault();var f2=$('#listaResultados button');if(f2&&ultimos.length===1)f2.click()}});
+lista.addEventListener('keydown',function(e){var bs=$$('#listaResultados button'),i=bs.indexOf(document.activeElement);if(i<0)return;if(e.key==='ArrowDown'&&i<bs.length-1){e.preventDefault();bs[i+1].focus()}if(e.key==='ArrowUp'){e.preventDefault();if(i>0)bs[i-1].focus();else q.focus()}});
+/* ---------- espacio de trabajo ---------- */
+function abrirTrabajo(r){
+  cont.innerHTML='';
+  if(r.c==='n'){var d=DES.filter(function(x){return x.s===r.s})[0];pintarDestino(d,r)}
+  else pintarGenerador(r);
+  trabajo.hidden=false;observar(trabajo);vigilarVivos(trabajo);
+  pasosBtns[1].disabled=false;marcarPaso(2);
+  var o=$('[data-otra]',trabajo);if(o)o.addEventListener('click',function(e){e.preventDefault();q.value='';q.focus();$('#buscar').scrollIntoView({behavior:prefs.movimiento?'auto':'smooth'})});
+  trabajo.scrollIntoView({behavior:prefs.movimiento?'auto':'smooth'});
+  setTimeout(function(){var h=$('h2',trabajo);if(h){h.setAttribute('tabindex','-1');h.focus({preventScroll:true})}},400);
+}
+function cabecera(titulo,ruta,texto,personaje){
+  return '<div class="cabecera-trabajo"><div><span class="ruta">'+esc(ruta)+'</span><h2 id="tTrabajo">'+esc(titulo)+'</h2><p>'+texto+'</p><p><a class="btn btn-primario btn-chico" href="#buscar" data-otra>Buscar otro destino u organización</a></p></div>'+svgFarol()+'<img class="personaje anima saluda" src="'+R('assets/personajes/'+personaje+'.webp')+'" alt=""></div>';
+}
+
+/* --- 50 Nuevos Destinos --- */
+var DEST_ACTUAL=null,RED='fb',INICIO='2026-11-09';
+function linkTxt(url,gen){
+  var v={la:'Encuéntrala',lo:'Encuéntralo',las:'Encuéntralas',los:'Encuéntralos'}[gen]||'Encuéntrala';
+  return RED==='ig'?v+' en el enlace de nuestro perfil.':v+' aquí: '+url;
+}
+function prepararCopy(t,D){
+  return t.replace(/\{D\}/g,D).replace(/\{LINK\|([^|]+)\|(\w+)\}/g,function(m,u,g){return linkTxt(u,g)});
+}
+function piezasDe(d,p){
+  var arr=[],con=CON[d.r].pubs[p.n],D=d.n;
+  for(var i=1;i<=p.k;i++){
+    var kk=p.n+'-'+i,g=GEN[d.s]&&GEN[d.s][kk],conBarra=d.lp&&BARRAS.indexOf(kk)>=0;
+    arr.push({barra:conBarra,tipo:'img',src:g||R('piezas/'+d.s+'/p'+p.n+'-'+i+'.jpg'),th:g||R('piezas/'+d.s+'/t/p'+p.n+'-'+i+'.webp'),alt:(con.alts[i-1]||'').replace(/\{D\}/g,D),nombre:d.s+'_publicacion-'+p.n+'_pieza-'+i+'.jpg',etq:'Pieza '+i});
+  }
+  if(p.v){
+    var v={tipo:'video',src:R('piezas/'+d.s+'/video.mp4'),th:R('piezas/'+d.s+'/t/video.jpg'),alt:(con.video||'').replace(/\{D\}/g,D),nombre:d.s+'_publicacion-'+p.n+'_video.mp4',etq:'Video'};
+    arr.splice(1,0,v);
+    arr.forEach(function(x,i){if(x.tipo==='img')x.etq='Pieza '+(i+1)});
+    v.etq='Pieza 2 (video)';
+  }
+  return arr;
+}
+function pintarDestino(d,r){
+  DEST_ACTUAL=d;
+  var c=CON[d.r];
+  var html=cabecera('Las piezas de '+d.n,'Ruta '+c.norma+': '+c.ruta.toLowerCase(),
+    d.pend?'Tus piezas se están terminando. Vuelve pronto: aparecerán aquí sin que tengas que hacer nada más.':
+    'Publica en este orden. Tú eliges los días; te sugerimos hacerlo entre el 9 y el 13 de noviembre, durante la Semana Nacional de la Calidad Turística.',c.personaje);
+  if(d.pend){
+    html+='<div class="pendiente"><img class="anima" src="'+R('assets/personajes/consultora-casco.webp')+'" alt=""><div><h3 style="margin:0 0 6px;color:var(--azul)">Piezas en preparación</h3><p style="margin:0">El equipo de diseño está terminando las piezas de '+esc(d.n)+'. Mientras tanto, revisa la guía de publicación accesible más abajo.</p></div></div>';
+    cont.innerHTML=html;return;
+  }
+  html+='<div class="controles">'+
+    '<div class="campo"><label for="fInicio">¿Qué día empiezas a publicar?</label><input class="entrada" type="date" id="fInicio" min="2026-11-01" max="2026-12-31" value="'+INICIO+'"></div>'+
+    '<div class="campo"><label for="fRed">¿Dónde vas a publicar?</label><select class="entrada" id="fRed"><option value="fb">Facebook, LinkedIn o X</option><option value="ig">Instagram</option></select></div>'+
+    '<button type="button" class="btn btn-borde" id="btnIcs">Agregar recordatorios a mi calendario</button>'+
+    '</div>'+(d.lp?cajaLogo(d):'')+'<p class="aviso" id="avisoFechas" hidden></p><div class="avance" role="status"><strong id="avanceTxt"></strong><span class="barra" aria-hidden="true"><i id="avanceBarra"></i></span></div><ol class="linea-tiempo" id="lineaTiempo"></ol>';
+  cont.innerHTML=html;
+  $('#fRed').value=RED;
+  $('#fInicio').addEventListener('change',function(){if(this.value){INICIO=this.value;actualizarFechas()}});
+  $('#fRed').addEventListener('change',function(){RED=this.value;pintarPubs()});
+  $('#btnIcs').addEventListener('click',bajarIcs);
+  if(d.lp)activarCajaLogo(d);
+  pintarPubs();
+}
+function pintarPubs(){
+  var d=DEST_ACTUAL,c=CON[d.r],ol=$('#lineaTiempo');ol.innerHTML='';
+  d.p.forEach(function(p,idx){
+    var info=c.pubs[p.n],piezas=piezasDe(d,p);
+    var li=document.createElement('li');li.className='pub';
+    var figs=piezas.map(function(x,i){
+      return '<figure class="'+(x.tipo==='video'?'es-video':'')+'">'+(x.barra&&!(GEN[d.s]&&GEN[d.s].listo)?'<span class="sin-logo">Falta logo de alcaldía</span>':'')+'<button type="button" class="ver" data-i="'+i+'" aria-label="Ver '+esc(x.etq)+' en grande"><img loading="lazy" src="'+x.th+'" alt="'+esc(x.alt)+'"></button><figcaption><span>'+esc(x.etq)+'</span><a class="bajar" href="'+x.src+'" download="'+x.nombre+'" aria-label="Descargar '+esc(x.etq)+'">Descargar</a></figcaption></figure>';
+    }).join('');
+    var copy=prepararCopy(info.copy,d.n);
+    var alts=piezas.map(function(x){return '<li><strong>'+esc(x.etq)+'.</strong> '+esc(x.alt)+'<br><button type="button" class="btn btn-borde btn-chico" data-copiar="'+esc(x.alt)+'">Copiar</button></li>'}).join('');
+    li.innerHTML='<span class="num" aria-hidden="true">'+(idx+1)+'</span>'+
+      '<div class="cabeza"><div class="txt"><span class="cuando" data-dia="'+idx+'"></span><h3>Publicación '+(idx+1)+': '+esc(info.titulo)+'</h3></div><img class="anima" src="'+R('assets/personajes/'+info.personaje+'.webp')+'" alt=""></div>'+
+      '<div class="carrusel" role="list" aria-label="Piezas de la publicación '+(idx+1)+'">'+figs+'</div>'+
+      '<div class="acciones"><button type="button" class="btn btn-azul btn-chico" data-zip="'+idx+'">Descargar todo (.zip)</button><button type="button" class="btn btn-borde btn-chico" data-copy="'+idx+'">Copiar texto sugerido</button></div>'+
+      (p.v?'<p style="margin:-4px 0 12px;color:var(--tinta-suave)">Puedes publicar el video dentro del carrusel, en el segundo lugar, o aparte como reel.</p>':'')+
+      '<label class="marca"><input type="checkbox" data-hecha="'+p.n+'">Ya la publiqué</label>'+'<details class="texto-copy"><summary>Ver texto sugerido</summary><pre>'+esc(copy)+'</pre></details>'+
+      '<details class="alts"><summary>Texto alternativo de cada pieza</summary><ol>'+alts+'</ol></details>';
+    $$('.ver',li).forEach(function(b){b.addEventListener('click',function(){abrirVisor(piezas,+b.dataset.i,'Publicación '+(idx+1))})});
+    $('[data-copy]',li).addEventListener('click',function(){copiar(copy)});
+    $$('[data-copiar]',li).forEach(function(b){b.addEventListener('click',function(){copiar(b.dataset.copiar)})});
+    $('[data-zip]',li).addEventListener('click',function(){zipPublicacion(d,p,piezas,copy,this)});
+    var ch=$('[data-hecha]',li);ch.checked=!!hechas()[p.n];li.classList.toggle('publicada',ch.checked);
+    ch.addEventListener('change',function(){var h=hechas();h[p.n]=ch.checked;guardarHechas(h);li.classList.toggle('publicada',ch.checked);avance();if(ch.checked)toast('¡Bien! Publicación '+(idx+1)+' marcada')});
+    ol.appendChild(li);
+  });
+  actualizarFechas();observar(ol);avance();
+}
+
+function hechas(){try{return JSON.parse(localStorage.getItem('snct2026-pub-'+DEST_ACTUAL.s)||'{}')}catch(e){return {}}}
+function guardarHechas(h){try{localStorage.setItem('snct2026-pub-'+DEST_ACTUAL.s,JSON.stringify(h))}catch(e){}}
+function avance(){var h=hechas(),tot=DEST_ACTUAL.p.length,n=DEST_ACTUAL.p.filter(function(p){return h[p.n]}).length;var t=$('#avanceTxt');if(!t)return;t.textContent=n===tot?'¡Completaste las '+tot+' publicaciones!':'Llevas '+n+' de '+tot+' publicaciones';$('#avanceBarra').style.width=(100*n/tot)+'%'}
+function actualizarFechas(){
+  var fuera=0,fin=new Date('2026-11-13T00:00:00Z'),ini=new Date('2026-11-09T00:00:00Z');
+  $$('.cuando').forEach(function(s){var f=sumarDias(INICIO,+s.dataset.dia);var o=f>fin||f<ini;if(o)fuera++;s.textContent='Sugerido: '+fmtDia.format(f);s.classList.toggle('fuera',o)});
+  var av=$('#avisoFechas');
+  if(fuera){av.hidden=false;av.textContent=fuera===1?'Una publicación queda por fuera de la Semana Nacional de la Calidad Turística (9 al 13 de noviembre). Puedes publicarla igual, o elegir una fecha de inicio más temprana.':fuera+' publicaciones quedan por fuera de la Semana Nacional de la Calidad Turística (9 al 13 de noviembre). Puedes publicarlas igual, o elegir una fecha de inicio más temprana.'}
+  else av.hidden=true;
+}
+function bajarIcs(){
+  var d=DEST_ACTUAL,c=CON[d.r],L=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Programa de Calidad Turistica//SNCT2026//ES','CALSCALE:GREGORIAN'];
+  function e(s){return s.replace(/\\/g,'\\\\').replace(/;/g,'\\;').replace(/,/g,'\\,')}
+  d.p.forEach(function(p,i){var f=sumarDias(INICIO,i),f2=sumarDias(INICIO,i+1);var t=c.pubs[p.n].titulo;
+    L.push('BEGIN:VEVENT','UID:snct2026-'+d.s+'-'+p.n+'@calidadturistica','DTSTAMP:20261107T000000Z','DTSTART;VALUE=DATE:'+isoDe(f).replace(/-/g,''),'DTEND;VALUE=DATE:'+isoDe(f2).replace(/-/g,''),'SUMMARY:'+e('Publicar '+(i+1)+': '+t+' ('+d.n+')'),'DESCRIPTION:'+e('Semana Nacional de la Calidad Turística 2026. Descarga las piezas y el texto sugerido en el repositorio del programa.'),'END:VEVENT')});
+  L.push('END:VCALENDAR');
+  descargarBlob(new Blob([L.join('\r\n')],{type:'text/calendar'}),'publicaciones-'+d.s+'.ics');
+}
+function zipPublicacion(d,p,piezas,copy,btn){
+  if(!window.JSZip){toast('Descarga las piezas una por una');return}
+  btn.disabled=true;var txt=btn.textContent;btn.textContent='Preparando…';
+  var z=new JSZip();
+  Promise.all(piezas.map(function(x){return fetch(x.src).then(function(r){if(!r.ok)throw new Error();return r.blob()}).then(function(b){z.file(x.nombre,b)})}))
+  .then(function(){
+    z.file('texto-sugerido.txt',copy);
+    z.file('textos-alternativos.txt',piezas.map(function(x){return x.etq+': '+x.alt}).join('\r\n\r\n'));
+    return z.generateAsync({type:'blob'});
+  }).then(function(b){descargarBlob(b,d.s+'_publicacion-'+p.n+'.zip');toast('Descarga lista')})
+  .catch(function(){toast('No se pudo armar el .zip. Descarga las piezas una por una.')})
+  .then(function(){btn.disabled=false;btn.textContent=txt});
+}
+
+
+/* ---------- logo de alcaldía que aún no está en las piezas ---------- */
+var BARRAS=['1-1','1-3','2-1','2-6','3-1','3-5','4-1','4-4','5-1','5-3'],GEN={};
+function cajaLogo(d){
+  return '<div class="falta-logo" id="cajaLogo"><div><h3>Agrega el logo de la Alcaldía de '+esc(d.n)+'</h3><p id="cajaLogoTxt">Las piezas marcadas aún no tienen el logo de tu alcaldía. Súbelo aquí y se ubicará automáticamente junto a los logos institucionales, en las 10 piezas que llevan la barra de logos. Usa un PNG con fondo transparente.</p></div>'+
+  '<label class="subir"><input type="file" id="logoAlc" accept="image/png,image/jpeg,image/webp,image/svg+xml"><span class="vista" id="vistaAlc">Elegir logo</span></label></div>';
+}
+function activarCajaLogo(d){
+  var inp=$('#logoAlc');
+  function usar(url){cargarImg(url).then(function(im){$('#vistaAlc').innerHTML='<img src="'+url+'" alt="Logo de la Alcaldía de '+esc(d.n)+'">';componerTodo(d,im)},function(){toast('No pudimos leer ese archivo. Prueba con PNG o JPG.')})}
+  inp.addEventListener('change',function(){var f=this.files[0];if(!f)return;if(f.size>5*1024*1024){toast('El logo pesa más de 5 MB. Usa uno más liviano.');return}
+    var rd=new FileReader();rd.onload=function(){try{localStorage.setItem('snct2026-logo-'+d.s,rd.result)}catch(e){}usar(rd.result)};rd.readAsDataURL(f)});
+  try{var g=localStorage.getItem('snct2026-logo-'+d.s);if(g)usar(g)}catch(e){}
+}
+function componer(src,logo,bar){
+  return cargarImg(src).then(function(im){
+    var cv=document.createElement('canvas');cv.width=1080;cv.height=1350;var c=cv.getContext('2d');c.drawImage(im,0,0,1080,1350);
+    var x0=bar[0],y0=bar[1],gw=bar[2]-bar[0]+1,gh=bar[3]-bar[1]+1;
+    var grupo=document.createElement('canvas');grupo.width=gw;grupo.height=gh;grupo.getContext('2d').drawImage(cv,x0,y0,gw,gh,0,0,gw,gh);
+    var lw0=logo.naturalWidth||logo.width,lh0=logo.naturalHeight||logo.height,lh=gh*.74,lw=lw0*lh/lh0;if(lw>200){lw=200;lh=lh0*lw/lw0}
+    var gap=38,tot=gw+gap+lw,k=Math.min(1,1000/tot);
+    c.fillStyle='#fff';c.fillRect(x0-8,y0-6,gw+16,gh+12);
+    var sx=540-tot*k/2;c.drawImage(grupo,sx,y0+gh*(1-k)/2,gw*k,gh*k);
+    c.drawImage(logo,sx+(gw+gap)*k,y0+(gh-lh*k)/2,lw*k,lh*k);
+    return new Promise(function(ok){cv.toBlob(function(b){ok(URL.createObjectURL(b))},'image/jpeg',.9)});
+  });
+}
+function componerTodo(d,logo){
+  var g=GEN[d.s]={};var t=$('#cajaLogoTxt');if(t)t.textContent='Agregando el logo a tus piezas…';
+  Promise.all(BARRAS.map(function(kk){var pn=kk.split('-');return componer(R('piezas/'+d.s+'/p'+pn[0]+'-'+pn[1]+'.jpg'),logo,d.bar).then(function(u){g[kk]=u})}))
+  .then(function(){g.listo=true;var cj=$('#cajaLogo');if(cj)cj.classList.add('listo');if(t)t.textContent='Listo: el logo ya está en tus piezas. Descárgalas normalmente. Si quieres cambiarlo, sube otro archivo.';pintarPubs();toast('Logo agregado a tus piezas')})
+  .catch(function(){if(t)t.textContent='No pudimos agregar el logo en este navegador. Intenta desde el enlace publicado del repositorio.'});
+}
+/* --- visor --- */
+var visor=$('#visor'),vLista=[],vI=0,vTit='';
+function abrirVisor(l,i,t){vLista=l;vI=i;vTit=t;mostrarVisor();if(visor.showModal)visor.showModal();else visor.setAttribute('open','')}
+function mostrarVisor(){
+  var x=vLista[vI],m=$('#visorMedio');m.innerHTML='';
+  if(x.tipo==='video'){var v=document.createElement('video');v.src=x.src;v.controls=true;v.playsInline=true;v.poster=x.th;v.setAttribute('aria-label',x.alt);m.appendChild(v)}
+  else{var im=document.createElement('img');im.src=x.src;im.alt=x.alt;m.appendChild(im)}
+  $('#visorTitulo').textContent=vTit+', '+x.etq.toLowerCase();$('#visorAlt').textContent=x.alt;
+  var a=$('#visorBajar');a.href=x.src;a.setAttribute('download',x.nombre);
+  $('#visorAnt').disabled=vI===0;$('#visorSig').disabled=vI===vLista.length-1;
+}
+$('#visorAnt').addEventListener('click',function(){if(vI>0){vI--;mostrarVisor()}});
+$('#visorSig').addEventListener('click',function(){if(vI<vLista.length-1){vI++;mostrarVisor()}});
+$('#visorCerrar').addEventListener('click',function(){cerrarVisor()});
+$('#visorCopiar').addEventListener('click',function(){copiar(vLista[vI].alt)});
+visor.addEventListener('keydown',function(e){if(e.key==='ArrowRight')$('#visorSig').click();if(e.key==='ArrowLeft')$('#visorAnt').click()});
+visor.addEventListener('close',function(){$('#visorMedio').innerHTML=''});
+visor.addEventListener('click',function(e){if(e.target===visor)cerrarVisor()});
+function cerrarVisor(){if(visor.close)visor.close();else visor.removeAttribute('open')}
+
+/* --- Generador para destinos certificados, prestadores y SITCAT --- */
+var IMG={},LOGO=null,G={};
+function cargarImg(src){return new Promise(function(ok,mal){var i=new Image();i.onload=function(){ok(i)};i.onerror=mal;i.src=src})}
+function fuenteLista(){
+  if(!document.fonts||!window.FontFace)return Promise.resolve();
+  return Promise.all([document.fonts.load('400 40px Atkinson'),document.fonts.load('700 40px Atkinson'),document.fonts.load('800 40px Atkinson')]).catch(function(){});
+}
+function opcionesNombre(n){
+  var ops=[],add=function(s){s=s.replace(/\s+/g,' ').replace(/^[-–,.\s]+|[-–,\s]+$/g,'').trim();if(s.length>1&&ops.indexOf(s)<0)ops.push(s)};
+  var base=n.replace(/\n/g,' ');
+  var partes=base.split(/\s+[-–]\s*|\s*[-–]\s+|\s*\/\s*/);
+  [base].concat(partes.length>1?partes:[]).forEach(function(p){add(tituloSiMayus(p));add(p)});
+  return ops;
+}
+function normaFrase(nm){return /,/.test(nm)?'las '+nm.replace(/,\s([^,]*)$/,' y $1'):'la '+nm}
+function genero(tipo){var t=(PLA.tipos||[]).filter(function(x){return x.v===tipo})[0];return t?t.g:'m'}
+function adj(base,g){return g==='f'?base.replace(/o$/,'a'):base}
+function tipoPorNorma(nm){
+  if(/^NTS-AV 00[1-4]/.test(nm))return 'Agencia de viajes';
+  if(/NTSH|NTS-TS 002/.test(nm))return 'Alojamiento turístico';
+  if(/21101|NTS-AV 01[0-4]/.test(nm))return 'Prestador de turismo de aventura';
+  if(/NTS-TS 004|USNA/.test(nm))return 'Establecimiento gastronómico';
+  if(/NTS-AV 009|NTS-TS 005/.test(nm))return 'Empresa de transporte turístico';
+  return 'Prestador de servicios turísticos';
+}
+function datosPiezas(){
+  var r=estado.reg,est=G.norma[1],nm=G.norma[0],tipo=G.tipo,g=genero(tipo),t=tipo.toLowerCase();
+  var cond,parr,frase;
+  if(r.c==='s'){cond='Sistema Territorial de Calidad Turística (SITCAT)';
+    parr='Por eso, desde el Sistema Territorial de Calidad Turística articulamos a prestadores de servicios turísticos, comunidad e instituciones en torno a buenas prácticas y estándares de calidad que generan valor para nuestro territorio.';
+    frase='Como parte del Sistema Territorial de Calidad Turística (SITCAT), trabajamos junto a prestadores de servicios turísticos, comunidad e instituciones para que la calidad sea una tarea compartida en todo el territorio.'}
+  else if(r.c==='d'){cond='Destino turístico certificado en '+normaFrase(nm);
+    parr='Por eso, como destino certificado en '+normaFrase(nm)+', trabajamos con buenas prácticas y estándares de calidad que generan valor para quienes vivimos aquí y para quienes nos visitan.';
+    frase='Como destino turístico certificado en '+normaFrase(nm)+', reafirmamos nuestro compromiso con una gestión turística que cuida lo que somos, impulsa la mejora continua y genera valor para quienes vivimos aquí y para quienes nos visitan.'}
+  else if(est==='c'){cond=tipo+' '+adj('certificado',g)+' en '+normaFrase(nm);
+    parr='Por eso, como '+t+' '+adj('certificado',g)+' en '+normaFrase(nm)+', aplicamos buenas prácticas y estándares de calidad que fortalecen la gestión turística y generan valor para nuestro destino.';
+    frase='Como '+t+' '+adj('certificado',g)+' en '+normaFrase(nm)+', reafirmamos nuestro compromiso con las buenas prácticas y los estándares de calidad que fortalecen la gestión turística, impulsan la mejora continua y contribuyen al desarrollo sostenible de nuestro destino.'}
+  else if(est==='b'){cond=tipo+' con Distintivo de Buenas Prácticas Calidad Turística Colombia';
+    parr='Por eso, contamos con el Distintivo de Buenas Prácticas Calidad Turística Colombia y aplicamos estándares de calidad que fortalecen la gestión turística y generan valor para nuestro destino.';
+    frase='Contamos con el Distintivo de Buenas Prácticas Calidad Turística Colombia y reafirmamos nuestro compromiso con las buenas prácticas y los estándares de calidad que fortalecen la gestión turística, impulsan la mejora continua y contribuyen al desarrollo sostenible de nuestro destino.'}
+  else{cond=tipo+' en implementación de '+normaFrase(nm);
+    parr='Por eso, avanzamos en la implementación de '+normaFrase(nm)+', con buenas prácticas y estándares de calidad que fortalecen la gestión turística y generan valor para nuestro destino.';
+    frase='Avanzamos en la implementación de '+normaFrase(nm)+' y, con cada paso, reafirmamos nuestro compromiso con las buenas prácticas y los estándares de calidad que fortalecen la gestión turística, impulsan la mejora continua y contribuyen al desarrollo sostenible de nuestro destino.'}
+  var lug=(norm(G.lugar)===norm(G.nombre))?'':G.lugar;
+  return {nombre:G.nombre,cond:cond,parr:parr,frase:frase,lugar:lug,codigo:'SNCT2026-'+r.i};
+}
+function pintarGenerador(r){
+  G={};LOGO=null;
+  var esPst=r.c==='p',esD=r.c==='d',esS=r.c==='s';
+  var pers=esS?'grupo':(esD?'alcalde':'recepcionista');
+  var ruta=esS?'SITCAT':(esD?'Destino certificado':'Prestador de servicios turísticos');
+  cont.innerHTML=cabecera('Tu publicación, '+tituloSiMayus(r.n),ruta,'Completa los datos, sube tu logo y descarga las tres piezas en JPG con el texto sugerido. El nombre y la norma salen de la base oficial del programa.',pers)+
+  '<div class="generador"><form class="formulario" id="fGen" onsubmit="return false">'+
+    '<div class="campo"><label for="gNombre">Nombre que aparecerá en las piezas</label><select class="entrada" id="gNombre"></select><span class="ayuda">Elige entre las formas del nombre registradas en el programa.</span></div>'+
+    (esPst?'<div class="campo"><label for="gTipo">Tipo de organización</label><select class="entrada" id="gTipo"></select></div>':'')+
+    '<div class="campo"><label for="gNorma">'+(esS?'Vinculación':'Norma o reconocimiento')+'</label><select class="entrada" id="gNorma"></select></div>'+
+    '<div class="campo"><label for="gLugar">Municipio y departamento</label><input class="entrada" id="gLugar" type="text" maxlength="60"><span class="ayuda" id="gLugarAyuda"></span></div>'+
+    '<div class="campo"><span style="display:block;font-weight:800;color:var(--azul);margin-bottom:8px" id="lLogo">Logo de tu organización (opcional)</span>'+
+      '<label class="subir" id="zonaLogo"><input type="file" id="gLogo" accept="image/png,image/jpeg,image/webp,image/svg+xml" aria-labelledby="lLogo"><span class="vista" id="vistaLogo">Elige un archivo PNG, JPG o SVG. Si tiene fondo transparente, se verá mejor.</span></label>'+
+      '<button type="button" class="btn btn-borde btn-chico" id="gQuitar" hidden style="margin-top:8px">Quitar logo</button></div>'+
+    '<div class="campo"><label for="gRed">¿Dónde vas a publicar?</label><select class="entrada" id="gRed"><option value="fb">Facebook, LinkedIn o X</option><option value="ig">Instagram</option></select></div>'+
+  '</form><div>'+
+    '<div class="previas" id="previas"></div>'+
+    '<div class="acciones" style="margin-top:16px"><button type="button" class="btn btn-azul" id="gZip">Descargar las 3 piezas (.zip)</button><button type="button" class="btn btn-borde" id="gCopiar">Copiar texto sugerido</button></div>'+
+    '<details class="texto-copy" open><summary>Texto sugerido</summary><pre id="gCopy"></pre></details>'+
+    '<details class="alts"><summary>Texto alternativo de cada pieza</summary><ol id="gAlts"></ol></details>'+
+  '</div></div>';
+  var sN=$('#gNombre');opcionesNombre(r.n).forEach(function(o){var op=document.createElement('option');op.value=o;op.textContent=o;sN.appendChild(op)});
+  var sNo=$('#gNorma');r.nr.forEach(function(x,i){var op=document.createElement('option');op.value=i;op.textContent=x[1]==='s'?'SITCAT':(x[1]==='b'?'Distintivo de Buenas Prácticas Calidad Turística Colombia':(x[1]==='c'?'Certificado en ':'En implementación de ')+x[0]);sNo.appendChild(op)});
+  if(esPst){var sT=$('#gTipo');PLA.tipos.forEach(function(t){var op=document.createElement('option');op.value=t.v;op.textContent=t.v;sT.appendChild(op)});sT.value=tipoPorNorma(r.nr[0][0])}
+  var lg=$('#gLugar');lg.value=esS?r.n:lugar(r);
+  $('#gLugarAyuda').textContent=(r.m||esS)?'Tomado de la base del programa. Puedes ajustar la escritura.':'La base no trae el municipio; escríbelo para que aparezca en las piezas.';
+  ['gNombre','gTipo','gNorma','gLugar','gRed'].forEach(function(id){var el=$('#'+id);if(el)el.addEventListener('input',programar)});
+  $('#gLogo').addEventListener('change',function(){var f=this.files[0];if(!f)return;
+    if(f.size>5*1024*1024){toast('El logo pesa más de 5 MB. Usa uno más liviano.');return}
+    var rd=new FileReader();rd.onload=function(){cargarImg(rd.result).then(function(im){LOGO=im;$('#vistaLogo').innerHTML='<img src="'+rd.result+'" alt="Vista previa del logo"><span>'+esc(f.name)+'</span>';$('#gQuitar').hidden=false;programar()},function(){toast('No pudimos leer ese archivo. Prueba con PNG o JPG.')})};rd.readAsDataURL(f)});
+  $('#gQuitar').addEventListener('click',function(){LOGO=null;$('#gLogo').value='';$('#vistaLogo').textContent='Elige un archivo PNG, JPG o SVG. Si tiene fondo transparente, se verá mejor.';this.hidden=true;programar()});
+  $('#gCopiar').addEventListener('click',function(){copiar($('#gCopy').textContent)});
+  $('#gZip').addEventListener('click',zipGenerador);
+  var pv=$('#previas');
+  [1,2,3].forEach(function(n){var f=document.createElement('figure');f.innerHTML='<canvas width="1080" height="1350" id="cv'+n+'" role="img"></canvas><figcaption><span>Pieza '+n+'</span><button type="button" class="bajar btn btn-borde btn-chico" data-bajar="'+n+'">Descargar JPG</button></figcaption>';pv.appendChild(f)});
+  $$('[data-bajar]').forEach(function(b){b.addEventListener('click',function(){var n=b.dataset.bajar;$('#cv'+n).toBlob(function(bl){descargarBlob(bl,nombreArchivo(n))},'image/jpeg',.92)})});
+  Promise.all([fuenteLista(),cargarImg(R('assets/plantilla/fondo-1.jpg')),cargarImg(R('assets/plantilla/fondo-2.jpg')),cargarImg(R('assets/plantilla/fondo-3.jpg')),cargarImg(R('assets/plantilla/wqw.png'))]).then(function(a){IMG.f1=a[1];IMG.f2=a[2];IMG.f3=a[3];IMG.wqw=a[4];dibujar()},function(){toast('No se pudieron cargar las plantillas.')});
+}
+function nombreArchivo(n){return norm(G.nombre||'pieza').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,40)+'_semana-calidad-2026_pieza-'+n+'.jpg'}
+var tD;function programar(){clearTimeout(tD);tD=setTimeout(dibujar,120)}
+function leerForm(){
+  var r=estado.reg;
+  G.nombre=$('#gNombre').value;G.tipo=$('#gTipo')?$('#gTipo').value:(r.c==='d'?'Destino turístico':'SITCAT');
+  G.norma=r.nr[+$('#gNorma').value||0];G.lugar=$('#gLugar').value.trim();RED=$('#gRed').value;
+}
+/* dibujo en lienzo */
+function rr(ctx,x,y,w,h,r){ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath()}
+function lineas(ctx,t,w){var pal=t.split(/\s+/),ls=[],l='';pal.forEach(function(p){var pr=l?l+' '+p:p;if(ctx.measureText(pr).width<=w||!l)l=pr;else{ls.push(l);l=p}});if(l)ls.push(l);return ls}
+function ajustar(ctx,t,w,peso,max,min,maxL){for(var s=max;s>=min;s-=2){ctx.font=peso+' '+s+'px Atkinson, sans-serif';var ls=lineas(ctx,t,w);if(ls.length<=maxL)return {s:s,ls:ls}}ctx.font=peso+' '+min+'px Atkinson, sans-serif';return {s:min,ls:lineas(ctx,t,w)}}
+function texto(ctx,ls,x,y,lh){ls.forEach(function(l,i){ctx.fillText(l,x,y+i*lh)});return y+(ls.length-1)*lh}
+function pin(ctx,x,y,s,color){ctx.save();ctx.translate(x,y);ctx.scale(s/30,s/30);ctx.fillStyle=color;ctx.beginPath();ctx.moveTo(15,38);ctx.bezierCurveTo(15,38,0,23,0,14.5);ctx.arc(15,14.5,15,Math.PI,0);ctx.bezierCurveTo(30,23,15,38,15,38);ctx.fill();ctx.fillStyle='#fff';ctx.beginPath();ctx.arc(15,14.5,5.8,0,Math.PI*2);ctx.fill();ctx.restore()}
+function tarjetaLogo(ctx,x,y,w,h){
+  ctx.save();ctx.shadowColor='rgba(0,30,40,.28)';ctx.shadowBlur=26;ctx.shadowOffsetY=10;ctx.fillStyle='#fff';rr(ctx,x,y,w,h,24);ctx.fill();ctx.restore();
+  var p=Math.round(Math.min(w,h)*.1),iw=LOGO.naturalWidth||LOGO.width,ih=LOGO.naturalHeight||LOGO.height,k=Math.min((w-2*p)/iw,(h-2*p)/ih);
+  ctx.drawImage(LOGO,x+(w-iw*k)/2,y+(h-ih*k)/2,iw*k,ih*k);
+}
+function codigo(ctx,c,claro){ctx.font='400 15px Atkinson, sans-serif';ctx.fillStyle=claro?'rgba(255,255,255,.72)':'rgba(30,43,55,.6)';ctx.textBaseline='alphabetic';ctx.fillText(c,40,1336)}
+function dibujarP1(ctx,d){
+  ctx.drawImage(IMG.f1,0,0,1080,1350);
+  var L=96,W=888;
+  for(var k=1;k>=.72;k-=.04){
+    var y=104,x=L,w=W;
+    var plan=[];
+    if(LOGO){plan.push(['logo',L,y,Math.round(230*k),Math.round(230*k)]);x=L+Math.round(230*k)+40;w=L+W-x}
+    ctx.font='400 '+Math.round(42*k)+'px Atkinson, sans-serif';
+    var yD=y+Math.round(40*k);plan.push(['t','400',Math.round(42*k),['Desde'],x,yD,0]);
+    var nm=ajustar(ctx,d.nombre,w,'800',Math.round(76*k),Math.round(40*k),3);
+    var lh=Math.round(nm.s*1.06),yN=yD+Math.round(14*k)+nm.s;plan.push(['t','800',nm.s,nm.ls,x,yN,lh]);
+    var fin=yN+(nm.ls.length-1)*lh;
+    y=Math.max(LOGO?y+Math.round(230*k):0,fin)+Math.round(52*k);
+    ctx.font='700 '+Math.round(34*k)+'px Atkinson, sans-serif';var cl=lineas(ctx,d.cond,W);lh=Math.round(34*k*1.25);
+    plan.push(['t','700',Math.round(34*k),cl,L,y,lh]);y+= (cl.length-1)*lh;
+    if(d.lugar){y+=Math.round(48*k);plan.push(['pin',L,y-Math.round(30*k),Math.round(28*k)]);plan.push(['t','400',Math.round(32*k),[d.lugar],L+Math.round(40*k),y,0])}
+    y+=Math.round(44*k);plan.push(['barra',L,y,Math.round(120*k),Math.round(10*k)]);
+    y+=Math.round(66*k);plan.push(['t','400',Math.round(42*k),['nos unimos a la celebración de la'],L,y,0]);
+    ctx.font='800 '+Math.round(54*k)+'px Atkinson, sans-serif';var sl=lineas(ctx,'Semana Nacional de la Calidad Turística 2026',W);lh=Math.round(54*k*1.1);
+    y+=Math.round(64*k);plan.push(['t','800',Math.round(54*k),sl,L,y,lh]);y+=(sl.length-1)*lh;
+    var wq=Math.round(360*k),hq=Math.round(wq*IMG.wqw.height/IMG.wqw.width);
+    y+=Math.round(40*k);plan.push(['wqw',L,y,wq,hq]);plan.push(['fecha',L+wq+Math.round(34*k),y+hq/2,k]);
+    if(y+hq<=955||k<=.74)break;
+  }
+  var off=Math.max(0,Math.round((955-(y+hq))/2));
+  ctx.save();ctx.translate(0,off);
+  plan.forEach(function(p){
+    if(p[0]==='logo')tarjetaLogo(ctx,p[1],p[2],p[3],p[4]);
+    else if(p[0]==='t'){ctx.fillStyle='#fff';ctx.font=p[1]+' '+p[2]+'px Atkinson, sans-serif';texto(ctx,p[3],p[4],p[5],p[6])}
+    else if(p[0]==='pin')pin(ctx,p[1],p[2],p[3],'#F2C200');
+    else if(p[0]==='barra'){ctx.fillStyle='#D2663A';rr(ctx,p[1],p[2],p[3],p[4],p[4]/2);ctx.fill()}
+    else if(p[0]==='wqw'){ctx.save();ctx.shadowColor='rgba(0,0,0,.25)';ctx.shadowBlur=14;ctx.shadowOffsetY=6;ctx.drawImage(IMG.wqw,p[1],p[2],p[3],p[4]);ctx.restore()}
+    else if(p[0]==='fecha'){var kk=p[3];ctx.fillStyle='#fff';ctx.font='400 '+Math.round(34*kk)+'px Atkinson, sans-serif';ctx.fillText('Del 9 al 13 de',p[1],p[2]-Math.round(6*kk));ctx.font='800 '+Math.round(46*kk)+'px Atkinson, sans-serif';ctx.fillText('noviembre',p[1],p[2]+Math.round(40*kk))}
+  });
+  ctx.restore();
+  codigo(ctx,d.codigo,true);
+}
+function dibujarP2(ctx,d){
+  ctx.drawImage(IMG.f2,0,0,1080,1350);
+  ctx.fillStyle='#fff';rr(ctx,108,342,856,676,10);ctx.fill();
+  var X=176,W=720,az='#24405E';
+  ctx.fillStyle=az;ctx.font='400 46px Atkinson, sans-serif';ctx.fillText('Nuestra calidez nos identifica,',X,446);
+  ctx.font='800 56px Atkinson, sans-serif';ctx.fillText('¡la calidad nos impulsa!',X,512);
+  var par='Estamos llevando la calidez que nos caracteriza a un nuevo nivel: una gestión turística de calidad que impulsa nuestro desempeño, genera mayores oportunidades para nuestras comunidades y crea mejores experiencias para quienes nos visitan.';
+  var a=ajustar(ctx,par,W,'400',33,27,8);ctx.fillStyle='#1E2B37';texto(ctx,a.ls,X,580,Math.round(a.s*1.45));
+  ctx.fillStyle='#D5DDE1';ctx.fillRect(X,878,W,2);
+  var nm=ajustar(ctx,d.nombre,W-46,'800',32,24,2);pin(ctx,X,900,30,'#D2663A');ctx.fillStyle=az;texto(ctx,nm.ls,X+46,928,Math.round(nm.s*1.15));
+  if(d.lugar){ctx.font='400 27px Atkinson, sans-serif';ctx.fillStyle='#4A5A68';ctx.fillText(d.lugar,X+46,928+nm.ls.length*Math.round(nm.s*1.15)+6)}
+  codigo(ctx,d.codigo,true);
+}
+function dibujarP3(ctx,d){
+  ctx.drawImage(IMG.f3,0,0,1080,1350);
+  var L=96,W=888;
+  for(var k=1;k>=.72;k-=.04){
+    var plan=[],y=150;
+    ctx.font='800 '+Math.round(64*k)+'px Atkinson, sans-serif';var t1=lineas(ctx,'¡Ser Anfitriones de Colombia',W);var lh=Math.round(64*k*1.08);
+    y+=Math.round(64*k);plan.push(['800',Math.round(64*k),t1,L,y,lh]);y+=(t1.length-1)*lh;
+    ctx.font='700 '+Math.round(38*k)+'px Atkinson, sans-serif';var t2=lineas(ctx,'es mucho más que dar una buena bienvenida!',W);lh=Math.round(38*k*1.2);
+    y+=Math.round(52*k);plan.push(['700',Math.round(38*k),t2,L,y,lh]);y+=(t2.length-1)*lh;
+    ctx.font='400 '+Math.round(36*k)+'px Atkinson, sans-serif';var t3=lineas(ctx,d.parr,W);lh=Math.round(36*k*1.42);
+    y+=Math.round(78*k);plan.push(['400',Math.round(36*k),t3,L,y,lh]);y+=(t3.length-1)*lh;
+    y+=Math.round(76*k);plan.push(['800',Math.round(40*k),['¡Somos Anfitriones de Colombia!','¡Ven y vive nuestro país!'],L,y,Math.round(40*k*1.2)]);y+=Math.round(40*k*1.2);
+    var wq=Math.round(360*k),hq=Math.round(wq*IMG.wqw.height/IMG.wqw.width),yr=y+Math.round(54*k);
+    if(yr+Math.max(hq,LOGO?Math.round(150*k):0)<=960||k<=.74)break;
+  }
+  var fin=yr+Math.max(hq,LOGO?Math.round(150*k):0),off=Math.max(0,Math.round((955-fin)/2));
+  ctx.save();ctx.translate(0,off);
+  ctx.fillStyle='#fff';plan.forEach(function(p){ctx.font=p[0]+' '+p[1]+'px Atkinson, sans-serif';texto(ctx,p[2],p[3],p[4],p[5])});
+  var xq=L+W-wq;
+  if(LOGO){var hl=Math.max(hq,Math.round(150*k));tarjetaLogo(ctx,L,yr,Math.round(250*k),hl)}
+  ctx.save();ctx.shadowColor='rgba(0,0,0,.25)';ctx.shadowBlur=14;ctx.shadowOffsetY=6;ctx.drawImage(IMG.wqw,xq,yr+(LOGO?(Math.max(hq,Math.round(150*k))-hq)/2:0),wq,hq);ctx.restore();
+  ctx.restore();
+  codigo(ctx,d.codigo,true);
+}
+function dibujar(){
+  if(!IMG.f1)return;leerForm();
+  var d=datosPiezas();
+  [dibujarP1,dibujarP2,dibujarP3].forEach(function(fn,i){var cv=$('#cv'+(i+1));if(!cv)return;var ctx=cv.getContext('2d');ctx.textBaseline='alphabetic';ctx.clearRect(0,0,1080,1350);fn(ctx,d)});
+  var alts=altsGen(d);
+  $('#cv1').setAttribute('aria-label',alts[0]);$('#cv2').setAttribute('aria-label',alts[1]);$('#cv3').setAttribute('aria-label',alts[2]);
+  $('#gAlts').innerHTML=alts.map(function(a,i){return '<li><strong>Pieza '+(i+1)+'.</strong> '+esc(a)+'<br><button type="button" class="btn btn-borde btn-chico" data-copiar="'+esc(a)+'">Copiar</button></li>'}).join('');
+  $$('#gAlts [data-copiar]').forEach(function(b){b.addEventListener('click',function(){copiar(b.dataset.copiar)})});
+  $('#gCopy').textContent=copyGen(d);
+}
+function altsGen(d){
+  var lg=LOGO?' Incluye el logo de '+d.nombre+'.':'';
+  return [
+    'Pieza gráfica sobre fondo verde azulado. Texto: Desde '+d.nombre+'. '+d.cond+'.'+(d.lugar?' '+d.lugar+'.':'')+' Nos unimos a la celebración de la Semana Nacional de la Calidad Turística 2026. World Quality Week 2026, del 9 al 13 de noviembre. Colombia te llama.'+lg+' Logos del Ministerio de Comercio, Industria y Turismo, FONTUR, Calidad Turística Colombia y Activa Territorio.',
+    'Collage de fotografías de destinos de Colombia con un recuadro blanco. Texto: Nuestra calidez nos identifica, ¡la calidad nos impulsa! Estamos llevando la calidez que nos caracteriza a un nuevo nivel: una gestión turística de calidad que impulsa nuestro desempeño, genera mayores oportunidades para nuestras comunidades y crea mejores experiencias para quienes nos visitan. '+d.nombre+(d.lugar?', '+d.lugar:'')+'.',
+    'Pieza gráfica sobre fondo verde azulado. Texto: ¡Ser Anfitriones de Colombia es mucho más que dar una buena bienvenida! '+d.parr+' ¡Somos Anfitriones de Colombia! ¡Ven y vive nuestro país! World Quality Week 2026. Colombia te llama.'+lg+' Logos institucionales.'
+  ];
+}
+function copyGen(d){
+  var desde='Desde '+d.nombre+(d.lugar&&estado.reg.c!=='s'?', en '+d.lugar.split(',')[0]+',':'');
+  return '¡Ser Anfitriones de Colombia es mucho más que dar una buena bienvenida!\n\n'+
+    desde+' nos unimos a la Semana Nacional de la Calidad Turística 2026, del 9 al 13 de noviembre.\n\n'+
+    d.frase+'\n\n'+
+    'La calidad se construye con acciones, y cada experiencia que ofrecemos es una oportunidad para demostrarlo.\n\n'+
+    '¡Somos Anfitriones de Colombia!\n¡Colombia te llama!\n\n'+PLA.hashtags;
+}
+function zipGenerador(){
+  if(!window.JSZip){toast('Descarga las piezas una por una');return}
+  var b=$('#gZip'),t=b.textContent;b.disabled=true;b.textContent='Preparando…';
+  var z=new JSZip(),d=datosPiezas();
+  Promise.all([1,2,3].map(function(n){return new Promise(function(ok){$('#cv'+n).toBlob(function(bl){z.file(nombreArchivo(n),bl);ok()},'image/jpeg',.92)})}))
+  .then(function(){z.file('texto-sugerido.txt',copyGen(d));z.file('textos-alternativos.txt',altsGen(d).map(function(a,i){return 'Pieza '+(i+1)+': '+a}).join('\r\n\r\n'));return z.generateAsync({type:'blob'})})
+  .then(function(bl){descargarBlob(bl,nombreArchivo('s').replace('_pieza-s.jpg','.zip'));toast('Descarga lista')})
+  .catch(function(){toast('No se pudo armar el .zip. Descarga las piezas una por una.')})
+  .then(function(){b.disabled=false;b.textContent=t});
+}
+})();
+</script>
+</body>
+</html>
