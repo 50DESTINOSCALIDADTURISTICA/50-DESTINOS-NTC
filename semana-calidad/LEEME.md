@@ -9,7 +9,7 @@ Sitio estático para publicar en GitHub Pages (por ejemplo, en la carpeta `seman
 
 ## Estructura
 - `index.html`: la página.
-- `data/registros.js`: base oficial (642 registros) con nombre, tipo, ubicación y norma. No incluye correos ni responsables.
+- `data/registros.js`: base oficial (643 registros; incluye a Palmira, Valle del Cauca, como actor SITCAT) con nombre, tipo, ubicación y norma. No incluye correos ni responsables.
 - `data/destinos.js`: los 49 destinos y sus publicaciones.
 - `data/contenidos.js`: textos sugeridos, títulos y textos alternativos por ruta.
 - `piezas/<destino>/`: piezas en JPG (`p<publicación>-<pieza>.jpg`), miniaturas en `t/` y video cuando existe.

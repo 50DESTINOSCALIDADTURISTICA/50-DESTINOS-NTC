@@ -899,7 +899,7 @@ lista.addEventListener('keydown',function(e){var bs=$$('#listaResultados button'
 /* ---------- espacio de trabajo ---------- */
 function abrirTrabajo(r){
   cont.innerHTML='';
-  if(r.c==='n'){var d=DES.filter(function(x){return x.s===r.s})[0];pintarDestino(d,r)}
+  if(r.c==='n'||r.ds){var d=DES.filter(function(x){return x.s===(r.ds||r.s)})[0];pintarDestino(d,r)}
   else pintarGenerador(r);
   trabajo.hidden=false;observar(trabajo);vigilarVivos(trabajo);
   pasosBtns[1].disabled=false;marcarPaso(2);
@@ -1098,9 +1098,9 @@ function tipoPorNorma(nm){
 function datosPiezas(){
   var r=estado.reg,est=G.norma[1],nm=G.norma[0],tipo=G.tipo,g=genero(tipo),t=tipo.toLowerCase();
   var cond,parr,frase;
-  if(r.c==='s'){cond='Sistema Territorial de Calidad Turística (SITCAT)';
+  if(r.c==='s'){var sitV=(r.dp&&norm(r.dp)!==norm(r.n))?' del '+r.dp:'';cond='Sistema Territorial de Calidad Turística'+sitV+' (SITCAT)';
     parr='Por eso, desde el Sistema Territorial de Calidad Turística articulamos a prestadores de servicios turísticos, comunidad e instituciones en torno a buenas prácticas y estándares de calidad que generan valor para nuestro territorio.';
-    frase='Como parte del Sistema Territorial de Calidad Turística (SITCAT), trabajamos junto a prestadores de servicios turísticos, comunidad e instituciones para que la calidad sea una tarea compartida en todo el territorio.'}
+    frase='Como parte del Sistema Territorial de Calidad Turística'+sitV+' (SITCAT), trabajamos junto a prestadores de servicios turísticos, comunidad e instituciones para que la calidad sea una tarea compartida en todo el territorio.'}
   else if(r.c==='d'){cond='Destino turístico certificado en '+normaFrase(nm);
     parr='Por eso, como destino certificado en '+normaFrase(nm)+', trabajamos con buenas prácticas y estándares de calidad que generan valor para quienes vivimos aquí y para quienes nos visitan.';
     frase='Como destino turístico certificado en '+normaFrase(nm)+', reafirmamos nuestro compromiso con una gestión turística que cuida lo que somos, impulsa la mejora continua y genera valor para quienes vivimos aquí y para quienes nos visitan.'}

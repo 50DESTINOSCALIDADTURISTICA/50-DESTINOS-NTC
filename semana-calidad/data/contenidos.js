@@ -13,6 +13,30 @@
   }
 
   window.CONTENIDOS = {
+
+    'sitcat': {
+      norma: 'SITCAT',
+      nombreNorma: 'Sistema Territorial de Calidad Turística',
+      ruta: 'Calidad turística en el territorio',
+      personaje: 'grupo',
+      pubs: {
+        1: {
+          titulo: 'Semana Nacional de la Calidad Turística',
+          personaje: 'alcalde-saluda',
+          copy:
+'✨ ¡Nuestra calidez nos identifica, la calidad nos impulsa!\n\n' +
+'Desde {D} nos unimos a la celebración de la Semana Nacional de la Calidad Turística 2026, del 9 al 13 de noviembre.\n\n' +
+'Como parte del Sistema Territorial de Calidad Turística del Valle del Cauca (SITCAT), trabajamos junto a prestadores de servicios turísticos, comunidad e instituciones para llevar la calidez que nos caracteriza a un nuevo nivel: una gestión turística de calidad que impulsa nuestro desempeño, genera más oportunidades para nuestras comunidades y crea mejores experiencias para quienes nos visitan.\n\n' +
+'Con el apoyo del Ministerio de Comercio, Industria y Turismo y de FONTUR, avanzamos en buenas prácticas y estándares de calidad que fortalecen la gestión turística y generan valor para nuestro destino.\n\n' +
+'¡Somos Anfitriones de Colombia! Ven a {D} y vive nuestro país.\n\n' + H + ' #SITCAT #ValleDelCauca',
+          alts: [
+            'Pieza sobre fondo verde azulado. Texto: Desde {D} nos unimos a la celebración de la Semana Nacional de la Calidad Turística 2026. Sello World Quality Week 2026, del 9 al 13 de noviembre. Colombia te llama. Logos del Ministerio de Comercio, Industria y Turismo, FONTUR, Calidad Turística Colombia y Activa Territorio.',
+            'Collage de fotografías de destinos de Colombia: la torre de una iglesia, un edificio de colores, paisajes y un personaje de carnaval con máscara. En el centro, un recuadro blanco con el texto: Nuestra calidez nos identifica, ¡la calidad nos impulsa! Estamos llevando la calidez que nos caracteriza a un nuevo nivel: una gestión turística de calidad que impulsa nuestro desempeño, genera mayores oportunidades para nuestras comunidades y crea mejores experiencias para quienes nos visitan.',
+            'Pieza sobre fondo verde azulado. Texto: ¡Ser Anfitriones de Colombia es mucho más que dar una buena bienvenida! Por eso, avanzamos en la implementación de buenas prácticas y estándares de calidad que fortalecen la gestión turística y generan valor para nuestros destinos. ¡Somos Anfitriones de Colombia! ¡Ven y vive nuestro país! Sello World Quality Week 2026. Colombia te llama. Logos del Ministerio de Comercio, Industria y Turismo, FONTUR, Calidad Turística Colombia y Activa Territorio.'
+          ]
+        }
+      }
+    },
     '6654': {
       norma: 'NTC 6654',
       nombreNorma: 'Requisitos y recomendaciones para un turismo accesible para todos',
