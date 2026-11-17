@@ -829,6 +829,25 @@ footer a{color:#E3A83B}
 .ver-form input{flex:1;min-width:180px;font:inherit;padding:10px 12px;border:2px solid var(--linea);border-radius:12px}
 .ver-out{font-size:14px;margin-top:10px;border-radius:12px}
 .ver-out.ok{background:#E4EFE0;padding:10px 12px}.ver-out.no{background:var(--crema);padding:10px 12px}
+
+/* REPOSITORIO Y CIERRE DIPLOMADO */
+body[data-page="archivo"] section[data-p="archivo"]{display:block}
+.repo-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.repo-card{background:var(--blanco);border:1px solid var(--linea);border-radius:20px;padding:20px;text-decoration:none;color:var(--tinta);display:flex;flex-direction:column;gap:8px;transition:transform .25s ease,box-shadow .25s ease}
+.repo-card:hover{transform:translateY(-4px);box-shadow:var(--sombra)}
+.repo-card strong{font-family:var(--fd);font-size:18px;line-height:1.3}
+.repo-card span{font-size:15px;color:var(--tinta2)}
+.repo-card .repo-est{align-self:flex-start;font-family:var(--fd);font-size:12px;font-weight:800;padding:4px 10px;border-radius:999px;background:var(--gris);color:var(--tinta)}
+.repo-card em{font-style:normal;margin-top:auto;font-family:var(--fd);font-weight:800;font-size:14px;color:var(--vino)}
+.gracias{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:44px;align-items:center}
+.gracias-vis{position:relative;background:linear-gradient(160deg,#2F7A24,#7EC700);border-radius:28px;min-height:440px;overflow:hidden;color:#fff;padding:36px}
+.gracias-vis b{display:block;font-family:var(--fd);font-size:clamp(56px,6.2vw,84px);font-weight:900;line-height:1;position:relative;z-index:1}
+.gracias-vis span{display:block;font-family:var(--fd);font-weight:700;font-size:19px;max-width:220px;margin-top:8px;position:relative;z-index:1}
+.gracias-vis img{position:absolute;right:-6px;bottom:0;height:56%;width:auto}
+.prox-conv{display:flex;gap:14px;align-items:flex-start;background:#FFF4D6;border:1.5px solid #E8D39A;border-radius:16px;padding:14px 16px;margin-top:18px}
+@media (max-width:1000px){.repo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:900px){.gracias{grid-template-columns:minmax(0,1fr)}.gracias-vis{min-height:320px}}
+@media (max-width:620px){.repo-grid{grid-template-columns:minmax(0,1fr)}}
 </style>
 </head>
 <body data-page="participa">
@@ -845,6 +864,7 @@ footer a{color:#E3A83B}
       <li><a href="formacion.html" data-pg="formacion">Formación</a></li>
       <li><a href="participa.html" data-pg="participa">Participa</a></li>
       <li><a href="contacto.html" data-pg="contacto">Contacto</a></li>
+      <li><a href="archivo.html" data-pg="archivo">Repositorio</a></li>
     </ul>
     <div class="acc-tools"><button class="icon-btn" id="a11yNav" type="button" aria-label="Opciones de accesibilidad" aria-controls="a11yPanel"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="4.5" r="2"/><path d="M5 8l7 1.5L19 8M12 9.5V14l-3 6M12 14l3 6"/></svg></button><button class="icon-btn" id="busBtn" type="button" aria-label="Buscar en el portal"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></button><a class="btn oro cta" href="participa.html#mi-avance">Consulta tu avance</a><span id="navCta" hidden></span></div>
     <button class="menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FBF8F1" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
@@ -855,8 +875,8 @@ footer a{color:#E3A83B}
 <div id="contenido" tabindex="-1"></div>
 <header class="pagehead"><div class="wrap"><div class="logos"><img src="assets/40524d3023.webp" alt="Ministerio de Comercio, Industria y Turismo y FONTUR"></div>
 <nav class="migas" aria-label="Ruta de navegación"><a href="index.html">Inicio</a><span aria-hidden="true">/</span><span aria-current="page">Participa</span></nav>
-<h1>Participa</h1><p>Consulta tu avance en la capacitación, tu resultado en la convocatoria del curso de auditores y la Mesa de ayuda para destinos.</p>
-<nav class="subnav" aria-label="Secciones de esta página"><a href="#mi-avance">Consulta tu avance</a><a href="#resultados">Resultados convocatoria 006</a><a href="#mesa-de-ayuda">Mesa de ayuda</a></nav></div><div class="pj-head"><img src="assets/9d1090079c.webp" alt=""></div><div class="bub-head">Consulta tu avance o tu resultado en segundos.</div></header>
+<h1>Participa</h1><p>Consulta tu avance en la capacitación, descarga o verifica tu certificado y usa la Mesa de ayuda para destinos.</p>
+<nav class="subnav" aria-label="Secciones de esta página"><a href="#mi-avance">Consulta tu avance y certificado</a><a href="#mesa-de-ayuda">Mesa de ayuda</a></nav></div><div class="pj-head"><img src="assets/9d1090079c.webp" alt=""></div><div class="bub-head">Consulta tu avance o descarga tu certificado.</div></header>
 <!-- HERO -->
 <section class="hero" id="inicio" data-p="inicio">
   <video class="hero-bg" id="vHero" muted loop playsinline preload="none" data-poster="assets/anfitriones_clip1.jpg" aria-hidden="true" tabindex="-1" src="assets/anfitriones_clip1.mp4"></video>
@@ -878,7 +898,7 @@ footer a{color:#E3A83B}
       <div class="hero-stats">
         <div><b data-count="50">0</b><span>destinos acompañados</span></div>
         <div><b data-count="3">0</b><span>normas técnicas</span></div>
-        <div><b data-count="860" data-prefix="+">0</b><span>personas en capacitación certificada</span></div>
+        <div><b data-count="1100" data-prefix="+">0</b><span>personas en capacitación certificada</span></div>
         <div><b data-count="70" data-suffix=" %">0</b><span>de avance del proyecto</span></div>
       </div>
     </div>
@@ -894,10 +914,10 @@ footer a{color:#E3A83B}
     </div>
   </div>
   <nav class="wrap accesos reveal" aria-label="Accesos rápidos">
-    <a class="acceso" data-x="1" href="#mi-avance"><span class="ir" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E3A83B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><small>Participo en la capacitación</small><strong>Consulta tu avance</strong><span>Tus sesiones y tu estado, con tu número de documento.</span></a>
-    <a class="acceso" data-x="1" href="#resultados"><span class="ir" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E3A83B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><small>Me postulé al curso de auditores</small><strong>Consulta tu resultado</strong><span>Convocatoria 006: resultados publicados.</span></a>
-    <a class="acceso" data-x="1" href="#diplomado"><span class="ir" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E3A83B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><small>Quiero formarme</small><strong>Diplomado virtual NTC 6725</strong><span id="accDip">Inscripciones abiertas.</span></a>
-    <a class="acceso" data-x="1" href="#curso6654"><span class="ir" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E3A83B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><small>Turismo accesible</small><strong>Curso NTC 6654</strong><span>Virtual y gratuito, martes y jueves.</span></a>
+    <a class="acceso" data-x="1" href="#mi-avance"><span class="ir" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E3A83B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><small>Terminé la NTC 6725 o 6733</small><strong>Descarga tu certificado</strong><span>Con tu número de documento.</span></a>
+    <a class="acceso" data-x="1" href="#curso6654"><span class="ir" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E3A83B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><small>Participo en la NTC 6654</small><strong>Avance y material de repaso</strong><span>Curso en desarrollo, martes y jueves.</span></a>
+    <a class="acceso" data-x="1" href="#diplomado"><span class="ir" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E3A83B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><small>Diplomado virtual NTC 6725</small><strong>Inscripciones cerradas</strong><span>En 2027, en la plataforma del MinCIT.</span></a>
+    <a class="acceso" data-x="1" href="#repositorio"><span class="ir" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E3A83B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><small>Procesos cerrados</small><strong>Repositorio del proyecto</strong><span>Charlas, convocatorias y eventos.</span></a>
   </nav>
   <svg class="ola" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path fill="var(--papel)" d="M0,38 C240,70 480,4 720,30 C960,56 1200,14 1440,36 L1440,70 L0,70Z"><animate attributeName="d" dur="12s" repeatCount="indefinite" values="M0,38 C240,70 480,4 720,30 C960,56 1200,14 1440,36 L1440,70 L0,70Z;M0,30 C240,8 480,62 720,40 C960,18 1200,60 1440,30 L1440,70 L0,70Z;M0,38 C240,70 480,4 720,30 C960,56 1200,14 1440,36 L1440,70 L0,70Z"/></path></svg>
   <a class="scroll-hint" href="#novedades" style="text-decoration:none">Desliza para recorrer
@@ -906,30 +926,22 @@ footer a{color:#E3A83B}
 
 <!-- INVITACION DIPLOMADO -->
 <section class="sec" id="invitacion" data-p="inicio" style="background:linear-gradient(135deg,#EAF5DA 0%,#FBF8F1 60%)">
-  <div class="wrap dip">
-    <div class="reveal">
-      <div class="carrusel" aria-roledescription="carrusel" aria-label="Piezas de la invitación al diplomado virtual">
-        <img class="on" src="assets/dip_impl_1.jpg" alt="Conviértete en implementador de la sostenibilidad: diplomado virtual gratuito en implementación de la NTC 6725, inscripciones abiertas, inicio en la segunda semana de noviembre de 2026">
-        <img src="assets/dip_impl_2.jpg" alt="Formación gratuita: 100 % virtual y asincrónico, 8 módulos, 120 horas, certificación al aprobar con mínimo 80 sobre 100">
-        <img src="assets/dip_impl_3.jpg" alt="Inscríbete ahora y sé protagonista de la transformación del turismo desde los territorios: código QR del formulario de registro">
-      </div>
-      <div class="car-dots"></div>
-    </div>
+  <div class="wrap gracias">
+    <div class="gracias-vis reveal" aria-hidden="true"><b>+1.000</b><span>personas inscritas en la primera cohorte</span><img src="assets/eaf61cf9d5.webp" alt=""></div>
     <div class="reveal d2">
-      <div class="eyebrow" style="color:var(--sost)">Colombia te llama · Diplomado virtual · Formación gratuita</div>
-      <h2 class="h2" style="margin-top:14px">¡Conviértete en implementador de la sostenibilidad y transforma el turismo en Colombia!</h2>
-      <p class="lead" style="margin-top:16px">Adquiere conocimientos y herramientas para implementar los requisitos de sostenibilidad de la <strong style="color:var(--tinta)">Norma Técnica Colombiana NTC 6725</strong> y conviértete en un agente de cambio que impulse destinos turísticos más sostenibles.</p>
-      <p style="font-family:var(--fd);font-weight:700;font-size:18px;margin-top:16px;color:var(--sost)">¡Inscríbete ahora y sé protagonista de la transformación del turismo desde los territorios!</p>
-      <div class="dip-feat"><div><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2F7A24" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg>100 % virtual y asincrónico</div><div><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2F7A24" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg>8 módulos · 120 horas de formación</div><div><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2F7A24" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg>Estudia a tu propio ritmo</div><div><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2F7A24" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg>Certificación al aprobar con mínimo 80 sobre 100</div></div>
-      <p style="font-size:15px;margin-top:4px"><strong>Inicio:</strong> segunda semana de noviembre de 2026 · <strong>Inscripciones abiertas</strong></p>
-      <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:20px;align-items:center">
-        <a class="btn oro" href="https://docs.google.com/forms/d/e/1FAIpQLSe5ML3qFmiu_GzhlBmo_hFPiL4CNpDjwkLkJZZF7CxjNZHD9w/viewform" target="_blank" rel="noopener">Inscríbete aquí</a>
-        <a class="btn line" href="#diplomado" style="color:var(--tinta)">Conoce más del diplomado</a>
+      <div class="eyebrow" style="color:var(--sost)">Diplomado Virtual NTC 6725 · Inscripciones cerradas</div>
+      <h2 class="h2" style="margin-top:14px">¡Gracias, Colombia! Los cupos de la primera cohorte están completos</h2>
+      <p class="lead" style="margin-top:16px">La respuesta fue extraordinaria: más de 1.000 personas se inscribieron en el Diplomado Virtual de Implementación de la NTC 6725:2023, Requisitos de sostenibilidad para destinos turísticos. Con esta respuesta completamos los cupos de la primera cohorte y cerramos las inscripciones.</p>
+      <div class="prox-conv"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#141414" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><p style="margin:0;font-size:16px"><strong>¿No alcanzaste a inscribirte?</strong> En 2027 este diplomado se habilitará en la Plataforma de Calidad Turística del Ministerio de Comercio, Industria y Turismo. Te invitamos a estar atento a sus comunicaciones.</p></div>
+      <p style="font-family:var(--fd);font-weight:700;font-size:18px;margin-top:18px;color:var(--sost)">Gracias por sumarte a la construcción de destinos más sostenibles.</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:18px;align-items:center">
+        <a class="btn oro" href="#diplomado">Conoce el diplomado</a>
+        <a class="btn line" href="https://www.mincit.gov.co" target="_blank" rel="noopener" style="color:var(--tinta)">Página del MinCIT</a>
       </div>
-      <p style="font-size:13px;color:var(--tinta2);margin-top:14px">#DestinosTurísticosSostenibles #TurismoSostenible #NTC6725 #CalidadTurística</p>
     </div>
   </div>
 </section>
+
 
 <!-- NOVEDADES -->
 <section class="sec" id="novedades" data-p="inicio">
@@ -939,11 +951,10 @@ footer a{color:#E3A83B}
       <p class="lead">Formación abierta, resultados de convocatorias y nuevos contenidos para seguir avanzando en la calidad turística de los destinos.</p>
     </div>
     <div class="novs" id="novs">
-      <a class="nov reveal" href="#charlas" data-desde="2026-10-22T12:00:00-05:00" data-vence="2026-10-28T12:00:00-05:00" data-orden="1" data-fin="Realizada"><div class="im"><img loading="lazy" decoding="async" src="assets/charla2_flyer.jpg" alt="Pieza de la charla 2: Territorios vivos, patrimonio biocultural y ciencia ciudadana"></div><div class="tx"><time>Charla 2 · miércoles 28 de octubre</time><strong>Territorios vivos, patrimonio biocultural y ciencia ciudadana</strong><p>Con Carol Andrea Ruiz Barajas y panelistas de MinCultura, Parques Nacionales y MinAmbiente. 9:30 a. m., virtual.</p><span class="mas">Ver la agenda →</span></div></a>
-      <a class="nov reveal" href="#charlas" data-desde="2026-10-28T12:00:00-05:00" data-vence="2026-11-04T12:00:00-05:00" data-orden="1" data-fin="Realizada"><div class="im"><img loading="lazy" decoding="async" src="assets/charla3_flyer.jpg" alt="Pieza de la charla 3: Destinos inteligentes, marketing con datos e IA"></div><div class="tx"><time>Charla 3 · miércoles 4 de noviembre</time><strong>Destinos inteligentes: marketing con datos e IA</strong><p>Con Jesús Alejandro Vargas Quintero (MinCIT) y panelistas de EDEQ, la Red Iberoamericana de Destinos Turísticos Inteligentes y el IDT de Bogotá. 9:30 a. m., virtual.</p><span class="mas">Ver la agenda →</span></div></a>
-      <a class="nov reveal" href="#diplomado" data-orden="2"><div class="im"><img loading="lazy" decoding="async" src="assets/dip_impl_1.jpg" alt="Pieza del diplomado virtual en implementación de la NTC 6725"></div><div class="tx"><time>Inscripciones abiertas</time><strong>Diplomado virtual NTC 6725</strong><p>Conviértete en implementador de la sostenibilidad. 8 módulos, 120 horas, 100 % virtual y gratuito. Inicia en la segunda semana de noviembre.</p><span class="mas">Conoce el diplomado →</span></div></a>
-      <a class="nov reveal" href="#curso6654" data-vence="2026-11-07T23:59:00-05:00" data-orden="3" data-fin="Inscripciones cerradas"><div class="im"><img loading="lazy" decoding="async" src="assets/curso_6654.jpg" alt="Pieza del curso de formación NTC 6654"></div><div class="tx"><time>Inicia el 27 de octubre</time><strong>Curso NTC 6654: turismo accesible e inclusivo</strong><p>40 horas, virtual y gratuito, abierto a los actores turísticos de los destinos. Martes y jueves de 3:00 a 6:00 p. m.</p><span class="mas">Inscríbete →</span></div></a>
-      <a class="nov reveal" href="#resultados" data-vence="2026-11-15T23:59:00-05:00" data-orden="4" data-fin="Cerrada"><div class="im"><img loading="lazy" decoding="async" src="assets/convocatoria_006.jpg" alt="Pieza de la convocatoria del curso de auditores en normas técnicas de turismo"></div><div class="tx"><time>21 de octubre de 2026</time><strong>Resultados de la Convocatoria 006</strong><p>130 personas seleccionadas para el curso de auditores en normas técnicas de turismo.</p><span class="mas">Consulta tu resultado →</span></div></a>
+      <a class="nov reveal" href="#diplomado" data-vence="2026-12-31T23:59:00-05:00" data-orden="1" data-fin="Inscripciones cerradas"><div class="im"><img src="assets/dip_impl_2.jpg" alt="Pieza del diplomado virtual en implementación de la NTC 6725"></div><div class="tx"><time>Inscripciones cerradas</time><strong>¡Gracias! Más de 1.000 inscritos en el diplomado</strong><p>Los cupos de la primera cohorte del Diplomado Virtual NTC 6725 están completos. En 2027 se habilitará en la Plataforma de Calidad Turística del MinCIT.</p><span class="mas">Ver más →</span></div></a>
+      <a class="nov reveal d1" href="#mi-avance" data-vence="2027-02-28T23:59:00-05:00" data-orden="2"><div class="im" style="background:#E4EFE0;display:flex;align-items:flex-end;justify-content:center"><img src="assets/9d1090079c.webp" alt="Personaje del programa celebrando" style="width:auto;height:92%;object-fit:contain"></div><div class="tx"><time>Desde el 5 de noviembre de 2026</time><strong>Certificados de la capacitación NTC 6725 y NTC 6733</strong><p>340 participantes cumplieron la asistencia. Descarga tu certificado con tu número de documento.</p><span class="mas">Descargar mi certificado →</span></div></a>
+      <a class="nov reveal d2" href="#curso6654" data-orden="3"><div class="im"><img src="assets/curso_6654.jpg" alt="Pieza del curso de formación NTC 6654"></div><div class="tx"><time>En curso · martes y jueves</time><strong>Curso NTC 6654: turismo accesible e inclusivo</strong><p>Los participantes consultan su avance y el material de repaso de cada sesión.</p><span class="mas">Ver el curso →</span></div></a>
+      <a class="nov reveal d3" href="#repositorio" data-orden="4"><div class="im" style="background:var(--crema);display:flex;align-items:flex-end;justify-content:center"><img src="assets/c219acc404.webp" alt="Personaje del programa con el Manual" style="width:auto;height:92%;object-fit:contain"></div><div class="tx"><time>Procesos cerrados</time><strong>Repositorio del proyecto</strong><p>Charlas, Semana de la Calidad Turística, ruedas de encadenamiento y convocatoria del curso de auditores.</p><span class="mas">Ir al repositorio →</span></div></a>
     </div>
     <details class="nov-arch" id="novArch" hidden><summary>Ver novedades anteriores <span id="novArchN"></span></summary><div class="novs" id="novsArch"></div></details>
   </div>
@@ -992,7 +1003,7 @@ footer a{color:#E3A83B}
       <div>
         <div class="eyebrow">Avance del proyecto · Convenio FNTC-732-2025</div>
         <h2 class="h2" style="margin-top:14px">Así avanza el programa</h2>
-        <p class="lead" style="margin-top:14px">Cada componente suma a una misma meta: que los destinos cuenten con capacidades, herramientas y conocimiento para gestionar el turismo con calidad. Corte: octubre de 2026.</p>
+        <p class="lead" style="margin-top:14px">Cada componente suma a una misma meta: que los destinos cuenten con capacidades, herramientas y conocimiento para gestionar el turismo con calidad. Corte: noviembre de 2026.</p>
       </div>
     </div>
     <div class="comps-av reveal d1">
@@ -1001,11 +1012,11 @@ footer a{color:#E3A83B}
       <article class="cav"><h3>Manual y herramientas documentales NTC 6725</h3><div class="pct"><span>Avance</span><b>100 %</b></div><div class="bar"><i style="--w:100%;background:#2F7A24"></i></div>
         <ul><li>Manual de Implementación construido con 7 grupos focales, 10 entrevistas a expertos, 60 fuentes y 2 mesas técnicas de validación.</li><li>Más de 80 herramientas documentales para implementar la norma.</li><li>Ruta Implementadora de 32 pasos y sistema de 22 indicadores.</li></ul></article>
       <article class="cav"><h3>Contenidos OVA NTC 6725 y GTC-ISO 19011</h3><div class="pct"><span>Avance</span><b>90 %</b></div><div class="bar"><i style="--w:90%;background:#3A66B0"></i></div>
-        <ul><li>8 módulos para la NTC 6725 y 5 para la GTC-ISO 19011.</li><li>Validación de usabilidad con expertos, auditores y especialista en plataforma.</li><li>Diplomado virtual NTC 6725 con inscripciones abiertas; inicia en la segunda semana de noviembre.</li></ul></article>
+        <ul><li>8 módulos para la NTC 6725 y 5 para la GTC-ISO 19011.</li><li>Validación de usabilidad con expertos, auditores y especialista en plataforma.</li><li>Diplomado virtual NTC 6725: primera cohorte con más de 1.000 inscritos, desde la segunda semana de noviembre.</li></ul></article>
       <article class="cav"><h3>Plataforma tecnológica</h3><div class="pct"><span>Avance</span><b>70 %</b></div><div class="bar"><i style="--w:70%;background:#B04A25"></i></div>
         <ul><li>Caja de Herramientas 3.0 con gestor de tareas, auditoría interna, autodiagnóstico e indicadores.</li><li>Nuevos módulos de CRM, recursos humanos y gestión financiera.</li><li>Usuario Destino Turístico para gestionar atractivos, recursos y prestadores.</li></ul></article>
       <article class="cav"><h3>Formación</h3><div class="pct"><span>En curso</span></div>
-        <ul><li>Más de 860 personas en la capacitación certificada en las normas técnicas.</li><li>130 personas seleccionadas para el curso de auditores, entre 329 postulaciones.</li><li>Ciclo de tres charlas especializadas realizado, abierto a todo el país.</li></ul></article>
+        <ul><li>340 personas certificadas en las NTC 6725 y NTC 6733; curso NTC 6654 en desarrollo.</li><li>Más de 1.000 personas inscritas en la primera cohorte del diplomado virtual NTC 6725.</li><li>130 personas seleccionadas para el curso de auditores, entre 329 postulaciones.</li><li>Ciclo de tres charlas especializadas realizado, abierto a todo el país.</li></ul></article>
       <article class="cav prox"><h3>Próximamente</h3><p><strong>Plataforma de Calidad Turística:</strong> caja de herramientas y procesos de gestión para implementar las normas técnicas, abierta a destinos y prestadores.</p><p><strong>Acceso a los OVA</strong> para que más personas se formen a su ritmo.</p></article>
     </div>
   </div>
@@ -1203,7 +1214,7 @@ footer a{color:#E3A83B}
       <p class="lead">Cursos certificados, Objetos Virtuales de Aprendizaje, cápsulas de video y podcast para que el conocimiento llegue a cada territorio y se consulte en cualquier momento.</p>
     </div>
     <div class="stats-row">
-      <div class="bigstat reveal" style="background:var(--vino);color:#fff"><b data-count="860" data-prefix="+">0</b><span>personas en la capacitación certificada</span></div>
+      <div class="bigstat reveal" style="background:var(--vino);color:#fff"><b data-count="1100" data-prefix="+">0</b><span>personas en la capacitación certificada</span></div>
       <div class="bigstat reveal d1" style="background:var(--blanco);border:1px solid var(--linea)"><b data-count="130" style="color:var(--tierra)">0</b><span>personas seleccionadas para el curso de auditores</span></div>
       <div class="bigstat reveal d2" style="background:var(--blanco);border:1px solid var(--linea)"><b data-count="40" style="color:var(--tierra)">0</b><span>implementadores del proyecto en territorio</span></div>
       <div class="bigstat reveal d3" style="background:var(--verde);color:#fff"><b data-count="27">0</b><span>departamentos y Bogotá D.C. conectados</span></div>
@@ -1267,7 +1278,7 @@ footer a{color:#E3A83B}
       <a href="assets/curso_6654.jpg" target="_blank" rel="noopener" class="carrusel" style="display:block;background:#2B4C9E" aria-label="Ver la pieza del curso NTC 6654 en tamaño completo"><img loading="lazy" decoding="async" class="on" src="assets/curso_6654.jpg" alt="Curso de formación NTC 6654, requisitos para un turismo accesible e inclusivo: inscripciones abiertas, inicio el 27 de octubre de 2026, martes y jueves de 3:00 a 6:00 p. m."></a>
     </div>
     <div class="reveal d2">
-      <span class="tag" style="background:#3A66B0;color:#fff">Inscripciones abiertas</span>
+      <span class="tag" style="background:#3A66B0;color:#fff">Curso en desarrollo</span>
       <h2 class="h2" style="margin-top:16px">¡Comenzamos la ruta hacia un destino turístico para todos!</h2>
       <p style="font-family:var(--fd);font-weight:700;font-size:clamp(17px,1.6vw,20px);color:#3A66B0;margin-top:8px">Curso de formación · NTC 6654: Requisitos para un turismo accesible e inclusivo</p>
       <p class="lead" style="margin-top:16px">Como parte del acompañamiento a los destinos en la implementación de la NTC 6654, el programa 50 Nuevos Destinos, Anfitriones de Colombia te invita a aprender cómo avanzar hacia un turismo en el que la accesibilidad, la inclusión y la igualdad de oportunidades sean parte de cada experiencia.</p>
@@ -1275,7 +1286,7 @@ footer a{color:#E3A83B}
       <p style="font-size:15px"><strong>¿Quiénes pueden participar?</strong> Actores estratégicos del territorio: entidades públicas, prestadores de servicios turísticos, gremios, organizaciones comunitarias, academia y organizaciones de personas con discapacidad, sus agremiaciones y demás actores comprometidos con el desarrollo turístico de su territorio.</p>
       <p style="font-size:15px;margin-top:8px"><strong>Inicio del curso:</strong> 27 de octubre de 2026 · <strong>Horario:</strong> martes y jueves de 3:00 a 6:00 p. m.</p>
       <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:20px;align-items:center">
-        <a class="btn oro" href="https://forms.gle/6noP9NPpwijPcJqG8" target="_blank" rel="noopener">Inscríbete aquí</a>
+        <a class="btn oro" href="#mi-avance">Consulta tu avance</a>
         <span style="font-size:14px;color:var(--tinta2)">Información: <a href="mailto:convenio732fontur@fundacionactivaterritorio.org" style="font-weight:700">convenio732fontur@fundacionactivaterritorio.org</a></span>
       </div>
       <p style="font-size:15px;margin-top:14px;background:#E3EAF7;border-radius:12px;padding:10px 14px"><strong>¿Ya participas?</strong> Ingresa a <a href="#mi-avance" style="font-weight:800">Consulta tu avance</a> con tu número de documento para ver tus sesiones y abrir el material de repaso del curso.</p>
@@ -1289,23 +1300,18 @@ footer a{color:#E3A83B}
 <section class="sec cream" id="diplomado" data-p="formacion">
   <div class="wrap dip">
     <div class="reveal">
-      <div class="carrusel" id="car" aria-roledescription="carrusel" aria-label="Piezas del diplomado virtual">
-        <img class="on" src="assets/dip_impl_1.jpg" alt="Conviértete en implementador de la sostenibilidad: diplomado virtual gratuito en implementación de la NTC 6725, inscripciones abiertas, inicio en la segunda semana de noviembre de 2026">
-        <img src="assets/dip_impl_2.jpg" alt="Formación gratuita: 100 % virtual y asincrónico, 8 módulos, 120 horas, certificación al aprobar con mínimo 80 sobre 100">
-        <img src="assets/dip_impl_3.jpg" alt="Inscríbete ahora y sé protagonista de la transformación del turismo desde los territorios: código QR del formulario de registro">
-      </div>
-      <div class="car-dots" id="carDots"></div>
+      <div class="carrusel" style="background:#2F7A24"><img class="on" src="assets/dip_impl_2.jpg" alt="Diplomado virtual gratuito en implementación de la NTC 6725: 100 % virtual y asincrónico, 8 módulos, 120 horas, certificación al aprobar con mínimo 80 sobre 100"></div>
     </div>
     <div class="reveal d2">
-      <span class="tag" id="dipEstado" style="background:var(--sost);color:#fff">Inscripciones abiertas</span>
+      <span class="tag" id="dipEstado" style="background:var(--tinta);color:#fff">Inscripciones cerradas · Primera cohorte completa</span>
       <h2 class="h2" style="margin-top:16px">Diplomado Virtual de Implementación de la NTC 6725</h2>
       <p style="font-family:var(--fd);font-weight:700;font-size:clamp(17px,1.6vw,20px);color:var(--sost);margin-top:8px">Requisitos de sostenibilidad para destinos turísticos</p>
       <p class="lead" style="margin-top:16px">Conviértete en implementador de la sostenibilidad. Adquiere conocimientos y herramientas para implementar los requisitos de la NTC 6725 y conviértete en un agente de cambio que impulse destinos turísticos más sostenibles. Estudia desde donde estés, en una plataforma virtual y a tu propio ritmo.</p>
       <div class="dip-feat"><div><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2F7A24" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg>100 % virtual y asincrónico</div><div><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2F7A24" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg>8 módulos · 120 horas de formación</div><div><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2F7A24" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg>Estudia a tu propio ritmo</div><div><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2F7A24" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg>Certificación al aprobar con mínimo 80 sobre 100</div></div>
       <p style="font-size:15px"><strong>Dirigido a</strong> prestadores de servicios turísticos, funcionarios y contratistas de entidades públicas, miembros de comunidades, estudiantes, gremios y profesionales interesados en fortalecer sus conocimientos y aportar al desarrollo sostenible del turismo.</p>
-      <p style="font-size:15px;margin-top:8px"><strong>Inicio:</strong> segunda semana de noviembre de 2026 · <strong>Inscripciones abiertas</strong></p>
+      <div class="prox-conv"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#141414" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><p style="margin:0;font-size:15px"><strong>Inscripciones cerradas.</strong> Más de 1.000 personas se inscribieron y los cupos de la primera cohorte, que inicia en la segunda semana de noviembre de 2026, están completos. En 2027 este diplomado se habilitará en la Plataforma de Calidad Turística del MinCIT: te invitamos a estar atento a las comunicaciones del Ministerio.</p></div>
       <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:22px;align-items:center">
-        <a class="btn oro" id="dipBtn" href="https://docs.google.com/forms/d/e/1FAIpQLSe5ML3qFmiu_GzhlBmo_hFPiL4CNpDjwkLkJZZF7CxjNZHD9w/viewform" target="_blank" rel="noopener">Inscríbete aquí</a>
+        <a class="btn oro" id="dipBtn" href="https://www.mincit.gov.co" target="_blank" rel="noopener">Página del MinCIT</a>
         <span style="font-size:14px;color:var(--tinta2)">Es un proceso distinto de la capacitación certificada y del curso de auditores.</span>
       </div>
     </div>
@@ -1322,7 +1328,25 @@ footer a{color:#E3A83B}
 </section>
 
 <!-- CHARLAS -->
-<section class="sec" id="charlas" data-p="formacion">
+<!-- REPOSITORIO -->
+<section class="sec cream" id="repositorio" data-p="archivo">
+  <div class="wrap">
+    <div class="head reveal">
+      <div class="txt"><div class="eyebrow">Procesos cerrados</div><h2 class="h2">Repositorio del proyecto</h2></div>
+      <p class="lead">Aquí queda el registro de las convocatorias, eventos y procesos que ya se cumplieron en el proyecto 50 Nuevos Destinos, Anfitriones de Colombia.</p>
+    </div>
+    <div class="repo-grid">
+      <a class="repo-card reveal" href="formacion.html#diplomado"><span class="repo-est">Inscripciones cerradas</span><strong>Diplomado Virtual NTC 6725 · Primera cohorte</strong><span>Más de 1.000 personas inscritas. En 2027 se habilitará en la Plataforma de Calidad Turística del MinCIT.</span><em>Ver el diplomado →</em></a>
+      <a class="repo-card reveal d1" href="semana-calidad/"><span class="repo-est">9 al 13 de noviembre de 2026</span><strong>Semana Nacional de la Calidad Turística</strong><span>Piezas de comunicación para destinos, prestadores de servicios turísticos y SITCAT.</span><em>Ir a las piezas →</em></a>
+      <a class="repo-card reveal d2" href="ruedas/"><span class="repo-est">Inscripciones cerradas el 12 de noviembre</span><strong>Ruedas de Encadenamiento Turístico «Anfitriones que suman»</strong><span>Portal de la convocatoria y de los participantes.</span><em>Ir al portal →</em></a>
+      <a class="repo-card reveal" href="#charlas"><span class="repo-est">22 y 28 de octubre y 4 de noviembre de 2026</span><strong>Ciclo de charlas especializadas</strong><span>Conocimiento que inspira ideas que transforman territorios: tres conversaciones con conferencistas y panelistas invitados.</span><em>Ver el ciclo →</em></a>
+      <a class="repo-card reveal d1" href="#resultados"><span class="repo-est">Resultados publicados el 21 de octubre de 2026</span><strong>Convocatoria 006 · Curso de auditores</strong><span>Consulta individual del resultado y enlace al acta oficial en el portal del MinCIT.</span><em>Consultar resultado →</em></a>
+      <a class="repo-card reveal d2" href="participa.html#mi-avance"><span class="repo-est">11 de agosto al 3 de noviembre de 2026</span><strong>Capacitación certificada NTC 6725 y NTC 6733</strong><span>Curso finalizado. Quienes cumplieron la asistencia descargan su certificado con su número de documento.</span><em>Descargar certificado →</em></a>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="charlas" data-p="archivo">
   <div class="wrap">
     <div class="head reveal">
       <div class="txt"><div class="eyebrow">Ciclo de charlas y conversatorios · Realizado</div><h2 class="h2">Conocimiento que inspira ideas que transforman territorios</h2></div>
@@ -1374,7 +1398,7 @@ footer a{color:#E3A83B}
 </section>
 
 <!-- CONVOCATORIA -->
-<section class="sec" id="convocatoria" data-p="participa" style="background:var(--blanco)" hidden>
+<section class="sec" id="convocatoria" data-p="archivo" style="background:var(--blanco)" hidden>
   <div class="wrap conv">
     <div class="reveal" style="display:flex;flex-direction:column;gap:18px">
       <span class="tag" id="convEstado" style="background:var(--rojo);color:#fff;align-self:flex-start;display:inline-flex;gap:8px;align-items:center"><i class="brillo" style="width:9px;height:9px;border-radius:50%;background:#fff;display:inline-block"></i><span>Postulaciones cerradas</span></span>
@@ -1419,7 +1443,7 @@ footer a{color:#E3A83B}
   </div>
 </section>
 <!-- RESULTADOS CONVOCATORIA 006 -->
-<section class="sec cream" id="resultados" data-p="participa">
+<section class="sec cream" id="resultados" data-p="archivo">
   <div class="wrap">
     <div class="head reveal">
       <div class="txt"><div class="eyebrow">Convocatoria 006 · Curso de auditores en normas técnicas de turismo</div><h2 class="h2">¡Felicitaciones a las 130 personas seleccionadas!</h2><p style="font-family:var(--fd);font-size:clamp(18px,1.8vw,22px);font-weight:700;color:var(--tierra)">Estás a un paso de confirmar tu cupo</p></div>
@@ -1560,7 +1584,7 @@ footer a{color:#E3A83B}
       <details><summary>¿Qué es la Unidad de Gestión del destino?</summary><p>Es una instancia técnica independiente que lidera y acompaña la implementación de la NTC 6725 en el destino. Identifica y mapea las fuentes de recursos existentes y prioriza las acciones frente a ellas; no ordena gasto ni crea rubros presupuestales.</p></details>
       <details><summary>¿Qué es el Comité de Seguimiento Local?</summary><p>Es el espacio del destino que aprueba el cronograma y la metodología al inicio del proceso y acompaña el avance de cada fase de la implementación.</p></details>
       <details><summary>¿Cuánto dura el acompañamiento técnico?</summary><p>Cada destino del proyecto recibe 120 horas de asistencia técnica en la norma que implementa, con sesiones presenciales y virtuales, cápsulas de video y soporte técnico continuo. Estas horas son distintas de la capacitación certificada de 120 horas y del curso de auditores de 75 horas.</p></details>
-      <details><summary>¿Cómo me vinculo a la formación?</summary><p>Inscríbete al diplomado virtual en implementación de la NTC 6725 (inscripciones abiertas, inicio en la segunda semana de noviembre de 2026) y participa en el ciclo de charlas especializadas. La convocatoria del curso de auditores ya cerró y su resultado se consulta en esta página.</p></details>
+      <details><summary>¿Cómo me vinculo a la formación?</summary><p>Las inscripciones de la primera cohorte del Diplomado Virtual NTC 6725 ya cerraron. En 2027 este diplomado se habilitará en la Plataforma de Calidad Turística del Ministerio de Comercio, Industria y Turismo; te invitamos a estar atento a sus comunicaciones. Las convocatorias y eventos ya cumplidos quedan en el Repositorio del proyecto.</p></details>
     </div>
   </div>
 </section>
@@ -1587,7 +1611,7 @@ footer a{color:#E3A83B}
         <p style="font-size:14px;line-height:1.5">Programa de Calidad Turística · Convenio de Cooperación FNTC-732-2025<br>50 Nuevos Destinos, Anfitriones de Colombia · <a href="mailto:convenio732fontur@fundacionactivaterritorio.org">convenio732fontur@fundacionactivaterritorio.org</a></p></div>
       <div class="r"><img loading="lazy" decoding="async" src="assets/29f564bdd4.webp" alt="Activa Territorio, FUNDATER"></div>
     </div>
-    <nav class="foot-nav" aria-label="Páginas del portal"><a href="index.html">Inicio</a><a href="programa.html">El programa</a><a href="aprende.html">Aprende</a><a href="formacion.html">Formación</a><a href="participa.html">Participa</a><a href="contacto.html">Contacto</a></nav>
+    <nav class="foot-nav" aria-label="Páginas del portal"><a href="index.html">Inicio</a><a href="programa.html">El programa</a><a href="aprende.html">Aprende</a><a href="formacion.html">Formación</a><a href="participa.html">Participa</a><a href="contacto.html">Contacto</a><a href="archivo.html">Repositorio</a></nav>
   </div>
 </footer>
 <div class="buscador" id="buscador" role="dialog" aria-modal="true" aria-label="Buscar en el portal"><div class="bus-box"><div class="bus-in"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><input id="busIn" type="search" placeholder="Busca un destino, una norma, una herramienta o un tema" autocomplete="off" aria-label="Buscar"><button class="icon-btn" id="busX" type="button" aria-label="Cerrar buscador" style="color:var(--tinta);border-color:var(--linea)">×</button></div><div class="bus-res" id="busRes"><p class="bus-vacio">Escribe al menos dos letras. Por ejemplo: Duitama, diplomado, indicadores, certificado.</p></div></div></div>
@@ -1980,7 +2004,7 @@ var esIni=(document.body.dataset.page||'inicio')==='inicio',red=window.matchMedi
 var v=$('vHero');if(v&&esIni&&!red){v.preload='auto';v.muted=true;var pr=v.play();if(pr&&pr.catch)pr.catch(function(){})}
 var rw=$('rw'),W=['sostenibles','accesibles','seguros','competitivos','que inspiran'],k=0;
 if(rw&&!red)setInterval(function(){rw.classList.add('out');setTimeout(function(){k=(k+1)%W.length;rw.textContent=W[k];rw.classList.remove('out')},450)},2600);
-var G=[["9d1090079c", "Hola, anfitrión", "¿Ya consultaste cómo vas en la capacitación certificada?", "Consulta tu avance", "#mi-avance"], ["eaf61cf9d5", "Formación abierta", "Inscríbete al diplomado virtual NTC 6725: 100 % virtual, a tu ritmo y gratuito.", "Quiero inscribirme", "#diplomado"], ["c219acc404", "Conocimiento", "Mira en video el Manual de Implementación NTC 6725.", "Ver el Manual", "#manual"], ["7b6bcf5bd3", "Lo que viene", "Así se verá la Plataforma de Calidad Turística. ¡Échale un vistazo!", "Ver la plataforma", "#plataforma"], ["866cd323fb", "Territorio", "Explora en el mapa los 50 destinos que ya empezaron la ruta.", "Ver el mapa", "#destinos"], ["c19e9461b1", "Para tu destino", "¿Tu destino está listo para empezar? Haz el autodiagnóstico.", "Hacer el autodiagnóstico", "#autodiagnostico"]],g=$('guia');if(!g)return;
+var G=[["9d1090079c", "Hola, anfitrión", "¿Terminaste la capacitación en la NTC 6725 o 6733? Descarga aquí tu certificado.", "Descargar mi certificado", "#mi-avance"], ["eaf61cf9d5", "¡Gracias, Colombia!", "Más de 1.000 personas se inscribieron al diplomado virtual NTC 6725. En 2027 llegará a la Plataforma de Calidad Turística del MinCIT.", "Ver más", "#invitacion"], ["c219acc404", "Conocimiento", "Mira en video el Manual de Implementación NTC 6725.", "Ver el Manual", "#manual"], ["7b6bcf5bd3", "Lo que viene", "Así se verá la Plataforma de Calidad Turística. ¡Échale un vistazo!", "Ver la plataforma", "#plataforma"], ["866cd323fb", "Territorio", "Explora en el mapa los 50 destinos que ya empezaron la ruta.", "Ver el mapa", "#destinos"], ["c19e9461b1", "Para tu destino", "¿Tu destino está listo para empezar? Haz el autodiagnóstico.", "Hacer el autodiagnóstico", "#autodiagnostico"]],g=$('guia');if(!g)return;
 var pjs=[].slice.call(g.querySelectorAll('.pj')),bub=$('guiaBub'),txt=$('guiaTxt'),tag=$('guiaTag'),bt=$('guiaBtn'),dots=$('guiaDots'),i=0,t=null,ty=null,pausa=false;
 G.forEach(function(x,j){var d=document.createElement('button');d.type='button';d.setAttribute('aria-label','Guía '+(j+1)+': '+x[3]);d.onclick=function(){ir(j);reinicia()};dots.appendChild(d)});
 function escribir(s){clearInterval(ty);bub.classList.remove('listo');if(red){txt.textContent=s;bub.classList.add('listo');return}
@@ -2015,7 +2039,7 @@ if(ven.length){arch.hidden=false;$('novArchN').textContent='('+ven.length+')'}
 [].forEach.call(document.querySelectorAll('video[data-poster]'),function(v){var s=v.closest('[data-p]');if(!s||s.dataset.p===(document.body.dataset.page||'inicio'))v.poster=v.dataset.poster});
 /* PAGINAS Y ENLACES */
 (function(){
-var pg=document.body.dataset.page||'inicio',F={inicio:'index.html',programa:'programa.html',aprende:'aprende.html',formacion:'formacion.html',participa:'participa.html',contacto:'contacto.html'};
+var pg=document.body.dataset.page||'inicio',F={inicio:'index.html',programa:'programa.html',aprende:'aprende.html',formacion:'formacion.html',participa:'participa.html',contacto:'contacto.html',archivo:'archivo.html'};
 function pagDe(id){var e=document.getElementById(id);var s=e&&e.closest('[data-p]');return s?s.dataset.p:null}
 window.__irA=function(id){var p=pagDe(id);if(p&&p!==pg){location.href=F[p]+'#'+id;return true}return false};
 if(location.hash.length>1){var id=decodeURIComponent(location.hash.slice(1));var p=pagDe(id);if(p&&p!==pg)location.replace(F[p]+'#'+id)}
@@ -2043,7 +2067,7 @@ var qd=new URLSearchParams(location.search).get('d');if(qd){var p=P.filter(funct
 
 /* BUSCADOR GENERAL */
 (function(){
-var ov=$('buscador'),inp=$('busIn'),res=$('busRes'),F={inicio:'index.html',programa:'programa.html',aprende:'aprende.html',formacion:'formacion.html',participa:'participa.html',contacto:'contacto.html'},NP={inicio:'Inicio',programa:'El programa',aprende:'Aprende',formacion:'Formación',participa:'Participa',contacto:'Contacto'};
+var ov=$('buscador'),inp=$('busIn'),res=$('busRes'),F={inicio:'index.html',programa:'programa.html',aprende:'aprende.html',formacion:'formacion.html',participa:'participa.html',contacto:'contacto.html',archivo:'archivo.html'},NP={inicio:'Inicio',programa:'El programa',aprende:'Aprende',formacion:'Formación',participa:'Participa',contacto:'Contacto',archivo:'Repositorio'};
 var IDX=null;
 function nn(t){return String(t||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase()}
 function crear(){IDX=[];
