@@ -876,6 +876,7 @@ body[data-page="archivo"] section[data-p="archivo"]{display:block}
 a[href^="mailto:"]{overflow-wrap:anywhere}
 @media (max-width:1100px){.guia .s2{display:none}}
 @media (max-width:620px){.gracias-vis span{max-width:150px}.gracias-vis img{height:44%}}
+.ses.ref{background:#3A66B0!important;border-color:#3A66B0!important;color:#fff!important}.ses.ref small{color:#fff!important;opacity:.95;font-size:8px;letter-spacing:-.2px}.sesiones.con-ref{grid-template-columns:repeat(14,minmax(0,1fr))}@media (max-width:700px){.sesiones.con-ref{grid-template-columns:repeat(7,minmax(0,1fr))}}.ref-nota{background:#E3EAF7;border-radius:12px;padding:10px 14px;color:var(--tinta)!important}
 </style>
 </head>
 <body data-page="contacto">
@@ -1866,8 +1867,9 @@ function buscar(id,d){var enc=new TextEncoder();
 function calc(rec,c){var held=c.realizadas,nc=rec.z?(c.flexibles||[]).slice():[];
   var cuenta=held.filter(function(s){return nc.indexOf(s)<0}),acr=(c.acreditadas||[]).filter(function(s){return cuenta.indexOf(s)>=0});
   var asis=cuenta.filter(function(s){return acr.indexOf(s)>=0||(rec.s||[]).indexOf(s)>=0});
-  var ratio=cuenta.length?asis.length/cuenta.length:0,est=ratio>=c.umbral.verde?'verde':(ratio>=c.umbral.amarillo?'amarillo':'camino');
-  return{c:c,cuenta:cuenta,asis:asis,acr:acr,ratio:ratio,est:est,fin:held.length>=c.total,nc:nc}}
+  var ref=!!(rec.r&&c.refuerzo),num=asis.length+(ref?1:0),tot=cuenta.length+(ref?1:0);
+  var ratio=cuenta.length?Math.min(num,cuenta.length)/cuenta.length:0,est=ratio>=c.umbral.verde?'verde':(ratio>=c.umbral.amarillo?'amarillo':'camino');
+  return{c:c,cuenta:cuenta,asis:asis,acr:acr,ratio:ratio,est:est,fin:held.length>=c.total,nc:nc,ref:ref,num:num,tot:tot}}
 var TXT={
  verde:['¡Vas muy bien!','Tu participación ha sido constante. Sigue así: cada sesión trae un tema nuevo para fortalecer la gestión turística de tu destino.'],
  amarillo:['Vas por buen camino','Cada sesión aborda un tema distinto. Te esperamos en las próximas para que no te pierdas ninguno.'],
@@ -1880,12 +1882,13 @@ var vacio=card.innerHTML;
 function render(res,id,cod){
   var cods=Object.keys(res);cod=cod||cods[0];var rec=res[cod],c=DATA[cod].meta;var R=calc(rec,c);
   var t=R.fin?(R.est==='verde'?TXT.finV:TXT.finN):TXT[R.est];
-  var C=2*Math.PI*74,off=C*(1-(R.cuenta.length?R.asis.length/R.cuenta.length:0));
+  var C=2*Math.PI*74,off=C*(1-(R.tot?Math.min(R.num/R.tot,1):0));
   var ses='';for(var i=1;i<=c.total;i++){var f=(c.fechas||{})[i]||'',cl,tt,tx=i;
     if(c.realizadas.indexOf(i)>=0){if(R.nc.indexOf(i)>=0){cl='nc';tt='No se tiene en cuenta en tu cálculo'}else if(R.acr.indexOf(i)>=0){cl='si';tt='Tienes registro de asistencia';tx='✓'}else if(R.asis.indexOf(i)>=0){cl='si';tt='Tienes registro de asistencia';tx='✓'}else{cl='no';tt='Sin registro de asistencia'}}
     else{cl='fut';tt='Sesión por realizar'}
     ses+='<div class="ses '+cl+'" title="Sesión '+i+(f?' · '+fCorta(f):'')+': '+tt+'">'+tx+'<small>'+(f?fCorta(f):'S'+i)+'</small></div>'}
-  var notas='';
+  if(R.ref)ses+='<div class="ses ref" title="Sesión 14 · refuerzo compensatorio: tienes registro de asistencia">✓<small>Refuerzo</small></div>';
+  var notas=R.ref?'<p class="av-msg ref-nota"><strong>Sesión 14 de refuerzo.</strong> Participaste en la sesión de refuerzo, que compensa una de las sesiones a las que no pudiste asistir.</p>':'';
   if(rec.z&&(c.flexibles||[]).length)notas+='<p class="av-msg" style="color:var(--tinta2)">Por la situación de tu destino, las sesiones '+c.flexibles.join(' y ')+' no se tienen en cuenta en tu cálculo. Seguimos acompañándote.</p>';
   var cert='';
   if(R.est==='verde'&&R.fin)cert='<div class="cert-box"><p><strong>Tu certificado está listo.</strong> Descárgalo en el enlace.</p><button class="btn vino" type="button" data-cert="1">Descargar certificado</button></div>';
@@ -1893,10 +1896,10 @@ function render(res,id,cod){
   else if(!R.fin)cert='<div class="cert-box"><p>Tu certificado estará disponible al finalizar el curso. ¡Cada sesión cuenta!</p></div>';
   var tabs=cods.length>1?'<div class="av-tabs" role="tablist">'+cods.map(function(k){return'<button type="button" role="tab" aria-selected="'+(k===cod)+'" data-cod="'+k+'">NTC '+k+'</button>'}).join('')+'</div>':'';
   card.innerHTML='<div class="av-head"><div><div class="eyebrow">'+esc(c.nombre)+'</div><h3 style="margin-top:8px">Hola, '+esc(rec.n.split(' ')[0])+'</h3><p style="color:var(--tinta2);font-size:15px">'+esc(rec.n)+(rec.d?' · '+esc(rec.d):'')+'</p></div>'+tabs+'</div>'+
-   '<div class="av-main"><div class="ring"><svg width="170" height="170" viewBox="0 0 170 170"><circle class="bg" cx="85" cy="85" r="74"/><circle class="fg" cx="85" cy="85" r="74" stroke="'+COL[R.est]+'" stroke-dasharray="'+C+'" stroke-dashoffset="'+C+'" data-off="'+off+'"/></svg><div class="num"><b>'+R.asis.length+'</b><span>de '+R.cuenta.length+' sesiones<br>realizadas</span></div></div>'+
+   '<div class="av-main"><div class="ring"><svg width="170" height="170" viewBox="0 0 170 170"><circle class="bg" cx="85" cy="85" r="74"/><circle class="fg" cx="85" cy="85" r="74" stroke="'+COL[R.est]+'" stroke-dasharray="'+C+'" stroke-dashoffset="'+C+'" data-off="'+off+'"/></svg><div class="num"><b>'+R.num+'</b><span>de '+R.tot+' sesiones<br>realizadas</span></div></div>'+
    '<div class="estado-av '+R.est+'"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">'+ICO[R.est]+'</svg></span><div><strong>'+t[0]+'</strong><span class="av-msg">'+t[1]+'</span>'+'</div></div></div>'+
-   '<div><div style="font-family:var(--fd);font-weight:700;margin-bottom:10px">Tus sesiones</div><div class="sesiones">'+ses+'</div>'+
-   '<div class="leyenda" style="margin-top:10px"><span><i style="background:#2F7A24"></i>Con registro</span><span><i style="border:2px solid var(--linea)"></i>Sin registro</span><span><i style="background:repeating-linear-gradient(45deg,#ddd,#ddd 3px,#fff 3px,#fff 6px)"></i>No se cuenta</span><span><i style="border:2px dashed var(--linea)"></i>Por realizar</span></div></div>'+
+   '<div><div style="font-family:var(--fd);font-weight:700;margin-bottom:10px">Tus sesiones</div><div class="sesiones'+(R.ref?' con-ref':'')+'">'+ses+'</div>'+
+   '<div class="leyenda" style="margin-top:10px"><span><i style="background:#2F7A24"></i>Con registro</span><span><i style="border:2px solid var(--linea)"></i>Sin registro</span><span><i style="background:repeating-linear-gradient(45deg,#ddd,#ddd 3px,#fff 3px,#fff 6px)"></i>No se cuenta</span><span><i style="border:2px dashed var(--linea)"></i>Por realizar</span>'+(R.ref?'<span><i style="background:#3A66B0"></i>Refuerzo compensatorio</span>':'')+'</div></div>'+
    notas+cert+
    '<div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center;font-size:14px"><button type="button" class="btn line" id="avOtro" style="color:var(--tinta);min-height:44px;padding:10px 18px">Consultar otro documento</button><a href="mailto:'+MAIL+'?subject='+encodeURIComponent('Revisión de asistencia · '+c.nombre)+'&body='+encodeURIComponent('Hola. Solicito revisar mi registro de asistencia.\nDocumento: '+id+'\nNombre: '+rec.n+'\nSesión a revisar: ')+'" style="font-weight:700">¿Algo no coincide? Escríbenos</a></div>';
   var MAT={'6654':{u:'repaso-6654/',t:'Curso NTC 6654 · Turismo accesible',im:'assets/eaf61cf9d5.webp'}},mk=Object.keys(res).filter(function(k){return MAT[k]});
@@ -1930,7 +1933,7 @@ function certImg(cur,id,rec,b){var t0=b.textContent;b.textContent='Preparando tu
   getJ('meta.json').then(function(m){
     return crypto.subtle.importKey('raw',enc.encode(id),'PBKDF2',false,['deriveBits']).then(function(k){return crypto.subtle.deriveBits({name:'PBKDF2',salt:enc.encode(m.salt+cur),iterations:m.iter,hash:'SHA-256'},k,512)}).then(function(bits){
       var u=new Uint8Array(bits),idx=Array.prototype.map.call(u.slice(0,16),function(x){return('0'+x.toString(16)).slice(-2)}).join(''),sh=('0'+(parseInt(idx.slice(0,2),16)%m.shards)).slice(-2);
-      return getJ('c'+sh+'.json').then(function(S){if(S[idx])return S[idx];return getJ('x'+(parseInt(idx.charAt(0),16)%2)+'.json').then(function(X){return X[idx]})}).then(function(e){if(!e)throw 'nf';var raw=b64(e);
+      return getJ('c'+sh+'.json').then(function(S){if(S[idx])return S[idx];var p2=parseInt(idx.charAt(0),16)%2;return getJ('x'+p2+'.json').then(function(X){return X[idx]},function(){return null}).then(function(e){if(e)return e;return getJ('y'+p2+'.json').then(function(Y){return Y[idx]})})}).then(function(e){if(!e)throw 'nf';var raw=b64(e);
         return crypto.subtle.importKey('raw',u.slice(32),'AES-GCM',false,['decrypt']).then(function(kk){return crypto.subtle.decrypt({name:'AES-GCM',iv:raw.slice(0,12)},kk,raw.slice(12))})})})
   }).then(function(buf){var a=document.createElement('a');a.href=URL.createObjectURL(new Blob([buf],{type:'image/jpeg'}));a.download='Certificado_NTC'+cur+'_'+id+'.jpg';document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove()},1500);b.textContent='¡Descargado! Descargar de nuevo';b.disabled=false})
   .catch(function(e){fin();var o=b.parentNode.querySelector('.cert-err');if(o)o.remove();var p=document.createElement('p');p.className='cert-err';p.style.cssText='font-size:14px;margin-top:8px;flex-basis:100%';p.innerHTML=e==='nf'?'Tu certificado está en preparación. Si el problema sigue, escríbenos a <a href="mailto:convenio732fontur@fundacionactivaterritorio.org" style="font-weight:700">convenio732fontur@fundacionactivaterritorio.org</a>.':'No pudimos preparar tu certificado en este momento. Intenta de nuevo en unos minutos.';b.parentNode.appendChild(p)})}
