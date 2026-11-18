@@ -562,7 +562,7 @@ section{position:relative}
 @media (max-width:1100px){.pagehead .pj-head,.pagehead .bub-head{display:none}}
 @media (max-width:900px){
   .guia{height:460px;min-height:0;margin-top:10px}
-  .guia .bub{left:0;right:0;width:auto;top:0}
+  .guia .bub{left:0;right:0;width:auto;top:0;min-height:0;height:auto}
   .guia .pj{height:66%;left:62%}
   .guia .halo,.guia .aro{left:62%;top:62%}
   .guia .s2{display:none}
@@ -848,6 +848,34 @@ body[data-page="archivo"] section[data-p="archivo"]{display:block}
 @media (max-width:1000px){.repo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:900px){.gracias{grid-template-columns:minmax(0,1fr)}.gracias-vis{min-height:320px}}
 @media (max-width:620px){.repo-grid{grid-template-columns:minmax(0,1fr)}}
+
+/* AJUSTES DE DISEÑO 17 NOV: sin superposiciones */
+.guia .bub{top:2%;width:min(270px,46%)}
+.guia .pj{left:auto!important;right:0;height:74%;transform:translateY(40px) scale(.96)}
+.guia .pj.on{transform:none}
+.guia .halo,.guia .aro{left:72%!important;top:60%!important}
+.guia .s1{right:2%;top:2%;bottom:auto}
+.guia .s2{left:4%;top:auto;bottom:4%}
+.guia .s3{display:none}
+@media (min-width:1241px){.pagehead .pj-head{width:240px;display:flex;justify-content:center;align-items:flex-end}
+.pagehead .pj-head img{max-width:240px;height:auto;max-height:100%;object-fit:contain}
+.pagehead .bub-head{right:calc(4% + 252px)}}
+@media (max-width:900px){
+  .guia{height:600px}
+  .guia .bub{left:0;right:0;width:auto;top:0}
+  .guia .pj{right:auto;left:50%!important;height:56%;transform:translateX(-50%) translateY(40px)}
+  .guia .pj.on{transform:translateX(-50%)}
+  .guia .halo,.guia .aro{left:50%!important;top:70%!important}
+  .guia .s1{top:auto;bottom:3%;right:2%}
+  .guia .s2{display:none}
+}
+.nov .im.nov-mil{position:relative;background:linear-gradient(160deg,#2F7A24,#7EC700);color:#fff;padding:16px 18px;overflow:hidden}
+.nov .im.nov-mil b{display:block;font-family:var(--fd);font-weight:900;font-size:34px;line-height:1;position:relative;z-index:1}
+.nov .im.nov-mil span{display:block;font-family:var(--fd);font-weight:700;font-size:15px;position:relative;z-index:1}
+.nov .im.nov-mil img{position:absolute;right:0;bottom:0;width:auto!important;height:66%!important;object-fit:contain}
+a[href^="mailto:"]{overflow-wrap:anywhere}
+@media (max-width:1100px){.guia .s2{display:none}}
+@media (max-width:620px){.gracias-vis span{max-width:150px}.gracias-vis img{height:44%}}
 </style>
 </head>
 <body data-page="inicio">
@@ -990,9 +1018,9 @@ body[data-page="archivo"] section[data-p="archivo"]{display:block}
       <p class="lead">Formación abierta, resultados de convocatorias y nuevos contenidos para seguir avanzando en la calidad turística de los destinos.</p>
     </div>
     <div class="novs" id="novs">
-      <a class="nov reveal" href="#diplomado" data-vence="2026-12-31T23:59:00-05:00" data-orden="1" data-fin="Inscripciones cerradas"><div class="im"><img src="assets/dip_impl_2.jpg" alt="Pieza del diplomado virtual en implementación de la NTC 6725"></div><div class="tx"><time>Inscripciones cerradas</time><strong>¡Gracias! Más de 1.000 inscritos en el diplomado</strong><p>Los cupos de la primera cohorte del Diplomado Virtual NTC 6725 están completos. En 2027 se habilitará en la Plataforma de Calidad Turística del MinCIT.</p><span class="mas">Ver más →</span></div></a>
+      <a class="nov reveal" href="#diplomado" data-vence="2026-12-31T23:59:00-05:00" data-orden="1" data-fin="Inscripciones cerradas"><div class="im nov-mil" aria-hidden="true"><b>+1.000</b><span>inscritos</span><img src="assets/eaf61cf9d5.webp" alt=""></div><div class="tx"><time>Inscripciones cerradas</time><strong>¡Gracias! Más de 1.000 inscritos en el diplomado</strong><p>Los cupos de la primera cohorte del Diplomado Virtual NTC 6725 están completos. En 2027 se habilitará en la Plataforma de Calidad Turística del MinCIT.</p><span class="mas">Ver más →</span></div></a>
       <a class="nov reveal d1" href="#mi-avance" data-vence="2027-02-28T23:59:00-05:00" data-orden="2"><div class="im" style="background:#E4EFE0;display:flex;align-items:flex-end;justify-content:center"><img src="assets/9d1090079c.webp" alt="Personaje del programa celebrando" style="width:auto;height:92%;object-fit:contain"></div><div class="tx"><time>Desde el 5 de noviembre de 2026</time><strong>Certificados de la capacitación NTC 6725 y NTC 6733</strong><p>340 participantes cumplieron la asistencia. Descarga tu certificado con tu número de documento.</p><span class="mas">Descargar mi certificado →</span></div></a>
-      <a class="nov reveal d2" href="#curso6654" data-orden="3"><div class="im"><img src="assets/curso_6654.jpg" alt="Pieza del curso de formación NTC 6654"></div><div class="tx"><time>En curso · martes y jueves</time><strong>Curso NTC 6654: turismo accesible e inclusivo</strong><p>Los participantes consultan su avance y el material de repaso de cada sesión.</p><span class="mas">Ver el curso →</span></div></a>
+      <a class="nov reveal d2" href="#curso6654" data-orden="3"><div class="im" style="overflow:hidden"><img src="assets/curso_6654.jpg" alt="Pieza del curso de formación NTC 6654" style="width:130%!important;max-width:none;height:auto!important;margin-left:-15%;object-fit:initial"></div><div class="tx"><time>En curso · martes y jueves</time><strong>Curso NTC 6654: turismo accesible e inclusivo</strong><p>Los participantes consultan su avance y el material de repaso de cada sesión.</p><span class="mas">Ver el curso →</span></div></a>
       <a class="nov reveal d3" href="#repositorio" data-orden="4"><div class="im" style="background:var(--crema);display:flex;align-items:flex-end;justify-content:center"><img src="assets/c219acc404.webp" alt="Personaje del programa con el Manual" style="width:auto;height:92%;object-fit:contain"></div><div class="tx"><time>Procesos cerrados</time><strong>Repositorio del proyecto</strong><p>Charlas, Semana de la Calidad Turística, ruedas de encadenamiento y convocatoria del curso de auditores.</p><span class="mas">Ir al repositorio →</span></div></a>
     </div>
     <details class="nov-arch" id="novArch" hidden><summary>Ver novedades anteriores <span id="novArchN"></span></summary><div class="novs" id="novsArch"></div></details>
@@ -1314,7 +1342,7 @@ body[data-page="archivo"] section[data-p="archivo"]{display:block}
 <section class="sec" id="curso6654" data-p="formacion" style="background:linear-gradient(135deg,#E3EAF7 0%,#FBF8F1 65%)">
   <div class="wrap dip">
     <div class="reveal">
-      <a href="assets/curso_6654.jpg" target="_blank" rel="noopener" class="carrusel" style="display:block;background:#2B4C9E" aria-label="Ver la pieza del curso NTC 6654 en tamaño completo"><img loading="lazy" decoding="async" class="on" src="assets/curso_6654.jpg" alt="Curso de formación NTC 6654, requisitos para un turismo accesible e inclusivo: inscripciones abiertas, inicio el 27 de octubre de 2026, martes y jueves de 3:00 a 6:00 p. m."></a>
+      <div class="carrusel" style="display:block;background:#2B4C9E;aspect-ratio:1.7"><img class="on" src="assets/curso_6654.jpg" alt="Curso de formación NTC 6654: requisitos para un turismo accesible e inclusivo. Curso virtual de 40 horas, martes y jueves de 3:00 a 6:00 p. m." style="object-fit:cover;object-position:top"></div>
     </div>
     <div class="reveal d2">
       <span class="tag" style="background:#3A66B0;color:#fff">Curso en desarrollo</span>
