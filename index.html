@@ -889,6 +889,11 @@ a[href^="mailto:"]{overflow-wrap:anywhere}
   .guia .sello.s2{bottom:calc(3% + 58px)!important}
   .guia .sello.s3{bottom:calc(3% + 116px)!important}
 }
+
+/* AJUSTES QA 24 NOV */
+.guia-dots button{position:relative}
+.guia .halo,.guia .aro{z-index:0}.guia .bub{z-index:5}
+@media (max-width:620px){.guia-dots{gap:14px!important}.guia-dots button::before{content:"";position:absolute;inset:-10px -6px}}
 </style>
 </head>
 <body data-page="inicio">
@@ -961,35 +966,7 @@ a[href^="mailto:"]{overflow-wrap:anywhere}
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></a>
 </section>
 
-<!-- SEMANA NACIONAL DE LA CALIDAD TURÍSTICA 2026 (visible del 6 al 16 de noviembre) -->
-<section class="sec" id="semana-calidad" data-p="inicio" data-desde="2026-11-06T00:00:00-05:00" data-vence="2026-11-16T23:59:00-05:00" style="background:linear-gradient(135deg,#DDF1F3 0%,#FBF8F1 60%)">
-  <div class="wrap dip">
-    <div class="reveal">
-      <div class="carrusel" style="background:#127C8C">
-        <video id="sncVideo" muted loop playsinline preload="metadata" poster="semana-calidad/difusion/semana-calidad-historia-portada.jpg" aria-label="Video de la Semana Nacional de la Calidad Turística 2026" aria-describedby="sncDesc" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
-          <source src="semana-calidad/difusion/semana-calidad-historia.mp4" type="video/mp4">
-        </video>
-        <button type="button" id="sncPausa" aria-pressed="false" style="position:absolute;left:14px;bottom:14px;background:rgba(255,255,255,.94);color:#24405E;border:0;border-radius:999px;padding:8px 16px;font-weight:700;font-size:14px;cursor:pointer;font-family:inherit">Pausar video</button>
-      </div>
-    </div>
-    <div class="reveal d2">
-      <div class="eyebrow" style="color:#127C8C">Colombia te llama · Semana Nacional de la Calidad Turística · Del 9 al 13 de noviembre</div>
-      <h2 class="h2" style="margin-top:14px">Si eres parte del Programa de Calidad Turística, tus piezas ya están listas</h2>
-      <p class="lead" style="margin-top:16px">Ingresa y descarga las piezas oficiales de tu destino u organización, con el texto sugerido y la descripción de cada imagen, <strong style="color:var(--tinta)">listas para publicar</strong> en tus redes durante la Semana Nacional de la Calidad Turística.</p>
-      <div class="dip-feat">
-        <div><span style="display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:#127C8C;color:#fff;flex-shrink:0">1</span>Escribe el nombre de tu destino u organización</div>
-        <div><span style="display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:#127C8C;color:#fff;flex-shrink:0">2</span>Toca tu nombre y aparecen tus piezas</div>
-        <div><span style="display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:#127C8C;color:#fff;flex-shrink:0">3</span>Descarga, copia el texto y publica</div>
-        <div><span style="display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:#127C8C;color:#fff;flex-shrink:0">+</span>Prestadores y SITCAT: suben su logo</div>
-      </div>
-      <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:20px;align-items:center">
-        <a class="btn oro" href="semana-calidad/">Ingresar y descargar mis piezas</a>
-      </div>
-      <p style="font-size:13px;color:var(--tinta2);margin-top:14px">#SemanaNacionalDeLaCalidadTuristica #AnfitrionesDeColombia #ColombiaTeLlama #CalidadTuristica</p>
-      <details style="margin-top:10px;font-size:14px;color:var(--tinta2)"><summary style="cursor:pointer;font-weight:700">Descripción del video</summary><p id="sncDesc" style="margin-top:8px">Nos unimos a la celebración de la Semana Nacional de la Calidad Turística 2026, World Quality Week, del 9 al 13 de noviembre. Nuestra calidez nos identifica, ¡la calidad nos impulsa! Estamos llevando la calidez que nos caracteriza a un nuevo nivel: una gestión turística de calidad que impulsa nuestro desempeño, genera mayores oportunidades para nuestras comunidades y crea mejores experiencias para quienes nos visitan. ¡Ser Anfitriones de Colombia es mucho más que dar una buena bienvenida! Por eso, avanzamos en la implementación de buenas prácticas y estándares de calidad que fortalecen la gestión turística y generan valor para nuestros destinos. ¡Somos Anfitriones de Colombia! ¡Ven y vive nuestro país! Colombia te llama.</p></details>
-    </div>
-  </div>
-</section>
+
 <script>
 (function(){
   var sec=document.getElementById('semana-calidad');if(!sec)return;
@@ -1784,7 +1761,7 @@ var mp=$('momentos');
 tabs($('fases'),fases,function(f){var e=est(f);return el('button',{class:'fase'},'<div class="top"><span class="num">'+f.n+'</span><span class="estado '+e+'">'+(e==='ok'?'Completada':(e==='hoy'?'En curso':'Próxima'))+'</span></div><h3>'+f.t+'</h3><span class="fecha">'+f.f+'</span>')},
  function(f){mp.innerHTML='<div><div class="eyebrow">Fase '+f.n+'</div><h3 style="font-size:28px;font-weight:800;margin:10px 0 12px">'+f.t+'</h3><p class="lead">'+f.d+'</p><p style="font-size:14px;margin-top:14px;color:var(--tinta2)">'+f.f+'</p></div><div class="mom-list">'+f.m.map(function(x){return '<div class="mom"><b>'+x[0]+'</b><span>'+x[1]+'</span></div>'}).join('')+'</div>';swap(mp)},
  Math.max(0,fases.findIndex(function(f){return est(f)==='hoy'})));
-(function(){var a=fases[0].a,b=fases[3].b,p=Math.max(0,Math.min(1,(hoy-a)/(b-a)))*100;var bar=$('tiempoFill').parentNode;bar._onin=function(){$('tiempoFill').style.width=p+'%'};$('tiempoHoy').style.left=p+'%';
+(function(){var a=fases[0].a,b=fases[3].b,p=Math.max(0,Math.min(1,(hoy-a)/(b-a)))*100;var bar=$('tiempoFill').parentNode;bar._onin=function(){$('tiempoFill').style.width=p+'%'};$('tiempoHoy').style.left=p+'%';$('tiempoHoy').style.transform=p>85?'translateX(-100%)':(p<15?'translateX(0)':'translateX(-50%)');
   var d=new Date(hoy);$('tiempoHoy').textContent='Hoy · '+d.toLocaleDateString('es-CO',{day:'numeric',month:'short'})})();
 
 /* NORMAS + BUSCADOR */
@@ -1979,12 +1956,14 @@ form.addEventListener('submit',function(e){e.preventDefault();var id=normId(inp.
 var CERT_OK=['6725','6733'];
 document.addEventListener('submit',function(e){if(e.target&&e.target.id==='verForm'){e.preventDefault();verificar()}});
 function getJ(n){return fetch('certificados/'+n,{cache:'no-store'}).then(function(r){if(r.ok)return r.json();return fetch(n,{cache:'no-store'}).then(function(r2){if(!r2.ok)throw 0;return r2.json()})})}
+function getE(n,idx){function g(u){return fetch(u,{cache:'no-store'}).then(function(r){return r.ok?r.json():null}).catch(function(){return null})}
+  return Promise.all([g('certificados/'+n),g(n)]).then(function(a){return (a[0]&&a[0][idx])||(a[1]&&a[1][idx])||null})}
 function certImg(cur,id,rec,b){var t0=b.textContent;b.textContent='Preparando tu certificado…';b.disabled=true;var enc=new TextEncoder();
   function fin(){b.textContent=t0;b.disabled=false}
   getJ('meta.json').then(function(m){
     return crypto.subtle.importKey('raw',enc.encode(id),'PBKDF2',false,['deriveBits']).then(function(k){return crypto.subtle.deriveBits({name:'PBKDF2',salt:enc.encode(m.salt+cur),iterations:m.iter,hash:'SHA-256'},k,512)}).then(function(bits){
       var u=new Uint8Array(bits),idx=Array.prototype.map.call(u.slice(0,16),function(x){return('0'+x.toString(16)).slice(-2)}).join(''),sh=('0'+(parseInt(idx.slice(0,2),16)%m.shards)).slice(-2);
-      return getJ('c'+sh+'.json').then(function(S){if(S[idx])return S[idx];var p2=parseInt(idx.charAt(0),16)%2;return getJ('x'+p2+'.json').then(function(X){return X[idx]},function(){return null}).then(function(e){if(e)return e;return getJ('y'+p2+'.json').then(function(Y){return Y[idx]})})}).then(function(e){if(!e)throw 'nf';var raw=b64(e);
+      var p2=parseInt(idx.charAt(0),16)%2;return getE('c'+sh+'.json',idx).then(function(e){return e||getE('x'+p2+'.json',idx)}).then(function(e){return e||getE('y'+p2+'.json',idx)}).then(function(e){if(!e)throw 'nf';var raw=b64(e);
         return crypto.subtle.importKey('raw',u.slice(32),'AES-GCM',false,['decrypt']).then(function(kk){return crypto.subtle.decrypt({name:'AES-GCM',iv:raw.slice(0,12)},kk,raw.slice(12))})})})
   }).then(function(buf){var a=document.createElement('a');a.href=URL.createObjectURL(new Blob([buf],{type:'image/jpeg'}));a.download='Certificado_NTC'+cur+'_'+id+'.jpg';document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove()},1500);b.textContent='¡Descargado! Descargar de nuevo';b.disabled=false})
   .catch(function(e){fin();var o=b.parentNode.querySelector('.cert-err');if(o)o.remove();var p=document.createElement('p');p.className='cert-err';p.style.cssText='font-size:14px;margin-top:8px;flex-basis:100%';p.innerHTML=e==='nf'?'Tu certificado está en preparación. Si el problema sigue, escríbenos a <a href="mailto:convenio732fontur@fundacionactivaterritorio.org" style="font-weight:700">convenio732fontur@fundacionactivaterritorio.org</a>.':'No pudimos preparar tu certificado en este momento. Intenta de nuevo en unos minutos.';b.parentNode.appendChild(p)})}
